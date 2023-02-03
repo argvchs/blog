@@ -162,6 +162,15 @@ pandoc:
         - "+emoji"
         - "-implicit_figures"
 
+babel:
+    options:
+    exclude:
+        - "*.min.js"
+
+autoprefixer:
+    exclude:
+        - "*.min.css"
+
 uglify:
     mangle: true
     output:
@@ -184,11 +193,20 @@ html_minifier:
     minifyJS: true
     minifyCSS: true
 
-autoprefixer:
-    exclude:
-        - "*.min.css"
-
-babel:
-    options:
-    exclude:
-        - "*.min.js"
+feed:
+    enable: true
+    type:
+        - atom
+        - rss2
+    path:
+        - atom.xml
+        - rss2.xml
+    limit: 10
+    hub:
+    content:
+    content_limit: 200
+    content_limit_delim:
+    order_by: -date
+    icon:
+    autodiscovery: true
+    template:
