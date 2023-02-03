@@ -1,0 +1,194 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration
+## Source: https://github.com/hexojs/hexo
+
+# Site
+title: Argvchs の小窝
+subtitle: "Here's an argvchs..."
+description: ""
+keywords:
+author: Argvchs
+language: zh
+timezone: ""
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://argvchs.github.io
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+    trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+    trailing_html: false # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+    enable: true # Open external links in new tab
+    field: site # Apply to the whole site
+    exclude: ""
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+    enable: false
+    line_number: true
+    auto_detect: false
+    tab_replace: ""
+    wrap: true
+    hljs: false
+prismjs:
+    enable: false
+    preprocess: true
+    line_number: true
+    tab_replace: ""
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+    path: ""
+    per_page: 10
+    order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+    工具: tool
+    教程: tutorial
+    其他: other
+    算法: algorithm
+tag_map:
+    Python: python
+    PIP: pip
+    Crypto-js: crypto-js
+    Gitalk: gitalk
+    CORS: cors
+    Heroku: heroku
+    GitHub: github
+    Git: git
+    字体: fonts
+    NPM: npm
+    C/C++: c-cpp
+    C++20: cpp20
+    Fast-IO: fast-io
+    Hexo: hexo
+    Giscus: giscus
+    评论: comment
+    插件: plugin
+    LaTeX: latex
+    Node.js: node-js
+    MinGW: mingw
+    GCC: gcc
+    MSYS2: msys2
+    Clang: clang
+    主题: theme
+    Particlex: particlex
+    图床: image-hosting
+    Scenexe.io: scenexe-io
+    Arras.io: arras-io
+    IO Game: io-game
+    JS: js
+    CSS: css
+    Babel: babel
+    Netlify: netlify
+    Vercel: vercel
+    CDN: cdn
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: "mtime"
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins
+## Themes: https://hexo.io/themes
+theme: particlex
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+    type: git
+    # repo: https://github.com/argvchs/argvchs.github.io.git
+    repo: git@github.com:argvchs/argvchs.github.io.git
+    branch: master
+    message:
+
+archive_generator:
+    enabled: true
+    per_page: 0
+    yearly: false
+    monthly: false
+    daily: false
+
+pandoc:
+    extra:
+        - "no-highlight":
+    extensions:
+        - "+hard_line_breaks"
+        - "+emoji"
+        - "-implicit_figures"
+
+uglify:
+    mangle: true
+    output:
+    compress:
+    exclude:
+        - "*.min.js"
+
+clean_css:
+    exclude:
+        - "*.min.css"
+
+html_minifier:
+    collapseBooleanAttributes: true
+    collapseWhitespace: true
+    ignoreCustomComments: [!!js/regexp /^\s*more/]
+    removeComments: true
+    removeEmptyAttributes: true
+    removeScriptTypeAttributes: true
+    removeStyleLinkTypeAttributes: true
+    minifyJS: true
+    minifyCSS: true
+
+autoprefixer:
+    exclude:
+        - "*.min.css"
+
+babel:
+    options:
+    exclude:
+        - "*.min.js"
