@@ -1,4 +1,0 @@
-[submodule "themes/particlex"]
-    path = themes/particlex
-    url = git@github.com:argvchs/hexo-theme-particlex.git
-    branch = custom
