@@ -5,38 +5,28 @@ tags: [Python, PIP]
 categories: 工具
 ---
 
-[EasyPYTool](https://github.com/argvchs/easypytool) 是一个 **Windows** 上简单 & 轻量级的 Python 环境配置工具
+[EasyPyTool](https://github.com/argvchs/easypytool) 是一个简单的 Python 环境配置工具
 
 <!-- more -->
 
-~~毕竟那些用 Linux 的**神犇**绝对能自己处理好这些环境配置的~~
+## 文件
 
-> 仅 5 个 Bat 文件，总占用空间 < `5KB`
+-   `config.sh`
 
-## 文件解释
+    设置 Python 镜像源和代理
 
--   `mirror.set.bat`
+-   `export.sh`
 
-    设置 Python 镜像源和代理，镜像源默认 [Tuna](https://pypi.tuna.tsinghua.edu.cn/simple)，代理默认不设置
+    导出 PIP 库到 `packages`
 
--   `mirror.unset.bat`
+-   `import.sh`
 
-    重置 Python 镜像源和 Proxy
+    导入 PIP 库
 
--   `pack.export.bat`
+-   `setup.sh`
 
-    导出 PIP 包，存储到`packages`文件夹，可能需要一定时间
+    下载 Python 安装文件
 
--   `pack.import.bat`
+-   `clear.sh`
 
-    离线安装导出的 PIP 包, 可以将此程序放在 U 盘/移动硬盘上，完成两个电脑间的包转移
-
--   `pysetup.bat`
-
-    安装 Python，从 [Huawei Cloud](https://repo.huaweicloud.com/python) 加速下载，仅支持稳定版
-
--   `clearcache.bat`
-
-    清理缓存（导出的 PIP 包和 Python 安装文件）
-
-#### 只有这些了
+    清理导出的 PIP 包和安装文件
