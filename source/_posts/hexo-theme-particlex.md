@@ -1,7 +1,7 @@
 ---
-title: Particlex 主题使用说明
+title: ParticleX 主题使用说明
 date: 2022-05-10 11:01:07
-tags: [Hexo, 主题, Particlex]
+tags: [Hexo, 主题, ParticleX]
 categories: 工具
 pin: 1
 ---
