@@ -6,7 +6,6 @@ categories: 其他
 ---
 
 **Giscus 终于配置好了！**
-必须要纪念一下
 
 <!-- more -->
 

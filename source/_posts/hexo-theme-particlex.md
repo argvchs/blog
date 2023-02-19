@@ -3,7 +3,7 @@ title: ParticleX 主题使用说明
 date: 2022-05-10 11:01:07
 tags: [Hexo, 主题, ParticleX]
 categories: 工具
-pin: 1
+pin: 10
 ---
 
 [ParticleX](https://github.com/argvchs/hexo-theme-particlex) 主题，诞生原因是因为原来的 [Particle](https://github.com/korilin/hexo-theme-particle) 主题不维护了，但是我觉得还是很好的
