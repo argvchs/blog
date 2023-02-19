@@ -141,11 +141,7 @@ theme: particlex
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-    type: git
-    # repo: https://github.com/argvchs/argvchs.github.io.git
-    repo: git@github.com:argvchs/argvchs.github.io.git
-    branch: master
-    message:
+    type: ""
 
 archive_generator:
     enabled: true

@@ -16,7 +16,6 @@
     "hexo-autoprefixer": "^2.0.0",
     "hexo-babel": "^1.0.12",
     "hexo-clean-css": "^2.0.0",
-    "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
