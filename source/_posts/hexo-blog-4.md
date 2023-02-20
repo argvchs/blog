@@ -13,9 +13,9 @@ categories: 教程
 
 首先要有一个 [GitHub](https://github.com) 帐号
 
-**`<name>` 和 `<email>` 分别是你自己的 GitHub 用户名和注册时使用的邮箱**
+**`<user>` 和 `<email>` 分别是你自己的 GitHub 用户名和注册时使用的邮箱**
 
-注册完成后回到主页，点击左边的绿色按钮 New，新建一个仓库，名称为`<name>.github.io`，比如我的用户名是 argvchs，那么就是 argvchs.github.io，然后点击 Create repositpory 创建
+注册完成后回到主页，点击左边的绿色按钮 New，新建一个仓库，名称为`<user>.github.io`，比如我的用户名是 argvchs，那么就是 argvchs.github.io，然后点击 Create repositpory 创建
 
 在命令行输入命令 `ssh-keygen -t rsa -C "email@email.com"`，获取 SSH 密钥，这个过程会提示你输入一些东西，一直回车就行了
 
@@ -37,18 +37,18 @@ categories: 教程
 使用下面的命令初始配置
 
 ```bash
-git config --global user.name "<name>"
+git config --global user.name "<user>"
 git config --global user.email "<email>"
 ```
 
 打开你博客根目录的 `_config.yml`，设置参数
 
 ```yaml
-url: https://<name>.github.io/
+url: https://<user>.github.io/
 # ...
 deploy:
     type: git
-    repo: git@github.com:<name>/<name>.github.io.git
+    repo: git@github.com:<user>/<user>.github.io.git
     branch: master
     message:
 ```

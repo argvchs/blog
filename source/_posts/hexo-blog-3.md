@@ -31,13 +31,11 @@ categories: 教程
 在 `source` 下添加自定义文件，把文件放在 `js` `css` 文件夹下分类，不然生成的静态文件会很乱
 然后在 `layout.ejs` 下添加如下内容，如果使用网络上的文件直接在 `src` `href` 中填写路径即可
 
-**`<file-name>` 为自定义文件名称**
+**`<file>` 为自定义文件名称**
 
 ```html
-<!-- JS -->
-<script src="/js/<file-name>"></script>
-<!-- CSS -->
-<link rel="stylesheet" href="/css/<file-name>">
+<script src="/js/<file>"></script>
+<link rel="stylesheet" href="/css/<file>">
 ```
 
 ## 3. 我用的自定义文件

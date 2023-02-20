@@ -39,11 +39,11 @@ Markdown 可以看 GitHub 官方文档：[基本撰写和格式语法](https://d
 
 ![pnpm-vs-npm-vs-yarn](https://static-argvchs.netlify.app/images/pnpm-vs-npm-vs-yarn.svg)
 
-虽然 PNPM 较快，但创建 Vue/React 项目时可能会有错误
+虽然 PNPM 较快，但安装包有时可能会出现错误
 
 ## 3. 安装 Hexo CLI
 
-输入命令 `npm i -g hexo`， 用 `hexo -v` 检查安装
+输入命令 `npm i -g hexo-cli`， 用 `hexo -v` 检查安装
 新建一个文件夹，作为博客目录，`cd` 进入文件夹，运行命令
 
 ```bash

@@ -33,10 +33,6 @@ on:
     schedule:
         - cron: "0 0 * * *"
     workflow_dispatch:
-env:
-    REPO: ${{ github.repository }}
-    LIBS: ${{ vars.LIBS }}
-    TOKEN: ${{ secrets.TOKEN }}
 jobs:
     sync:
         runs-on: ubuntu-latest
@@ -44,40 +40,35 @@ jobs:
             - name: clone
               run: |
                   git clone https://github.com/cdnjs/cdnjs.git --depth=1 --filter=blob:none --no-checkout
-                  git clone https://$TOKEN@github.com/$REPO.git $REPO --depth=1 --filter=blob:none --no-checkout
+                  git clone https://${{ secrets.TOKEN }}@github.com/${{ github.repository }}.git static --depth=1 --filter=blob:none --no-checkout
             - name: checkout
               run: |
                   cd cdnjs
                   git sparse-checkout init --cone
-                  for i in $LIBS
+                  for i in ${{ vars.LIBS }}
                   do
                   git sparse-checkout add ajax/libs/$i
                   done
                   git checkout
-                  cd ..
-                  cd $REPO
+                  cd ../static
                   git sparse-checkout init --cone
                   git sparse-checkout set libs
                   git checkout
             - name: sync
               run: |
-                  rm -rf $REPO/libs
-                  for i in $LIBS
-                  do
-                  mkdir -p $REPO/libs/$i
-                  cp -r cdnjs/ajax/libs/$i/* $REPO/libs/$i
-                  done
+                  rm -rf static/libs
+                  cp -r cdnjs/ajax/libs static/libs
             - name: commit
               run: |
-                  cd $REPO
-                  git config user.name github-actions[bot]
-                  git config user.email github-actions[bot]@users.noreply.github.com
+                  cd static
+                  git config --global user.name github-actions[bot]
+                  git config --global user.email github-actions[bot]@users.noreply.github.com
                   git add .
                   git commit --allow-empty -m "sync"
             - name: push
               run: |
-                  cd $REPO
-                  git push https://$TOKEN@github.com/$REPO.git
+                  cd static
+                  git push https://${{ secrets.TOKEN }}@github.com/${{ github.repository }}.git
 ```
 
 这个是一天同步一次，如果想调整可以修改上面的 `cron` 参数
