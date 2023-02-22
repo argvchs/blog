@@ -1,9 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@babel/core': ^7.21.0
+  '@babel/preset-env': ^7.20.2
   hexo: ^6.3.0
   hexo-autoprefixer: ^2.0.0
-  hexo-babel: ^1.1.0
+  hexo-babel: ^1.1.1
   hexo-clean-css: ^2.0.0
   hexo-deployer-git: ^4.0.0
   hexo-generator-archive: ^2.0.0
@@ -20,9 +22,11 @@ specifiers:
   hexo-uglify: ^2.0.0
 
 dependencies:
+  '@babel/core': 7.21.0
+  '@babel/preset-env': 7.20.2_@babel+core@7.21.0
   hexo: 6.3.0
   hexo-autoprefixer: 2.0.0
-  hexo-babel: 1.1.0
+  hexo-babel: 1.1.1
   hexo-clean-css: 2.0.0
   hexo-deployer-git: 4.0.0
   hexo-generator-archive: 2.0.0
@@ -1807,8 +1811,8 @@ packages:
       postcss: 7.0.39
     dev: false
 
-  /hexo-babel/1.1.0:
-    resolution: {integrity: sha512-6UB9VKanptL0wY8YW1ODE6qXMASOSYQsxaIRgIIzWuEPmZzN1Juowr5qtEBVDG5AmLqzPSlfmyfXYtJU4XDFxA==}
+  /hexo-babel/1.1.1:
+    resolution: {integrity: sha512-3l0cfM6NMRU8xLotZj/rPVpIHfBzy6V6OwqydBdASE+XeQ2L4RqVJE3WNSzldGPHJKRHeMzy56X0JwBVmRLXzw==}
     dependencies:
       '@babel/core': 7.21.0
       '@babel/preset-env': 7.20.2_@babel+core@7.21.0
