@@ -12,7 +12,7 @@ categories: 工具
 ## 安装
 
 ```bash
-pnpm add hexo-babel
+pnpm add hexo-babel @babel/core @babel/preset-env
 ```
 
 ## 配置
