@@ -30,14 +30,14 @@ Markdown 可以看 GitHub 官方文档：[基本撰写和格式语法](https://d
     选择 LTS 或 Current 版本，安装一路确认即可
     完成后用 `node -v` 命令检查，有提示即安装正确
 
-## 2. 启用 Corepack（可选）
+## 2. 启用 Corepack
 
 运行 `corepack enable` 启用 Corepack
-启用后自动安装 Yarn 和 PNPM，这样以后的命令都可以换成自己喜欢的包管理器
+启用后自动安装 Yarn 和 PNPM，这样以后的命令都可以换成喜欢的包管理器，我一般用 PNPM
 
 这里是速度参考
 
-![pnpm-vs-npm-vs-yarn](https://static-argvchs.netlify.app/images/pnpm-vs-npm-vs-yarn.svg)
+![pnpm-vs-npm-vs-yarn](https://pnpm.io/img/benchmarks/alotta-files.svg)
 
 ## 3. 安装 Hexo
 
