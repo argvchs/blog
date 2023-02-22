@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   hexo: ^6.3.0
   hexo-autoprefixer: ^2.0.0
-  hexo-babel: ^1.0.13
+  hexo-babel: ^1.0.14
   hexo-clean-css: ^2.0.0
   hexo-deployer-git: ^4.0.0
   hexo-generator-archive: ^2.0.0
@@ -12,7 +12,7 @@ specifiers:
   hexo-generator-index: ^3.0.0
   hexo-generator-sitemap: ^3.0.1
   hexo-generator-tag: ^2.0.0
-  hexo-helper-crypto: ^1.0.6
+  hexo-helper-crypto: ^1.0.7
   hexo-html-minifier: ^1.0.0
   hexo-renderer-ejs: ^2.0.0
   hexo-renderer-pandoc: ^0.3.1
@@ -22,7 +22,7 @@ specifiers:
 dependencies:
   hexo: 6.3.0
   hexo-autoprefixer: 2.0.0
-  hexo-babel: 1.0.13
+  hexo-babel: 1.0.14
   hexo-clean-css: 2.0.0
   hexo-deployer-git: 4.0.0
   hexo-generator-archive: 2.0.0
@@ -31,7 +31,7 @@ dependencies:
   hexo-generator-index: 3.0.0
   hexo-generator-sitemap: 3.0.1
   hexo-generator-tag: 2.0.0
-  hexo-helper-crypto: 1.0.6
+  hexo-helper-crypto: 1.0.7
   hexo-html-minifier: 1.0.0
   hexo-renderer-ejs: 2.0.0
   hexo-renderer-pandoc: 0.3.1
@@ -1399,7 +1399,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001457
-      electron-to-chromium: 1.4.305
+      electron-to-chromium: 1.4.306
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
     dev: false
@@ -1659,8 +1659,8 @@ packages:
       jake: 10.8.5
     dev: false
 
-  /electron-to-chromium/1.4.305:
-    resolution: {integrity: sha512-WETy6tG0CT5gm1O+xCbyapWNsCcmIvrn4NHViIGYo2AT8FV2qUCXdaB+WqYxSv/vS5mFqhBYnfZAAkVArjBmUg==}
+  /electron-to-chromium/1.4.306:
+    resolution: {integrity: sha512-1zGmLFfpcs2v7ELt/1HgLZF6Gm2CCHaAdNKxd9Ge4INSU/HDYWjs7fcWU6eVMmhkpwmh+52ZrGCUU+Ji9OJihA==}
     dev: false
 
   /encodeurl/1.0.2:
@@ -1807,8 +1807,8 @@ packages:
       postcss: 7.0.39
     dev: false
 
-  /hexo-babel/1.0.13:
-    resolution: {integrity: sha512-7JETGh5MbQ3tGvX9Hi4X//cI0tnE864AWioN+GQfSwhSfyoQ2cep7wc3idxNbIVlXIZY/PR6E2nAerUyskRFCQ==}
+  /hexo-babel/1.0.14:
+    resolution: {integrity: sha512-VoX8XAk0uhE1UHiN5KYXrdNAfntwe7qVhJSgkckYmsLwigz8OiUQsoY4Rn4mP6aCWiBmWKqtTIUkYKoKdh0m0Q==}
     dependencies:
       '@babel/core': 7.21.0
       '@babel/preset-env': 7.20.2_@babel+core@7.21.0
@@ -1932,8 +1932,8 @@ packages:
       hexo-pagination: 3.0.0
     dev: false
 
-  /hexo-helper-crypto/1.0.6:
-    resolution: {integrity: sha512-bpjDvGDwFQpNCLJ0IWui5Iq68MogE3FG0Zh8wRUC1da/vvb22A3bTpjH6oUQDdHuH3A4Td20aqiKLjSsmhbGUg==}
+  /hexo-helper-crypto/1.0.7:
+    resolution: {integrity: sha512-vBbHeJtlZMTf5prI+JjIwHSOWxudTim33fJUmNGBTAoXfdu+nO4bxgMLvIw+6/ml/jYM2HHyRtUyYIXHf9nYcA==}
     dependencies:
       crypto-js: 4.1.1
     dev: false
