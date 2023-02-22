@@ -56,7 +56,7 @@ deploy:
 设置好参数，使用下面的命令安装部署插件，安装了才能部署到 GitHub Pages
 
 ```bash
-npm i -S hexo-deployer-git
+pnpm add hexo-deployer-git
 ```
 
 在博客根目录下使用 `hexo d -g` 部署到 GitHub Pages

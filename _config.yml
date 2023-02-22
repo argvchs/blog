@@ -82,7 +82,6 @@ tag_map:
     GitHub: github
     Git: git
     字体: fonts
-    NPM: npm
     C/C++: c-cpp
     C++20: cpp20
     Fast-IO: fast-io

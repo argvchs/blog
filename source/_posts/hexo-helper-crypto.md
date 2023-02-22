@@ -17,7 +17,7 @@ description: |
 ## 安装
 
 ```bash
-npm i hexo-helper-crypto -S
+pnpm add hexo-helper-crypto
 ```
 
 ## 使用

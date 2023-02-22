@@ -30,13 +30,13 @@ $$
 在根目录下执行以下命令，删除默认渲染器
 
 ```bash
-npm un hexo-renderer-marked
+pnpm rm hexo-renderer-marked
 ```
 
 安装 Pandoc 和 MathJax
 
 ```bash
-npm i hexo-renderer-pandoc hexo-filter-mathjax -S
+pnpm add hexo-renderer-pandoc hexo-filter-mathjax
 ```
 
 ## 2. 配置 Pandoc 和 MathJax

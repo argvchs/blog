@@ -14,7 +14,7 @@ CSS 兼容性太麻烦了，所以要自动处理
 Hexo-Autoprefixer 可以自动处理 CSS 兼容性
 
 ```bash
-npm i hexo-autoprefixer -S
+pnpm add hexo-autoprefixer
 ```
 
 ## 2. 配置

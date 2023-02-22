@@ -28,7 +28,7 @@ Markdown 可以看 GitHub 官方文档：[基本撰写和格式语法](https://d
     <https://nodejs.org>
 
     选择 LTS 或 Current 版本，安装一路确认即可
-    完成后用 `node -v` 和 `npm -v` 两个命令检查，有提示即安装正确
+    完成后用 `node -v` 命令检查，有提示即安装正确
 
 ## 2. 启用 Corepack（可选）
 
@@ -39,16 +39,14 @@ Markdown 可以看 GitHub 官方文档：[基本撰写和格式语法](https://d
 
 ![pnpm-vs-npm-vs-yarn](https://static-argvchs.netlify.app/images/pnpm-vs-npm-vs-yarn.svg)
 
-虽然 PNPM 较快，但安装包有时可能会出现错误
+## 3. 安装 Hexo
 
-## 3. 安装 Hexo CLI
-
-输入命令 `npm i -g hexo-cli`， 用 `hexo -v` 检查安装
 新建一个文件夹，作为博客目录，`cd` 进入文件夹，运行命令
 
 ```bash
+pnpm add hexo-cli -g
 hexo init --no-install
-npm i
+pnpm i
 ```
 
 Hexo 官方文档：<https://hexo.io/zh-cn/docs>
@@ -65,8 +63,8 @@ Hexo 官方文档：<https://hexo.io/zh-cn/docs>
 
 -   生成静态文件并部署到网站：`hexo d -g` 或 `hexo g -d`
 
--   创建新文章：`hexo new <post-name>`
+-   创建新文章：`hexo new <file>`
 
-**P.S. 创建新文章命令中的 `<post-name>` 是文件名，标题在文章中的 `title` 参数中修改**
+**P.S. 创建新文章命令中的 `<file>` 是文件名，标题在文章中的 `title` 参数中修改**
 
 下一篇：[Hexo 博客搭建教程 II](/2022/04/17/hexo-blog-2)

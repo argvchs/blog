@@ -15,7 +15,7 @@ Hexo 压缩静态文件，优化访问速度
 运行以下命令安装
 
 ```bash
-npm i hexo-html-minifier hexo-clean-css hexo-uglify -S
+pnpm add hexo-html-minifier hexo-clean-css hexo-uglify
 ```
 
 ## 2. 添加配置

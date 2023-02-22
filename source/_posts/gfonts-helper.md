@@ -1,7 +1,7 @@
 ---
 title: GFonts-Helper 使用说明
 date: 2022-07-25 13:29:33
-tags: [字体, NPM]
+tags: 字体
 categories: 工具
 ---
 
@@ -12,7 +12,7 @@ categories: 工具
 ## 1. 安装
 
 ```bash
-npm i -g gfonts-helper
+pnpm add gfonts-helper -g
 ```
 
 ## 2. 使用
