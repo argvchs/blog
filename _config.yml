@@ -156,10 +156,13 @@ pandoc:
     extra:
         - no-highlight:
     extensions:
-        - +hard_line_breaks
+        - +abbreviations
+        - +autolink_bare_uris
         - +emoji
+        - +hard_line_breaks
         - -implicit_figures
-        - +reference-links
+        - +mark
+        - +short_subsuperscripts
 
 babel:
     options:
