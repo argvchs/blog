@@ -152,13 +152,43 @@ archive_generator:
     monthly: false
     daily: false
 
-pandoc:
-    extra:
-        - "no-highlight":
-    extensions:
-        - "+hard_line_breaks"
-        - "+emoji"
-        - "-implicit_figures"
+markdown:
+    preset: default
+    render:
+        html: true
+        xhtmlOut: false
+        langPrefix: ""
+        breaks: true
+        linkify: true
+        typographer: true
+        quotes: "“”‘’"
+    enable_rules:
+    disable_rules:
+    plugins:
+        - markdown-it-abbr
+        - markdown-it-attrs
+        - markdown-it-cjk-breaks
+        - markdown-it-container
+        - markdown-it-deflist
+        - markdown-it-emoji
+        - markdown-it-footnote
+        - markdown-it-ins
+        - markdown-it-mark
+        - markdown-it-sub
+        - markdown-it-sup
+    anchors:
+        level: 1
+        collisionSuffix: ""
+        permalink: true
+        permalinkClass: header-anchor
+        permalinkSide: right
+        permalinkSymbol: ¶
+        case: 1
+        separator: "-"
+    images:
+        lazyload: false
+        prepend_root: false
+        post_asset: false
 
 babel:
     options:
