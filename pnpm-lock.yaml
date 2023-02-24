@@ -18,6 +18,7 @@ specifiers:
   hexo-html-minifier: ^1.0.0
   hexo-renderer-ejs: ^2.0.0
   hexo-renderer-markdown-it: ^7.0.0
+  hexo-renderer-pandoc: ^0.3.1
   hexo-server: ^3.0.0
   hexo-theme-particlex: github:argvchs/hexo-theme-particlex#custom
   hexo-uglify: ^2.0.0
@@ -38,8 +39,9 @@ dependencies:
   hexo-html-minifier: 1.0.0
   hexo-renderer-ejs: 2.0.0
   hexo-renderer-markdown-it: 7.0.0
+  hexo-renderer-pandoc: 0.3.1
   hexo-server: 3.0.0
-  hexo-theme-particlex: github.com/argvchs/hexo-theme-particlex/4429f07c8888fe5e0200daea7b6cbe1dd17a903a
+  hexo-theme-particlex: github.com/argvchs/hexo-theme-particlex/e5ec5cbb6bf64751c42645df8c1146f0e3d8deca
   hexo-uglify: 2.0.0
 
 devDependencies:
@@ -1993,6 +1995,10 @@ packages:
       markdown-it-sup: 1.0.0
     dev: false
 
+  /hexo-renderer-pandoc/0.3.1:
+    resolution: {integrity: sha512-ZTUzLkJHFA6OCzk37xR9PWYydLwuv4qV7iJMe5p88gxiIo3d1M/dOwsIXEra/olcA/y9UKw57qASCby1NseNsw==}
+    dev: false
+
   /hexo-server/3.0.0:
     resolution: {integrity: sha512-u4s0ty9Aew6jV+a9oMrXBwhrRpUQ0U8PWM/88a5aHgDru58VY81mVrxOFxs788NAsWQ8OvsJtF5m7mnXoRnSIA==}
     engines: {node: '>=12.13.0'}
@@ -2908,8 +2914,8 @@ packages:
   /yallist/3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  github.com/argvchs/hexo-theme-particlex/4429f07c8888fe5e0200daea7b6cbe1dd17a903a:
-    resolution: {tarball: https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/4429f07c8888fe5e0200daea7b6cbe1dd17a903a}
+  github.com/argvchs/hexo-theme-particlex/e5ec5cbb6bf64751c42645df8c1146f0e3d8deca:
+    resolution: {commit: e5ec5cbb6bf64751c42645df8c1146f0e3d8deca, repo: git+ssh://git@github.com/argvchs/hexo-theme-particlex.git, type: git}
     name: hexo-theme-particlex
-    version: 2.4.8
+    version: 2.4.9
     dev: false
