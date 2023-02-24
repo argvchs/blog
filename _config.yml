@@ -167,7 +167,6 @@ markdown:
     plugins:
         - markdown-it-abbr
         - markdown-it-attrs
-        - markdown-it-cjk-breaks
         - markdown-it-container
         - markdown-it-deflist
         - markdown-it-emoji
