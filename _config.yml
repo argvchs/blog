@@ -154,11 +154,12 @@ archive_generator:
 
 pandoc:
     extra:
-        - "no-highlight":
+        - no-highlight:
     extensions:
-        - "+hard_line_breaks"
-        - "+emoji"
-        - "-implicit_figures"
+        - +hard_line_breaks
+        - +emoji
+        - -implicit_figures
+        - +reference-links
 
 babel:
     options:

@@ -15,22 +15,38 @@ categories: 教程
 
 **`<user>` 和 `<email>` 分别是你自己的 GitHub 用户名和注册时使用的邮箱**
 
-注册完成后回到主页，点击左边的绿色按钮 New，新建一个仓库，名称为`<user>.github.io`，比如我的用户名是 argvchs，那么就是 argvchs.github.io，然后点击 Create repositpory 创建
+注册完成后回到主页，点击左边的 New 新建仓库，名称为 `<user>.github.io`，然后点击 Create repositpory 完成创建
 
-在命令行输入命令 `ssh-keygen -t rsa -C "email@email.com"`，获取 SSH 密钥，这个过程会提示你输入一些东西，一直回车就行了
+在命令行输入命令，获取 SSH 密钥，这个过程会提示你输入一些东西，一直回车就行了
 
-输入命令 `notepad %USERPROFILE%\.ssh\id_rsa.pub`，打开 SSH 密钥，先不用管，后面会用到
+```bash
+ssh-keygen -t ed25519 -C <email>
+```
 
-打开你 GitHub 右上角的头像中的 Settings 设置，点击左边的 SSH and GPG keys，点击右上角的 New SSH key，将刚才打开的 SSH 密钥复制到 Key 中，Title 不用写，点击 Add SSH key 添加密钥
+输入以下命令复制 SSH 密钥，先不用管，后面会用到
 
-设置好 SSH 密钥后用 `ssh -T git@github.com` 检测，如果出现 `Hi, XXX! You've successfully authenticated` 则配置成功
+```bash
+clip < ~/.ssh/id_ed25519.pub
+```
+
+如果你用 Windows CMD
+
+```batch
+clip < %USERPROFILE%\.ssh\id_ed25519.pub
+```
+
+打开你 GitHub 右上角的头像中的 Settings 设置，点击左边的 SSH and GPG keys，点击右上角的 New SSH key，将 SSH 密钥复制到 Key 中，Title 不用写，点击 Add SSH key 添加密钥
+
+设置好 SSH 密钥后用 `ssh -T git@github.com` 检测，如果出现 `Hi! You've successfully authenticated` 则配置成功
 
 ## 2. 更改默认分支（可选）
 
+默认分支以前是 `master`，现在改成了 `main`
+网上搜到关于 GitHub 的文章，大部分默认分支都是 `master`
+
 打开 <https://github.com/settings/repositories>，第一个输入框就是你的默认分支，更改后点击 Update 即可
 
-默认分支以前是 `master`，现在是 `main`，网上搜到关于 GitHub 的文章，大部分默认分支都是 `master`
-不更改也可以，但是之后修改 `_config.yml` 的参数时要将 `branch: master` 改为 `branch: main`
+也可以不更改，但以后的操作都要改成 `main`
 
 ## 3. 部署到 GitHub Pages
 
@@ -45,7 +61,6 @@ git config --global user.email "<email>"
 
 ```yaml
 url: https://<user>.github.io/
-# ...
 deploy:
     type: git
     repo: git@github.com:<user>/<user>.github.io.git

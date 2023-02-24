@@ -39,4 +39,4 @@ type: about
 | Twitter | Argvchs: [**argvchs**](https://twitter.com/argvchs)                                     |
 |  洛谷   | Argvchs: [**533270**](https://www.luogu.com.cn/user/533270)                             |
 
-<img src="https://static-argvchs.netlify.app/images/avatar.jpg" alt="avatar" style="width: 50%; border-radius: 50%; margin-top: 50px">
+![avatar](https://static-argvchs.netlify.app/images/avatar.jpg){width=50% style="border-radius: 50%"}
