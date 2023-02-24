@@ -35,8 +35,12 @@ GitHub 打不开可以用[镜像站](https://www.library.ac.cn)
 ## 3. 部署代理
 
 打开 [Heroku](https://www.heroku.com)，点击中间的 Create new app 按钮，输入你喜欢的项目名称，创建项目
+
 下载 [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)，安装完运行 `heroku -v`检测安装
-然后登陆 Heroku CLI，运行`heroku login -i`，填入你的邮箱和密码 找到你刚才下载 CORS Anywhere 项目的位置，`cd` 到项目根目录，执行以下命令部署
+
+然后登陆 Heroku CLI，运行 `heroku login -i`，填入你的邮箱和密码
+找到你刚才下载 CORS Anywhere 项目的位置，`cd` 到项目根目录，执行以下命令部署
+
 **`<appname>` 是你刚才设置的项目名称**
 
 ```bash
@@ -53,6 +57,7 @@ git push heroku master
 
 进入你 Heroku 的项目主页，点击右边的 Settings，找到 Reveal Config Vars 按钮，打开配置变量设置
 在左边输入 `CORSANYWHERE_BLACKLIST`（黑名单）或 `CORSANYWHERE_WHITELIST`（白名单），在右边输入你要设置黑/白名单的网站域名，要加上 `http://` 或 `https://` 前缀，用 `,` 分割
+
 **同一个域名要分别用 `http://` 和 `https://` 设置两次，协议不同被视为不同源**
 
 ## 5. 修改 Gitalk 设置

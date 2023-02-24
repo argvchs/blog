@@ -13,7 +13,7 @@ categories: 教程
 
 [Hexo](https://hexo.io) 是一个快速、简洁且高效的博客框架，Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页
 
-Markdown 可以看 GitHub 官方文档：[基本撰写和格式语法](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+Markdown 可以看 GitHub 的[基本撰写和格式语法](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 ## 1. 安装 Git 和 Node.js
 
@@ -49,7 +49,7 @@ pnpm i
 
 -   生成静态文件：`hexo g`
 
--   清除静态文件：`hexo cl`
+-   清空静态文件：`hexo cl`
 
 -   在本地运行：`hexo s`
 

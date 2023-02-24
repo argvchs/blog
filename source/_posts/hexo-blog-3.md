@@ -35,7 +35,7 @@ categories: 教程
 
 ```html
 <script src="/js/<file>"></script>
-<link rel="stylesheet" href="/css/<file>">
+<link rel="stylesheet" href="/css/<file>" />
 ```
 
 ## 3. 我用的自定义文件
@@ -51,7 +51,7 @@ categories: 教程
 
     ```html
     <div id="L2dCanvas"></div>
-    <link rel="stylesheet" href="/css/live2d.min.css">
+    <link rel="stylesheet" href="/css/live2d.min.css" />
     <script src="https://cdn.staticfile.org/pixi.js/4.6.1/pixi.min.js"></script>
     <script src="/js/live2d.min.js"></script>
     <script>
@@ -77,7 +77,10 @@ categories: 教程
 -   使用：
 
     ```html
-    <canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas>
+    <canvas
+        id="fireworks"
+        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"
+    ></canvas>
     <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
     <script src="/js/fireworks.min.js"></script>
     ```
@@ -89,7 +92,10 @@ categories: 教程
 -   使用：
 
     ```html
-    <canvas id="background" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"></canvas>
+    <canvas
+        id="background"
+        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"
+    ></canvas>
     <script src="/js/background.min.js"></script>
     ```
 
@@ -101,7 +107,7 @@ categories: 教程
 
     ```html
     <div id="cursor"></div>
-    <link rel="stylesheet" href="/css/cursor.min.css">
+    <link rel="stylesheet" href="/css/cursor.min.css" />
     <script src="/js/cursor.min.js"></script>
     ```
 
@@ -141,12 +147,14 @@ Markdown 是支持渲染 HTML 的，所以可以实现各种效果
     Markdown 注释和 HTML 一样
 
     ```markdown
-    <!-- comment... -->
+    <!-- ... -->
     ```
 
     特别的，用 `<!-- more -->` 可以控制主页预览内容，后面的内容在显示全文时才出现
 
 -   解决部分主题没有块引用的样式
+
+    ~~例如 Particle~~
 
     块引用会解析成 `<blockquote>` 标签，添加自定义 CSS 即可
 

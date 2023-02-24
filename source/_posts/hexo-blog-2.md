@@ -11,8 +11,10 @@ categories: 教程
 
 ## 1. 安装主题
 
-首先在[这里](https://hexo.io/themes/)选择一个主题
+首先在[这里](https://hexo.io/themes)选择一个主题
+
 上面的图片是预览页，下面的蓝色链接是 GitHub 项目页
+
 选好主题后就要安装，在博客根目录下运行下面的命令将主题 Clone 到本地
 
 **`<theme-link>` 为主题链接，`<theme-name>` 为主题名称**
@@ -90,7 +92,7 @@ exclude: # 排除文件/文件夹
 ignore: # 忽略文件/文件夹
 ```
 
-由于参数过多，只写了一部分，其他可以参考 [Hexo 官方文档](https://hexo.io/zh-cn/docs/configuration.html)
+由于参数过多，只写了一部分，其他可以参考 [Hexo 文档](https://hexo.io/zh-cn/docs/configuration.html)
 
 **P.S.：`titlecase` 参数改变后部分主题可能检测不到 Categories 和 Tags 页面**
 

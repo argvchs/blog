@@ -15,7 +15,7 @@ MinGW-w64 安装教程
 
 ## 2. 找到 MinGW-w64
 
-打开 <https://www.mingw-w64.org/downloads>
+打开 https://www.mingw-w64.org/downloads
 
 ![mingw-w64-download](https://static-argvchs.netlify.app/images/mingw-w64-download.png)
 

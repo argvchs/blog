@@ -12,7 +12,7 @@ categories: 工具
 ## 安装
 
 ```bash
-pnpm add hexo-babel @babel/core @babel/preset-env
+pnpm add hexo-babel
 ```
 
 ## 配置
@@ -26,21 +26,19 @@ babel:
 
 `options` 详见 [Options · Babel](https://babel.dev/docs/en/options) 和 [@babel/preset-env · Babel](https://babel.dev/docs/en/babel-preset-env#options)
 
-例如这是一种配置
+例如这是一种配置（要先安装 `@babel/preset-env`）
+
+```bash
+pnpm add @babel/core @babel/preset-env -D
+```
 
 ```yaml
 babel:
-    options: {
-        "presets": [
-            [
-                "@babel/preset-env",
-                {
-                    "targets": "last 5 versions, not dead, > 0.3%"
-                }
-            ]
-        ],
-        "sourceType": "script"
-    }
+    options:
+        presets:
+            - - "@babel/preset-env"
+              - targets: last 5 versions, not dead, > 0.3%
+        sourceType: script
     exclude:
         - "*.min.js"
 ```

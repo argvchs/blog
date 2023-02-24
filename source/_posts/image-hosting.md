@@ -43,7 +43,7 @@ GitHub 已经有 Fine-grained Token 了，但不能永久使用啊，所以还�
 
 GitHub 太慢了，我们需要用 [Netlify](https://netlify.com) 加速一下
 
-我太懒就不说了，和加速 `github.io` 一样
+我太懒就不说了，和加速 Github Pages 一样
 可以依照[之前的文章](/2022/04/17/hexo-blog-4/)设置一下
 
 弄完，把 PicGo 复制下的链接这样修改一下即可 ~~突然发现还可以缩短链接~~

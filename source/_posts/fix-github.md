@@ -15,7 +15,7 @@ categories: 其他
 
 按照[教程](https://hub.yzuu.cf/docmirror/dev-sidecar)安装即可
 
-附镜像站列表：<https://www.library.ac.cn>
+附镜像站列表：https://www.library.ac.cn
 
 > 这个 Dev-Sidecar 其实是有 :ladder: 功能的
 >

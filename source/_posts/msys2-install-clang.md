@@ -11,7 +11,7 @@ categories: 工具
 
 ## 1. 安装 MSYS2
 
-<https://www.msys2.org/#installation>
+https://www.msys2.org/#installation
 
 一路确认即可
 

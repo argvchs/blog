@@ -21,7 +21,7 @@ $$
 网上很大一部分文章都是介绍 Kramed 渲染器的，可我的博客总是无法正确显示，就写了这篇文章
 
 > 如果你正在使用 [ParticleX 主题](/2022/05/10/hexo-theme-particlex)，可以忽略 MathJax 的内容，因为主题内置了 $\KaTeX$
-> 但是 Pandoc 渲染器还是很好的，可以用一下
+> 但是 Pandoc 渲染器还是很好的
 
 ## 1. 安装环境
 
@@ -46,11 +46,15 @@ pnpm add hexo-renderer-pandoc hexo-filter-mathjax
 ```yaml
 pandoc:
     extra:
-        - "no-highlight":
+        - no-highlight:
     extensions:
-        - "+hard_line_breaks"
-        - "+emoji"
-        - "-implicit_figures"
+        - +abbreviations
+        - +autolink_bare_uris
+        - +emoji
+        - +hard_line_breaks
+        - -implicit_figures
+        - +mark
+        - +short_subsuperscripts
 
 mathjax:
     tags: none # or 'ams' or 'all'
