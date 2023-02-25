@@ -73,40 +73,40 @@ category_map:
     其他: other
     算法: algorithm
 tag_map:
-    Python: python
-    PIP: pip
-    Crypto-js: crypto-js
-    Gitalk: gitalk
-    CORS: cors
-    Heroku: heroku
-    GitHub: github
-    Git: git
-    字体: fonts
-    C/C++: c-cpp
-    C++20: cpp20
-    Fast-IO: fast-io
-    Hexo: hexo
-    Giscus: giscus
-    评论: comment
-    插件: plugin
-    LaTeX: latex
-    Node.js: node-js
-    MinGW: mingw
-    GCC: gcc
-    MSYS2: msys2
-    Clang: clang
-    主题: theme
-    ParticleX: particlex
-    图床: image-hosting
-    Scenexe.io: scenexe-io
     Arras.io: arras-io
+    Babel: babel
+    C++20: cpp20
+    C/C++: c-cpp
+    CDN: cdn
+    CORS: cors
+    CSS: css
+    Clang: clang
+    Crypto-js: crypto-js
+    Fast-IO: fast-io
+    GCC: gcc
+    Giscus: giscus
+    Git: git
+    GitHub: github
+    Gitalk: gitalk
+    Heroku: heroku
+    Hexo: hexo
     IO Game: io-game
     JS: js
-    CSS: css
-    Babel: babel
+    LaTeX: latex
+    MSYS2: msys2
+    MinGW: mingw
     Netlify: netlify
+    Node.js: node-js
+    PIP: pip
+    ParticleX: particlex
+    Python: python
+    Scenexe.io: scenexe-io
     Vercel: vercel
-    CDN: cdn
+    插件: plugin
+    评论: comment
+    图床: image-hosting
+    主题: theme
+    字体: fonts
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
