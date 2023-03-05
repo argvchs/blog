@@ -44,16 +44,8 @@ theme: particlex
     ```yaml
     highlight:
         enable: false
-        line_number: true
-        auto_detect: false
-        tab_replace: ""
-        wrap: true
-        hljs: false
     prismjs:
         enable: false
-        preprocess: true
-        line_number: true
-        tab_replace: ""
     ```
 
     如果使用 Pandoc 还需要设置一下
@@ -85,7 +77,6 @@ theme: particlex
 avatar: # Avatar image
 headBlockEnable: true # Home page info block
 background: # Home page background image
-highlightStyle: github # Highlight style
 ```
 
 -   导航栏
@@ -186,9 +177,21 @@ highlightStyle: github # Highlight style
             - default
     ```
 
--   渲染数学公式
+-   代码高亮
 
-    使用 KaTeX 渲染数学公式，默认关闭
+    使用 Highlight.js 代码高亮
+
+    样式可以在[这里](https://highlightjs.org/static/demo)选择，默认为 GitHub
+
+    ```yaml
+    highlight:
+        enable: false
+        style: github
+    ```
+
+-   数学渲染
+
+    使用 KaTeX 渲染数学公式
 
     ```yaml
     math:
@@ -197,11 +200,11 @@ highlightStyle: github # Highlight style
 
 -   文章置顶
 
-    在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `top` 作为置顶参数，越大越靠前，默认为 0
+    在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `pinned` 作为置顶参数，越大越靠前，默认为 0
 
 -   文章加密
 
-    使用 AES 加密算法，在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `password` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/argvchs/hexo-helper-crypto)**
+    使用 AES 加密算法，在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `secret` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/argvchs/hexo-helper-crypto)**
 
     ```yaml
     crypto:
@@ -210,7 +213,7 @@ highlightStyle: github # Highlight style
 
 -   搜索
 
-    嵌入到 Archives 中的搜索，默认关闭
+    嵌入到 Archives 中的搜索
 
     目前只支持搜索文档标题（我太弱了）
 
