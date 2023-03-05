@@ -39,7 +39,7 @@ dependencies:
   hexo-renderer-ejs: 2.0.0
   hexo-renderer-pandoc: 0.3.1
   hexo-server: 3.0.0
-  hexo-theme-particlex: github.com/argvchs/hexo-theme-particlex/adc676da9edbdcf1cb9d266d3d9df3d4e51fc641
+  hexo-theme-particlex: github.com/argvchs/hexo-theme-particlex/a89a64debb9897f0bee991a908ab53b46f7d5907
   hexo-uglify: 2.0.0
 
 devDependencies:
@@ -2762,10 +2762,10 @@ packages:
   /yallist/3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  github.com/argvchs/hexo-theme-particlex/adc676da9edbdcf1cb9d266d3d9df3d4e51fc641:
-    resolution: {tarball: https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/adc676da9edbdcf1cb9d266d3d9df3d4e51fc641}
+  github.com/argvchs/hexo-theme-particlex/a89a64debb9897f0bee991a908ab53b46f7d5907:
+    resolution: {tarball: https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/a89a64debb9897f0bee991a908ab53b46f7d5907}
     name: hexo-theme-particlex
-    version: 2.4.11
+    version: 2.5.0
     dependencies:
       hexo-helper-crypto: 1.1.0
       hexo-renderer-ejs: 2.0.0
