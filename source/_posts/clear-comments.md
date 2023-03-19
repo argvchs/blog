@@ -1,7 +1,8 @@
 ---
 title: 评论清除事件记录
 date: 2023-02-19 16:47:28
-tags: [评论]
+tags:
+    - 评论
 categories: 其他
 pinned: 1
 ---

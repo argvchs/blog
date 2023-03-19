@@ -1,7 +1,9 @@
 ---
 title: Giscus
 date: 2022-12-06 18:35:05
-tags: [Giscus, 评论]
+tags:
+    - Giscus
+    - 评论
 categories: 其他
 ---
 

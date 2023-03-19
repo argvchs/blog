@@ -1,7 +1,9 @@
 ---
 title: Hexo 博客搭建教程 II
 date: 2022-04-17 16:02:21
-tags: [Hexo, 主题]
+tags:
+    - Hexo
+    - 主题
 categories: 教程
 ---
 

@@ -1,7 +1,9 @@
 ---
 title: Hexo 压缩静态文件
 date: 2022-08-27 16:32:22
-tags: [Hexo, Node.js]
+tags:
+    - Hexo
+    - Node.js
 categories: 教程
 ---
 

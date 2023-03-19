@@ -1,7 +1,9 @@
 ---
 title: 搭建图床
 date: 2022-11-18 16:06:43
-tags: [图床, Netlify]
+tags:
+    - 图床
+    - Netlify
 categories: 教程
 ---
 

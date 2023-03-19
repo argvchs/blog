@@ -1,7 +1,9 @@
 ---
 title: Hexo 博客使用 LaTeX
 date: 2022-06-17 22:48:06
-tags: [Hexo, LaTeX]
+tags:
+    - Hexo
+    - LaTeX
 categories: 教程
 ---
 

@@ -1,7 +1,11 @@
 ---
 title: MSYS2 安装 Clang
 date: 2022-09-10 12:22:17
-tags: [C/C++, MSYS2, GCC, Clang]
+tags:
+    - C/C++
+    - MSYS2
+    - GCC
+    - Clang
 categories: 工具
 ---
 

@@ -1,7 +1,10 @@
 ---
 title: Hexo-Babel
 date: 2022-12-13 15:51:22
-tags: [Hexo, 插件, Babel]
+tags:
+    - Hexo
+    - 插件
+    - Babel
 categories: 工具
 ---
 

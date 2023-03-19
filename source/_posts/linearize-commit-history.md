@@ -1,7 +1,9 @@
 ---
 title: 线性化提交历史
 date: 2023-02-26 08:47:56
-tags: [Git, GitHub]
+tags:
+    - Git
+    - GitHub
 categories: 其他
 ---
 

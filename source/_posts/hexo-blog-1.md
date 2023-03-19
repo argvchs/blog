@@ -1,7 +1,10 @@
 ---
 title: Hexo 博客搭建教程 I
 date: 2022-04-17 12:05:13
-tags: [Hexo, Git, Node.js]
+tags:
+    - Hexo
+    - Git
+    - Node.js
 categories: 教程
 ---
 

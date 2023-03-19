@@ -1,7 +1,10 @@
 ---
 title: 搭建 CORS Anywhere
 date: 2022-07-04 20:41:42
-tags: [Gitalk, CORS, Heroku]
+tags:
+    - Gitalk
+    - CORS
+    - Heroku
 categories: 教程
 ---
 

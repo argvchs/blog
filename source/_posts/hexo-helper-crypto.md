@@ -1,7 +1,10 @@
 ---
 title: Hexo-Helper-Crypto
 date: 2022-12-08 16:26:33
-tags: [Hexo, 插件, Crypto-js]
+tags:
+    - Hexo
+    - 插件
+    - Crypto-js
 categories: 工具
 secret: "123456"
 description: |

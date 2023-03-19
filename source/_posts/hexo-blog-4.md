@@ -1,7 +1,11 @@
 ---
 title: Hexo 博客搭建教程 IV
 date: 2022-04-17 18:37:18
-tags: [Hexo, GitHub, Netlify, Vercel]
+tags:
+    - Hexo
+    - GitHub
+    - Netlify
+    - Vercel
 categories: 教程
 ---
 

@@ -1,7 +1,9 @@
 ---
 title: EasyPYTool 使用说明
 date: 2022-07-06 15:47:11
-tags: [Python, PIP]
+tags:
+    - Python
+    - PIP
 categories: 工具
 ---
 

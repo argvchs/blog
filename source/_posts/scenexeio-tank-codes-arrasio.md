@@ -1,8 +1,11 @@
 ---
 title: Scenexe.io Tank Codes
 date: 2022-12-04 23:27:21
-tags: [Scenexe.io, Arras.io, IO Game]
-categories: [其他]
+tags:
+    - Scenexe.io
+    - Arras.io
+    - IO Game
+categories: 其他
 ---
 
 **[Scenexe.io Test Server](https://test.scenexe.io)**

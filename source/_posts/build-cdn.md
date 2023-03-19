@@ -1,7 +1,10 @@
 ---
 title: 搭建 CDN
 date: 2023-01-05 15:31:20
-tags: [CDN, GitHub, Netlify]
+tags:
+    - CDN
+    - GitHub
+    - Netlify
 categories: 教程
 ---
 

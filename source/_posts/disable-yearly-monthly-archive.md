@@ -1,7 +1,8 @@
 ---
 title: 禁用年度月度归档
 date: 2023-01-05 17:53:55
-tags: Hexo
+tags:
+    - Hexo
 categories: 其他
 ---
 

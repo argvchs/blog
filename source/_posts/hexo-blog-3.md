@@ -1,7 +1,10 @@
 ---
 title: Hexo 博客搭建教程 III
 date: 2022-04-17 17:25:34
-tags: [Hexo, JS, CSS]
+tags:
+    - Hexo
+    - JS
+    - CSS
 categories: 教程
 ---
 

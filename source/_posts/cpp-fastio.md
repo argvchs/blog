@@ -1,7 +1,10 @@
 ---
 title: C++ Fast-IO
 date: 2022-08-11 13:45:19
-tags: [C/C++, C++20, Fast-IO]
+tags:
+    - C/C++
+    - C++20
+    - Fast-IO
 categories: 算法
 ---
 

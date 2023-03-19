@@ -1,7 +1,10 @@
 ---
 title: 安装 MinGW-w64
 date: 2022-07-21 22:03:08
-tags: [C/C++, MinGW, GCC]
+tags:
+    - C/C++
+    - MinGW
+    - GCC
 categories: 工具
 ---
 

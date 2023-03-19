@@ -1,7 +1,9 @@
 ---
 title: Hexo 自动处理 CSS 兼容性
 date: 2022-12-12 14:22:40
-tags: [Hexo, CSS]
+tags:
+    - Hexo
+    - CSS
 categories: 工具
 ---
 
