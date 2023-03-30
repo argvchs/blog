@@ -27,6 +27,13 @@ categories: 教程
 ssh-keygen -t ed25519 -C <email>
 ```
 
+然后添加到 SSH-Agent
+
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
 输入以下命令复制 SSH 密钥，先不用管，后面会用到
 
 ```bash
