@@ -67,7 +67,7 @@ git push heroku master
 
 部署完代理，就要修改 Gitalk 了，这里给出了两种方法，根据你主题文件夹 `_config.yml` 配置选择
 
-## 5.1 主题有 `gitalk/proxy` 配置
+## 5.1. 主题有 `gitalk/proxy` 配置
 
 有这个配置当然最好，将其修改为以下内容
 
@@ -77,7 +77,7 @@ gitalk:
     proxy: https://<appname>.herokuapp.com/https://github.com/login/oauth/access_token
 ```
 
-## 5.2 没有 `gitalk/proxy` 配置
+## 5.2. 没有 `gitalk/proxy` 配置
 
 没有配置，就要自己修改了，从你主题文件夹下，找出有类似以下内容的文件，**可能细节不太一样**
 

@@ -93,7 +93,7 @@ pnpm add hexo-deployer-git
 
 其实试一试就会了，不过还是把教程写一下吧（
 
-## 4.1 Vercel
+## 4.1. Vercel
 
 先注册一个 [Vercel](https://vercel.com/login) 帐号，通过 GitHub 注册
 
@@ -101,7 +101,7 @@ pnpm add hexo-deployer-git
 
 上传完成点击 Goto Dashboard 来到项目主页，选择顶部的 Settings，在 Project Name 中更改你网站的名称
 
-## 4.2 Netlify
+## 4.2. Netlify
 
 先注册一个 [Netlify](https://app.netlify.com/) 帐号，通过 GitHub 注册
 

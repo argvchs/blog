@@ -43,7 +43,7 @@ categories: 教程
 
 # 3. 我用的自定义文件
 
-## 3.1 `live2d.min.js`：Live2D 组件，需要 PIXI.js
+## 3.1. `live2d.min.js`：Live2D 组件，需要 PIXI.js
 
 **已被弃用了，因为写的太乱并且很卡**
 
@@ -75,7 +75,7 @@ categories: 教程
 -   [`live2d.min.css`](https://static-argvchs.netlify.app/css/live2d.min.css)
 -   [`live2d.zip`](https://static-argvchs.netlify.app/assets/model.zip)
 
-## 3.2 `fireworks.js`：鼠标点击特效，需要 Anime.js
+## 3.2. `fireworks.js`：鼠标点击特效，需要 Anime.js
 
 使用：
 
@@ -91,7 +91,7 @@ categories: 教程
 下载：
 -   [`fireworks.min.js`](https://static-argvchs.netlify.app/js/fireworks.min.js)
 
-## 3.3 `background.js`：流星背景特效
+## 3.3. `background.js`：流星背景特效
 
 使用：
 
@@ -106,7 +106,7 @@ categories: 教程
 下载：
 -   [`background.min.js`](https://static-argvchs.netlify.app/js/background.min.js)
 
-## 3.4 `cursor.js`：鼠标指针特效
+## 3.4. `cursor.js`：鼠标指针特效
 
 使用：
 
@@ -125,7 +125,7 @@ categories: 教程
 Markdown 是支持渲染 HTML 的，所以可以实现各种效果
 如果你要不使 HTML 标签被渲染可以在右边加 `\` 转义，如 `<tag\>`，但还是推荐 `` `code` `` 的代码格式
 
-## 4.1 字体
+## 4.1. 字体
 
 用 `<font>` 来实现字体的样式修改
 
@@ -135,7 +135,7 @@ Markdown 是支持渲染 HTML 的，所以可以实现各种效果
 <font color=<color> size=<size> face=<face>>Text...</font>
 ```
 
-## 4.2 下载文件
+## 4.2. 下载文件
 
 Markdown 下载文件，网上搜到的都是 `post_asset_folder` 这个参数~~（也不知道为什么我不能用）~~
 
@@ -147,7 +147,7 @@ Markdown 下载文件，网上搜到的都是 `post_asset_folder` 这个参数~~
 <a href="<file>" download>Download this file.</a>
 ```
 
-## 4.3 注释
+## 4.3. 注释
 
 Markdown 注释和 HTML 一样
 
@@ -157,7 +157,7 @@ Markdown 注释和 HTML 一样
 
 特别的，用 `<!-- more -->` 可以控制主页预览内容，后面的内容在显示全文时才出现
 
-## 4.4 解决部分主题没有块引用的样式
+## 4.4. 解决部分主题没有块引用的样式
 
 ~~例如 Particle~~
 

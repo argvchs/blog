@@ -36,7 +36,7 @@ GitHub 打不开可以用[镜像站](https://www.library.ac.cn)
 
 # 2. 创建关于页和文章分类
 
-## 2.1 Categories/Tags 文章分类
+## 2.1. Categories/Tags 文章分类
 
 **`<root>` 为你博客的根目录**
 
@@ -48,7 +48,7 @@ GitHub 打不开可以用[镜像站](https://www.library.ac.cn)
 
 如果想让标题大写的话可以将 `title` 参数改为大写，即 `title: Categories`，**但是一些主题是根据标题检测的，可能检测不到**
 
-## 2.2 About 关于页
+## 2.2. About 关于页
 
 先按照创建文章分类的方法，创建 About 页面，然后在下面添加内容即可
 
