@@ -11,7 +11,7 @@ categories: 教程
 
 <!-- more -->
 
-## 1. 安装主题
+# 1. 安装主题
 
 首先在[这里](https://hexo.io/themes)选择一个主题
 
@@ -34,25 +34,25 @@ GitHub 打不开可以用[镜像站](https://www.library.ac.cn)
 
 安装完成后，在博客根目录下的 `_config.yml` 中设置 theme 参数为你的主题名称，就可以切换主题，一般主题在 GitHub 项目页下都会有介绍和配置说明，可以按照说明自定义页面
 
-## 2. 创建关于页和文章分类
+# 2. 创建关于页和文章分类
 
--   Categories/Tags 文章分类
+## 2.1 Categories/Tags 文章分类
 
-    **`<root>` 为你博客的根目录**
+**`<root>` 为你博客的根目录**
 
-    输入命令 `hexo new page categories` 创建 Categories 页面
-    打开 `<root>/source/categories` 下的 `index.md` 文件，在文章前添加 `type: categories`
+输入命令 `hexo new page categories` 创建 Categories 页面
+打开 `<root>/source/categories` 下的 `index.md` 文件，在文章前添加 `type: categories`
 
-    输入命令 `hexo new page tags` 创建 Tags 页面
-    打开 `<root>/source/tags` 下的 `index.md` 文件，在文章前添加 `type: tags`
+输入命令 `hexo new page tags` 创建 Tags 页面
+打开 `<root>/source/tags` 下的 `index.md` 文件，在文章前添加 `type: tags`
 
-    如果想让标题大写的话可以将 `title` 参数改为大写，即 `title: Categories`，**但是一些主题是根据标题检测的，可能检测不到**
+如果想让标题大写的话可以将 `title` 参数改为大写，即 `title: Categories`，**但是一些主题是根据标题检测的，可能检测不到**
 
--   About 关于页
+## 2.2 About 关于页
 
-    先按照创建文章分类的方法，创建 About 页面，然后在下面添加内容即可
+先按照创建文章分类的方法，创建 About 页面，然后在下面添加内容即可
 
-## 3. 自定义网站配置
+# 3. 自定义网站配置
 
 打开博客根目录下的 `_config.yml`，下面是主要参数的介绍
 

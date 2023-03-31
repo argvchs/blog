@@ -7,18 +7,18 @@ categories: 其他
 pinned: 1
 ---
 
-### sry...
+## sry...
 
 用这个文章来记录 Argvchs 的评论清除事件
 不要误会啊，是技术原因导致的，我没有评论审查
 
 <!-- more -->
 
-### 第一次评论清除
+## 第 1 次评论清除
 
 从 Gitalk 改成 Giscus，懒得把 Issue 转换到 Discussion 了
 
-### 第二次评论清除
+## 第 2 次评论清除
 
 现在我的 Giscus 不用自建服务了，直接用 `data-theme` 参数来引入自定义样式
 

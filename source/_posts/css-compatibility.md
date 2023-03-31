@@ -11,7 +11,7 @@ CSS 兼容性太麻烦了，所以要自动处理
 
 <!-- more -->
 
-## 1. 安装插件
+# 1. 安装插件
 
 Hexo-Autoprefixer 可以自动处理 CSS 兼容性
 
@@ -19,7 +19,7 @@ Hexo-Autoprefixer 可以自动处理 CSS 兼容性
 pnpm add hexo-autoprefixer
 ```
 
-## 2. 配置
+# 2. 配置
 
 `_config.yml`
 

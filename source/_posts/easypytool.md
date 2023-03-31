@@ -11,7 +11,7 @@ categories: 工具
 
 <!-- more -->
 
-## 文件
+以下是文件解释
 
 -   `config.sh`
 

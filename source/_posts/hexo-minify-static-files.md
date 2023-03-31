@@ -11,7 +11,7 @@ Hexo 压缩静态文件，优化访问速度
 
 <!-- more -->
 
-## 1. 安装插件
+# 1. 安装插件
 
 压缩插件我原来用的是 Hexo-Neat，但是压缩文件会有 `rebuild by neat` 的信息，就换成了以下 3 个插件
 运行以下命令安装
@@ -20,7 +20,7 @@ Hexo 压缩静态文件，优化访问速度
 pnpm add hexo-html-minifier hexo-clean-css hexo-uglify
 ```
 
-## 2. 添加配置
+# 2. 添加配置
 
 在博客目录下 `_config.yml` 添加如下配置
 
@@ -48,7 +48,7 @@ html_minifier:
     minifyCSS: true
 ```
 
-## 3. 一些问题
+# 3. 一些问题
 
 主题最好更到最新，不然 Hexo-HTML-Minifier 解析 HTML 比较严格，可能有语法错误 ~~例如之前的 ParticleX~~
 如果你的主题不能用，应该是语法错了的原因啊

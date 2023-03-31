@@ -22,7 +22,7 @@ Fast-IO 用了 C++20 Concepts，用以下编译参数即可
 g++ <file>.cpp -o <file> -std=c++20 -Wall -O2 -O3 -Ofast
 ```
 
-## 目录解释
+# 1. 目录解释
 
 ```
 fastio.cpp          # 测试文件
@@ -32,7 +32,7 @@ fastio.speed.in     # 速度测试文件
 README.md           # README
 ```
 
-## 使用
+# 2. 使用
 
 -   `using namespace fastio;`
 
@@ -258,48 +258,49 @@ README.md           # README
 
     将字符串流的数据替换为 s 并移动读取指针到开始
 
-## 接口
+# 3. 接口
 
--   重载运算符
+可以用接口来重载运算符
 
-    **注意要用 `fastio::interface::rstream` `fastio::interface::wstream` 来重载**
+**注意要用 `fastio::interface::rstream` `fastio::interface::wstream` 来重载**
 
-    以下是一些示例程序
+以下是一些示例程序
 
-    ```cpp
-    // overload read/write for std::string
-    auto &operator<<(fastio::interface::rstream &rs, string &s) {
-        static char buf[1005];
-        rs >> buf;
-        s = buf;
-        return rs;
+```cpp
+auto &operator<<(fastio::interface::rstream &rs, string &s) {
+    static char buf[1005];
+    rs >> buf;
+    s = buf;
+    return rs;
+}
+auto &operator<<(fastio::interface::wstream &ws, const string s) { return ws << s.c_str(); }
+```
+
+```cpp
+enum punctuation { comma, simicolon, fullstop, question, exclamatory };
+auto &operator<<(fastio::interface::wstream& ws, const punctuation s) {
+    if (s == comma) ws.put(',');
+    else if (s == simicolon) ws.put(';');
+    else if (s == fullstop) ws.put('.');
+    else if (s == question) ws.put('?');
+    else if (s == exclamatory) ws.put('!');
+    return rs;
+}
+```
+
+```cpp
+template<class T> auto& operator<<(fastio::interface::rstream& rs, const vector<T>& v) {
+    v.clear();
+    T x;
+    int n = rs.read<size_t>();
+    while (n--) {
+        rs >> x;
+        v.push_back(x);
     }
-    auto &operator<<(fastio::interface::wstream &ws, const string s) { return ws << s.c_str(); }
-
-    // overload write for punctuation
-    enum punctuation { comma, simicolon, fullstop, question, exclamatory };
-    auto &operator<<(fastio::interface::wstream& ws, const punctuation s) {
-        if (s == comma) ws.put(',');
-        else if (s == simicolon) ws.put(';');
-        else if (s == fullstop) ws.put('.');
-        else if (s == question) ws.put('?');
-        else if (s == exclamatory) ws.put('!');
-        return rs;
-    }
-
-    // overload read/write for std::vector<T>
-    template<class T> auto& operator<<(fastio::interface::rstream& rs, const vector<T>& v) {
-        v.clear();
-        T x;
-        int n = rs.read<size_t>();
-        while (n--) {
-            rs >> x;
-            v.push_back(x);
-        }
-        return ws;
-    }
-    template<class T> auto& operator<<(fastio::interface::wstream& ws, const vector<T> v) {
-        for (T x : v) ws << x << ' ';
-        return ws;
-    }
-    ```
+    return ws;
+}
+template<class T> auto& operator<<(fastio::interface::wstream& ws, const vector<T> v) {
+    for (T x : v) ws << x << ' ';
+    return ws;
+}
+```

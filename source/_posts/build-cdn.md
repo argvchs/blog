@@ -12,7 +12,7 @@ categories: 教程
 
 <!-- more -->
 
-## 0. 前言
+# 0. 前言
 
 最初是因为 [Giscus](https://giscus-argvchs.netlify.app) 评论的字体和博客的字体相同，但要加载两次，太慢了，就想到可以引用同一个字体文件，其中一个加载，另一个就可以用缓存，但是总会 CORS 出错，于是就单独建了一个 CDN
 
@@ -22,11 +22,11 @@ categories: 教程
 >
 > [这里](https://github.com/argvchs/static)是我的 CDN，部署在 [`static-argvchs.netlify.app`](https://static-argvchs.netlify.app)
 
-## 1. 创建仓库
+# 1. 创建仓库
 
 在 [GitHub](https://github.com/new) 创建一个仓库，存储你的 CDN
 
-## 2. 创建文件
+# 2. 创建文件
 
 创建一个文件夹作为 CDN 项目目录，在目录中创建一个文件 `.github/workflows/sync.yml`
 
@@ -91,7 +91,7 @@ jobs:
         Access-Control-Allow-Origin = "*"
 ```
 
-## 3. 上传 GitHub
+# 3. 上传 GitHub
 
 运行命令
 
@@ -104,7 +104,7 @@ git remote add origin https://github.com/<user>/<repo>.git
 git push -u origin master
 ```
 
-## 4. 生成 Access token
+# 4. 生成 Access token
 
 在[这里](https://github.com/settings/tokens/new)生成新的 Access token
 
@@ -116,7 +116,7 @@ Select Scopes 勾选 `repo`，下面的会自动勾选
 
 **生成后会有一个复制按钮，存下来一会要用到**
 
-## 5. 设置环境变量
+# 5. 设置环境变量
 
 在仓库的 Settings/Security/Secrets and variables/Actions 里面
 
@@ -135,7 +135,7 @@ New repository variable 创建 `LIBS`，值为你想要添加的库文件，用�
 
 ![actions-run-workflow](https://static-argvchs.netlify.app/images/actions-run-workflow.png)
 
-## 6. 部署到 Netlify
+# 6. 部署到 Netlify
 
 在 [Netlify](https://www.netlify.com) 导入 CDN 仓库，部署并修改域名即可
 

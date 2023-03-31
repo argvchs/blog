@@ -13,7 +13,7 @@ categories: 教程
 
 <!-- more -->
 
-## 1. 配置 SSH 密钥
+# 1. 配置 SSH 密钥
 
 首先要有一个 [GitHub](https://github.com) 帐号
 
@@ -50,7 +50,7 @@ clip < %USERPROFILE%\.ssh\id_ed25519.pub
 
 设置好 SSH 密钥后用 `ssh -T git@github.com` 检测，如果出现 `Hi! You've successfully authenticated` 则配置成功
 
-## 2. 更改默认分支（可选）
+# 2. 更改默认分支（可选）
 
 默认分支以前是 `master`，现在改成了 `main`
 网上搜到关于 GitHub 的文章，大部分默认分支都是 `master`
@@ -61,7 +61,7 @@ clip < %USERPROFILE%\.ssh\id_ed25519.pub
 
 也可以不更改，但以后的操作都要改成 `main`
 
-## 3. 部署到 GitHub Pages
+# 3. 部署到 GitHub Pages
 
 使用下面的命令初始配置
 
@@ -89,22 +89,24 @@ pnpm add hexo-deployer-git
 
 在博客根目录下使用 `hexo d -g` 部署到 GitHub Pages
 
-## 4. 部署到 Vercel 或 Netlify 加速访问
+# 4. 部署到 Vercel 或 Netlify 加速访问
 
--   Vercel
+其实试一试就会了，不过还是把教程写一下吧（
 
-    先注册一个 [Vercel](https://vercel.com/login) 帐号，通过 GitHub 注册
+## 4.1 Vercel
 
-    注册成功后跳转到你的首页，点击 New project，跳转后在 Import Git Repository 中选择你的 Hexo 博客，跳转后点击 Deploy 上传到 Vercel
+先注册一个 [Vercel](https://vercel.com/login) 帐号，通过 GitHub 注册
 
-    上传完成点击 Goto Dashboard 来到项目主页，选择顶部的 Settings，在 Project Name 中更改你网站的名称
+注册成功后跳转到你的首页，点击 New project，跳转后在 Import Git Repository 中选择你的 Hexo 博客，跳转后点击 Deploy 上传到 Vercel
 
--   Netlify
+上传完成点击 Goto Dashboard 来到项目主页，选择顶部的 Settings，在 Project Name 中更改你网站的名称
 
-    先注册一个 [Netlify](https://app.netlify.com/) 帐号，通过 GitHub 注册
+## 4.2 Netlify
 
-    注册成功后跳转到你的首页，点击 Add new site 中的 Import an existing project，点击 GitHub，与 GitHub 关联
+先注册一个 [Netlify](https://app.netlify.com/) 帐号，通过 GitHub 注册
 
-    关联 GitHub 后在下面会出现你 GitHub 中的仓库，点击你创建的 Hexo 博客，再点击 Deploy site 上传
+注册成功后跳转到你的首页，点击 Add new site 中的 Import an existing project，点击 GitHub，与 GitHub 关联
 
-    上传完成会跳转到项目主页，选择 Site settings，跳转后往下滑，点击 Change site name 更改你网站的名称
+关联 GitHub 后在下面会出现你 GitHub 中的仓库，点击你创建的 Hexo 博客，再点击 Deploy site 上传
+
+上传完成会跳转到项目主页，选择 Site settings，跳转后往下滑，点击 Change site name 更改你网站的名称

@@ -13,13 +13,13 @@ categories: 工具
 
 <!-- more -->
 
-## 1. 安装 MSYS2
+# 1. 安装 MSYS2
 
 https://www.msys2.org/#installation
 
 一路确认即可
 
-## 2. 打开 MSYS2 Shell
+# 2. 打开 MSYS2 Shell
 
 MSYS2 安装完成后开始菜单一般会有 MSYS2 32/64 bit 文件夹，运行里面的 MSYS2 MSYS
 
@@ -29,7 +29,7 @@ MSYS2 安装完成后开始菜单一般会有 MSYS2 32/64 bit 文件夹，运行
 <msys2-dir>/msys2_shell -msys
 ```
 
-## 3. 安装 Clang
+# 3. 安装 Clang
 
 MSYS2 使用 Pacman 作为包管理器，首先要更新一下软件包（用 MSYS2 Shell）
 

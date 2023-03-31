@@ -10,13 +10,13 @@ categories: 工具
 
 <!-- more -->
 
-## 1. 安装
+# 1. 安装
 
 ```bash
 pnpm add gfonts-helper -g
 ```
 
-## 2. 使用
+# 2. 使用
 
 ```bash
 gfonts-helper <url> <group>

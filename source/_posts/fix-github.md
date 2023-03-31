@@ -12,7 +12,7 @@ categories: 其他
 
 终于找到一个很好的工具
 
-#### [Dev-Sidecar](https://hub.yzuu.cf/docmirror/dev-sidecar/releases)
+### [Dev-Sidecar](https://hub.yzuu.cf/docmirror/dev-sidecar/releases)
 
 按照[教程](https://hub.yzuu.cf/docmirror/dev-sidecar)安装即可
 

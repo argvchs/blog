@@ -13,17 +13,17 @@ categories: 教程
 
 <!-- more -->
 
-## 1. 安装 PicGo
+# 1. 安装 PicGo
 
 我们用 [PicGo](https://github.com/Molunerfinn/PicGo/releases) + GitHub 方式来自建图床
 
-## 2. 创建仓库
+# 2. 创建仓库
 
 应该都会创建吧，注意一定要是 Public 仓库，还要加一个 README
 
 > Initialize this repository with a README.
 
-## 3. 创建 Token
+# 3. 创建 Token
 
 从[这里](https://github.com/settings/tokens/new)创建 Token
 
@@ -33,7 +33,7 @@ GitHub 已经有 Fine-grained Token 了，但不能永久使用啊，所以还�
 
 创建完后会提示你复制 Token，记下来以后要用到
 
-## 4. 配置 PicGo
+# 4. 配置 PicGo
 
 打开 PicGo，找到图床设置
 
@@ -41,7 +41,7 @@ GitHub 已经有 Fine-grained Token 了，但不能永久使用啊，所以还�
 
 注意分支名，如果你没设置默认分支为 `master` 的话就改成 `main`
 
-## 5. Netlify 加速
+# 5. Netlify 加速
 
 GitHub 太慢了，我们需要用 [Netlify](https://netlify.com) 加速一下
 

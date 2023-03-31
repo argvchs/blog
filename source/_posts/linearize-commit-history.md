@@ -13,7 +13,7 @@ ParticleX 主题之前用了 Git Flow AVH，提交记录很丑
 
 <!-- more -->
 
-## 1. 线性化
+# 1. 线性化
 
 其实这样用 `rebase --root` 就可以线性化了
 
@@ -41,7 +41,7 @@ git branch -D new
 git push -f
 ```
 
-## 2. 扩展
+# 2. 扩展
 
 如果分支历史上有**很多** Tag 的话要**把所有 Tag 全部清除**，然后手动添加
 
@@ -72,7 +72,7 @@ git branch -D new
 git push -f
 ```
 
-## 3. 后言
+# 3. 后言
 
 ParticleX 是无法做到完全线性提交的，因为有 `custom` 分支一直合并
 

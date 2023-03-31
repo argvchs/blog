@@ -12,13 +12,13 @@ categories: 工具
 
 <!-- more -->
 
-## 安装
+# 1. 安装
 
 ```bash
 pnpm add hexo-babel
 ```
 
-## 配置
+# 2. 配置
 
 ```yaml
 babel:

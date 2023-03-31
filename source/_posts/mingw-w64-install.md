@@ -12,11 +12,11 @@ MinGW-w64 安装教程
 
 <!-- more -->
 
-## 0. 前言
+# 0. 前言
 
 看了好多 MinGW-w64 安装教程，都是从 SourceForge 上下载，版本很旧，C++17/C++20 一些 STL 库还没更新，不能用万能头，就很难受啊，这篇文章教你如何找到最新 MinGW-w64 版本
 
-## 2. 找到 MinGW-w64
+# 2. 找到 MinGW-w64
 
 打开 https://www.mingw-w64.org/downloads
 
@@ -26,7 +26,7 @@ MinGW-w64 安装教程
 
 虽然最新版本是 v10.0.0，可那是源码，最新构建版本是 v8.1.0，太旧了
 
-## 3. 最新版本
+# 3. 最新版本
 
 其实，如果你仔细看一看，就会发现上面有一个 [MinGW-Builds](https://github.com/niXman/mingw-builds-binaries/releases)，但因为描述太少被忽略了
 看一下版本：Release 12.1.0-rt_v10-rev3，WC 这么新，往下翻
