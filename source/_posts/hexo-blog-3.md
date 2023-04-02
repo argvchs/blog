@@ -71,6 +71,7 @@ categories: 教程
 ```
 
 下载：
+
 -   [`live2d.min.js`](https://static-argvchs.netlify.app/js/live2d.min.js)
 -   [`live2d.min.css`](https://static-argvchs.netlify.app/css/live2d.min.css)
 -   [`live2d.zip`](https://static-argvchs.netlify.app/assets/model.zip)
@@ -89,6 +90,7 @@ categories: 教程
 ```
 
 下载：
+
 -   [`fireworks.min.js`](https://static-argvchs.netlify.app/js/fireworks.min.js)
 
 ## 3.3. `background.js`：流星背景特效
@@ -104,6 +106,7 @@ categories: 教程
 ```
 
 下载：
+
 -   [`background.min.js`](https://static-argvchs.netlify.app/js/background.min.js)
 
 ## 3.4. `cursor.js`：鼠标指针特效
@@ -117,6 +120,7 @@ categories: 教程
 ```
 
 下载：
+
 -   [`cursor.min.css`](https://static-argvchs.netlify.app/css/cursor.min.css)
 -   [`cursor.min.js`](https://static-argvchs.netlify.app/js/cursor.min.js)
 
