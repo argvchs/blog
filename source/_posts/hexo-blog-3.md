@@ -17,7 +17,7 @@ categories: 教程
 介绍一下博客根目录各文件/文件夹的作用，我的主题用的是 EJS，其他如 Pug/Jade 等和原始 HTML 相差太大的模板引擎请不要参考本篇 ~~我太懒了~~
 
 ```
-<root>
+blog # Hexo 博客根目录
 |---public # 静态网页文件
 |---source # 文章
 |---themes # 主题
@@ -34,8 +34,6 @@ categories: 教程
 在 `source` 下添加自定义文件，把文件放在 `js` `css` 文件夹下分类，不然生成的静态文件会很乱
 然后在 `layout.ejs` 下添加如下内容，如果使用网络上的文件直接在 `src` `href` 中填写路径即可
 
-**`<file>` 为自定义文件名称**
-
 ```html
 <script src="/js/<file>"></script>
 <link rel="stylesheet" href="/css/<file>" />
@@ -43,12 +41,12 @@ categories: 教程
 
 # 3. 我用的自定义文件
 
-## 3.1. `live2d.min.js`：Live2D 组件，需要 PIXI.js
+## 3.1. Live2D 组件
 
 **已被弃用了，因为写的太乱并且很卡**
 
-将[这里](https://github.com/imuncle/live2d)的 Live2D 模型 Clone 到本地，选择一个模型（是 Cubism 3 版本的，在 `live2d_3` 文件夹下）复制到 `source/model`
-**`<model-name>` 为模型名称，参数和我给的 CSS 样式可以更改，以下是我的配置**
+将[这里](https://github.com/imuncle/live2d)的 Live2D 模型 Clone 到本地
+选择一个模型（是 Cubism 3 版本的，在 `live2d_3` 文件夹下）复制到 `source/model`
 
 ```html
 <div id="L2dCanvas"></div>
@@ -62,7 +60,7 @@ categories: 教程
         right: "0",
         bottom: "0",
         basePath: "/model",
-        role: "<model-name>",
+        role: "<model>",
         mobile: true,
     });
 </script>
@@ -70,7 +68,7 @@ categories: 教程
 
 [`live2d.min.js`](https://static-argvchs.netlify.app/js/live2d.min.js) [`live2d.min.css`](https://static-argvchs.netlify.app/css/live2d.min.css) [`live2d.zip`](https://static-argvchs.netlify.app/assets/model.zip)
 
-## 3.2. `fireworks.js`：鼠标点击特效，需要 Anime.js
+## 3.2. 鼠标点击特效
 
 ```html
 <canvas
@@ -83,7 +81,7 @@ categories: 教程
 
 [`fireworks.min.js`](https://static-argvchs.netlify.app/js/fireworks.min.js)
 
-## 3.3. `background.js`：流星背景特效
+## 3.3. 流星背景特效
 
 ```html
 <canvas
@@ -95,7 +93,7 @@ categories: 教程
 
 [`background.min.js`](https://static-argvchs.netlify.app/js/background.min.js)
 
-## 3.4. `cursor.js`：鼠标指针特效
+## 3.4. 鼠标指针特效
 
 ```html
 <div id="cursor"></div>
@@ -112,24 +110,21 @@ Markdown 是支持渲染 HTML 的，所以可以实现各种效果
 
 ## 4.1. 字体
 
-用 `<font>` 来实现字体的样式修改
-
-**`<color>` `<size>` `<face>` 分别是你字体的颜色，大小和字体名称**
+用 `<font>` 元素来实现字体的样式修改
 
 ```markdown
-<font color=<color> size=<size> face=<face>>Text...</font>
+<font color=<color> size=<size> face=<face>>...</font>
 ```
 
 ## 4.2. 下载文件
 
-Markdown 下载文件，网上搜到的都是 `post_asset_folder` 这个参数~~（也不知道为什么我不能用）~~
-
 只要把文件放到 `source` 下，在 Markdown 中引用就行
-部分文件可能不会下载，在浏览器打开，如果有洁癖可以用第二种方法
+
+部分文件可能不会下载，直接在浏览器打开，可以用第二种方法
 
 ```markdown
-[Download](file)
-<a href="<file>" download>Download this file.</a>
+[...](<file>)
+<a href="<file>" download>...</a>
 ```
 
 ## 4.3. 注释

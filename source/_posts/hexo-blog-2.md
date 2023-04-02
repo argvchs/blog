@@ -19,11 +19,9 @@ categories: 教程
 
 选好主题后就要安装，在博客根目录下运行下面的命令将主题 Clone 到本地
 
-**`<theme-link>` 为主题链接，`<theme-name>` 为主题名称**
-
 ```bash
 cd themes
-git clone <theme-link>.git <theme-name> --depth=1
+git clone <link>.git <theme> --depth=1
 ```
 
 > `--depth=1` 是为了 Clone 更快，只 Clone 最新提交
@@ -34,23 +32,25 @@ GitHub 打不开可以用[镜像站](https://www.library.ac.cn)
 
 安装完成后，在博客根目录下的 `_config.yml` 中设置 theme 参数为你的主题名称，就可以切换主题，一般主题在 GitHub 项目页下都会有介绍和配置说明，可以按照说明自定义页面
 
-# 2. 创建关于页和文章分类
+# 2. 创建特殊页面
 
-## 2.1. Categories/Tags 文章分类
+## 2.1. 标签分类页
 
-**`<root>` 为你博客的根目录**
+输入命令 `hexo new page categories` 创建分类页
+打开 `source/categories/index.md`，在 `---` 括起来的地方添加 `type: categories`
 
-输入命令 `hexo new page categories` 创建 Categories 页面
-打开 `<root>/source/categories` 下的 `index.md` 文件，在文章前添加 `type: categories`
+输入命令 `hexo new page tags` 创建标签页
+打开 `source/tags/index.md`，在 `---` 括起来的地方添加 `type: tags`
 
-输入命令 `hexo new page tags` 创建 Tags 页面
-打开 `<root>/source/tags` 下的 `index.md` 文件，在文章前添加 `type: tags`
+## 2.2. 关于页
 
-如果想让标题大写的话可以将 `title` 参数改为大写，即 `title: Categories`，**但是一些主题是根据标题检测的，可能检测不到**
+输入命令 `hexo new page about` 创建关于页
+打开 `source/about/index.md` 在下面添加内容即可
 
-## 2.2. About 关于页
+---
 
-先按照创建文章分类的方法，创建 About 页面，然后在下面添加内容即可
+如果想让标题大写的话可以将 `title` 参数改为大写，例如 `title: About`
+虽然 ParticleX 是根据 `type` 参数来检测的，**但是一些主题是根据 `title` 检测的，可能检测不到**
 
 # 3. 自定义网站配置
 

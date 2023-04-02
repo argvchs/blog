@@ -17,8 +17,6 @@ categories: 教程
 
 首先要有一个 [GitHub](https://github.com) 帐号
 
-**`<user>` 和 `<email>` 分别是你自己的 GitHub 用户名和注册时使用的邮箱**
-
 注册完成后回到主页，点击左边的 New 新建仓库，名称为 `<user>.github.io`，然后点击 Create repositpory 完成创建
 
 在命令行输入命令，获取 SSH 密钥，这个过程会提示你输入一些东西，一直回车就行了
