@@ -47,8 +47,6 @@ categories: 教程
 
 **已被弃用了，因为写的太乱并且很卡**
 
-使用：
-
 将[这里](https://github.com/imuncle/live2d)的 Live2D 模型 Clone 到本地，选择一个模型（是 Cubism 3 版本的，在 `live2d_3` 文件夹下）复制到 `source/model`
 **`<model-name>` 为模型名称，参数和我给的 CSS 样式可以更改，以下是我的配置**
 
@@ -70,15 +68,9 @@ categories: 教程
 </script>
 ```
 
-下载：
-
--   [`live2d.min.js`](https://static-argvchs.netlify.app/js/live2d.min.js)
--   [`live2d.min.css`](https://static-argvchs.netlify.app/css/live2d.min.css)
--   [`live2d.zip`](https://static-argvchs.netlify.app/assets/model.zip)
+[`live2d.min.js`](https://static-argvchs.netlify.app/js/live2d.min.js) [`live2d.min.css`](https://static-argvchs.netlify.app/css/live2d.min.css) [`live2d.zip`](https://static-argvchs.netlify.app/assets/model.zip)
 
 ## 3.2. `fireworks.js`：鼠标点击特效，需要 Anime.js
-
-使用：
 
 ```html
 <canvas
@@ -89,13 +81,9 @@ categories: 教程
 <script src="/js/fireworks.min.js"></script>
 ```
 
-下载：
-
--   [`fireworks.min.js`](https://static-argvchs.netlify.app/js/fireworks.min.js)
+[`fireworks.min.js`](https://static-argvchs.netlify.app/js/fireworks.min.js)
 
 ## 3.3. `background.js`：流星背景特效
-
-使用：
 
 ```html
 <canvas
@@ -105,13 +93,9 @@ categories: 教程
 <script src="/js/background.min.js"></script>
 ```
 
-下载：
-
--   [`background.min.js`](https://static-argvchs.netlify.app/js/background.min.js)
+[`background.min.js`](https://static-argvchs.netlify.app/js/background.min.js)
 
 ## 3.4. `cursor.js`：鼠标指针特效
-
-使用：
 
 ```html
 <div id="cursor"></div>
@@ -119,10 +103,7 @@ categories: 教程
 <script src="/js/cursor.min.js"></script>
 ```
 
-下载：
-
--   [`cursor.min.css`](https://static-argvchs.netlify.app/css/cursor.min.css)
--   [`cursor.min.js`](https://static-argvchs.netlify.app/js/cursor.min.js)
+[`cursor.min.css`](https://static-argvchs.netlify.app/css/cursor.min.css) [`cursor.min.js`](https://static-argvchs.netlify.app/js/cursor.min.js)
 
 # 4. Hexo Markdown 语法补充
 
