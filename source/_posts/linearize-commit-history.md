@@ -8,7 +8,6 @@ categories: 其他
 ---
 
 ParticleX 主题之前用了 Git Flow AVH，提交记录很丑
-
 这篇文章说一下怎么线性化提交历史
 
 <!-- more -->

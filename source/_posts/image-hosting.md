@@ -8,7 +8,6 @@ categories: 教程
 ---
 
 之前图床用的是 [ImgTP](https://www.imgtp.com)，因为能传 SVG，当初就选了这个，但现在总是间歇性的打不开了
-
 还是自建图床吧
 
 <!-- more -->

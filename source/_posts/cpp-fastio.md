@@ -9,7 +9,6 @@ categories: 算法
 ---
 
 写了一个 [Fast-IO](https://github.com/argvchs/fast-io) 快读/快写库
-
 支持基本类型与 `__int128_t` 读写，指针地址写入，和 `cin/cout` 用法类似
 
 <!-- more -->
