@@ -6,7 +6,7 @@ tags:
 categories: 算法
 ---
 
-[2023 年洛谷愚人节比赛](https://www.luogu.com.cn/contest/105199)，我竟然拿到 #4 了！！！
+2023 年洛谷愚人节比赛，我竟然拿到 #4 了
 
 <!-- more -->
 
