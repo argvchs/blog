@@ -70,7 +70,7 @@ _The ciphertext is Styles._
 
 致谢名单：
 
--   [@yr317430_xht](https://www.luogu.com.cn/user/959024)：POQS 题 133 分换 CDFG 题 400 分
+-   [@yr317430_xht](https://www.luogu.com.cn/user/959024)：OPQS 题 133 分换 CDGH 题 400 分
 
 -   [@rainygame](https://www.luogu.com.cn/user/804607)：P 题 100 分换 J 题 55 分
 
@@ -78,7 +78,7 @@ _The ciphertext is Styles._
 
 -   [@trh0630](https://www.luogu.com.cn/user/252093)：BDG 题 300 分换 J 题 67 分
 
--   [@Jasoncwx](https://www.luogu.com.cn/user/592684)：FPJQ 题 333 分换 SO 题 115 分
+-   [@Jasoncwx](https://www.luogu.com.cn/user/592684)：FJPQ 题 333 分换 OS 题 115 分
 
 -   [@MornEveGlow](https://www.luogu.com.cn/user/52914)：P 题 100 分换 O 题 55 分
 
