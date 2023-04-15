@@ -51,7 +51,7 @@ dependencies:
     version: 3.0.0
   hexo-theme-particlex:
     specifier: github:argvchs/hexo-theme-particlex#custom
-    version: github.com/argvchs/hexo-theme-particlex/1a4ee6144aa3bf465e126df89c20124bff19307b
+    version: github.com/argvchs/hexo-theme-particlex/b0660eade7bfd3e8b299309ee546e176b3260ef7
   hexo-uglify:
     specifier: ^2.0.0
     version: 2.0.0
@@ -182,7 +182,7 @@ packages:
       '@babel/helper-plugin-utils': 7.20.2
       debug: 4.3.4
       lodash.debounce: 4.0.8
-      resolve: 1.22.2
+      resolve: 1.22.3
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
@@ -1135,7 +1135,7 @@ packages:
       babel-plugin-polyfill-corejs2: 0.3.3(@babel/core@7.21.4)
       babel-plugin-polyfill-corejs3: 0.6.0(@babel/core@7.21.4)
       babel-plugin-polyfill-regenerator: 0.4.1(@babel/core@7.21.4)
-      core-js-compat: 3.30.0
+      core-js-compat: 3.30.1
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
@@ -1302,7 +1302,7 @@ packages:
     hasBin: true
     dependencies:
       browserslist: 4.21.5
-      caniuse-lite: 1.0.30001477
+      caniuse-lite: 1.0.30001478
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       picocolors: 0.2.1
@@ -1330,7 +1330,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.4
       '@babel/helper-define-polyfill-provider': 0.3.3(@babel/core@7.21.4)
-      core-js-compat: 3.30.0
+      core-js-compat: 3.30.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1391,8 +1391,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001477
-      electron-to-chromium: 1.4.357
+      caniuse-lite: 1.0.30001478
+      electron-to-chromium: 1.4.365
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10(browserslist@4.21.5)
 
@@ -1419,8 +1419,8 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /caniuse-lite@1.0.30001477:
-    resolution: {integrity: sha512-lZim4iUHhGcy5p+Ri/G7m84hJwncj+Kz7S5aD4hoQfslKZJgt0tHc/hafVbqHC5bbhHb+mrW2JOUHkI5KH7toQ==}
+  /caniuse-lite@1.0.30001478:
+    resolution: {integrity: sha512-gMhDyXGItTHipJj2ApIvR+iVB5hd0KP3svMWWXDvZOmjzJJassGLMfxRkQCSYgGd2gtdL/ReeiyvMSFD1Ss6Mw==}
 
   /chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -1540,8 +1540,8 @@ packages:
   /convert-source-map@1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
 
-  /core-js-compat@3.30.0:
-    resolution: {integrity: sha512-P5A2h/9mRYZFIAP+5Ab8ns6083IyVpSclU74UNvbGVQ8VM7n3n3/g2yF3AkKQ9NXz2O+ioxLbEWKnDtgsFamhg==}
+  /core-js-compat@3.30.1:
+    resolution: {integrity: sha512-d690npR7MC6P0gq4npTl5n2VQeNAmUrJ90n+MHiKS7W2+xno4o3F5GDEuylSdi6EJ3VssibSGXOa1r3YXD3Mhw==}
     dependencies:
       browserslist: 4.21.5
     dev: true
@@ -1645,8 +1645,8 @@ packages:
       jake: 10.8.5
     dev: false
 
-  /electron-to-chromium@1.4.357:
-    resolution: {integrity: sha512-UTkCbNTAcGXABmEnQrGcW4m3cG6fcyBfD4KDF0iyEAlbrGZiY9dmslyDAGOD1Kr5biN2F743Y30aRCOtau35Vw==}
+  /electron-to-chromium@1.4.365:
+    resolution: {integrity: sha512-FRHZO+1tUNO4TOPXmlxetkoaIY8uwHzd1kKopK/Gx2SKn1L47wJXWD44wxP5CGRyyP98z/c8e1eBzJrgPeiBOg==}
 
   /encodeurl@1.0.2:
     resolution: {integrity: sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==}
@@ -1815,7 +1815,7 @@ packages:
       hexo-log: 2.0.0
       hexo-util: 2.7.0
       minimist: 1.2.8
-      resolve: 1.22.2
+      resolve: 1.22.3
       tildify: 2.0.0
     dev: false
 
@@ -1827,7 +1827,7 @@ packages:
       hexo-fs: 4.1.1
       hexo-util: 2.7.0
       luxon: 3.3.0
-      nunjucks: 3.2.3
+      nunjucks: 3.2.4
       picocolors: 1.0.0
     transitivePeerDependencies:
       - chokidar
@@ -1879,7 +1879,7 @@ packages:
     engines: {node: '>=10.13.0'}
     dependencies:
       hexo-util: 2.7.0
-      nunjucks: 3.2.3
+      nunjucks: 3.2.4
     transitivePeerDependencies:
       - chokidar
     dev: false
@@ -1897,7 +1897,7 @@ packages:
     dependencies:
       hexo-util: 2.7.0
       micromatch: 4.0.5
-      nunjucks: 3.2.3
+      nunjucks: 3.2.4
     transitivePeerDependencies:
       - chokidar
     dev: false
@@ -2018,10 +2018,10 @@ packages:
       moize: 6.1.5
       moment: 2.29.4
       moment-timezone: 0.5.43
-      nunjucks: 3.2.3
+      nunjucks: 3.2.4
       picocolors: 1.0.0
       pretty-hrtime: 1.0.3
-      resolve: 1.22.2
+      resolve: 1.22.3
       strip-ansi: 6.0.1
       text-table: 0.2.0
       tildify: 2.0.0
@@ -2333,8 +2333,8 @@ packages:
     resolution: {integrity: sha512-Y1wZESM7VUThYY+4W+X4ySH2maqcA+p7UR+w8VWNWVAd6lwuXXWz/w/Cz43J/dI2I+PS6wD5N+bJUF+gjWvIqg==}
     dev: false
 
-  /nunjucks@3.2.3:
-    resolution: {integrity: sha512-psb6xjLj47+fE76JdZwskvwG4MYsQKXUtMsPh6U0YMvmyjRtKRFcxnlXGWglNybtNTNVmGdp94K62/+NjF5FDQ==}
+  /nunjucks@3.2.4:
+    resolution: {integrity: sha512-26XRV6BhkgK0VOxfbU5cQI+ICFUtMLixv1noZn1tGU38kQH5A5nmmbk/O45xdyBhD1esk47nKrY0mvQpZIhRjQ==}
     engines: {node: '>= 6.9.0'}
     hasBin: true
     peerDependencies:
@@ -2502,8 +2502,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: false
 
-  /resolve@1.22.2:
-    resolution: {integrity: sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==}
+  /resolve@1.22.3:
+    resolution: {integrity: sha512-P8ur/gp/AmbEzjr729bZnLjXK5Z+4P0zhIJgBgzqRih7hL7BOukHGtSTA3ACMY467GRFz3duQsi0bDZdR7DKdw==}
     hasBin: true
     dependencies:
       is-core-module: 2.12.0
@@ -2776,10 +2776,10 @@ packages:
   /yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  github.com/argvchs/hexo-theme-particlex/1a4ee6144aa3bf465e126df89c20124bff19307b:
-    resolution: {tarball: https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/1a4ee6144aa3bf465e126df89c20124bff19307b}
+  github.com/argvchs/hexo-theme-particlex/b0660eade7bfd3e8b299309ee546e176b3260ef7:
+    resolution: {tarball: https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/b0660eade7bfd3e8b299309ee546e176b3260ef7}
     name: hexo-theme-particlex
-    version: 2.5.12
+    version: 2.5.13
     dependencies:
       hexo-helper-crypto: 1.1.2
       hexo-renderer-ejs: 2.0.0
