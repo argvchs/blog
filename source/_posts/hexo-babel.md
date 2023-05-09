@@ -8,7 +8,7 @@ tags:
 categories: 工具
 ---
 
-[Hexo-Babel](https://github.com/argvchs/hexo-babel) 插件，使用 Babel 编译转换 JS 文件
+[Hexo-Babel](https://github.com/theme-particlex/hexo-babel) 插件，使用 Babel 编译转换 JS 文件
 
 <!-- more -->
 
@@ -50,14 +50,7 @@ babel:
 
 ```json
 {
-    "presets": [
-        [
-            "@babel/preset-env",
-            {
-                "targets": "last 5 versions, not dead, > 0.3%"
-            }
-        ]
-    ],
+    "presets": [["@babel/preset-env", { "targets": "last 5 versions, not dead, > 0.3%" }]],
     "sourceType": "script"
 }
 ```

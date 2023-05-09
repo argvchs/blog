@@ -26,9 +26,13 @@ git clone <link>.git <theme> --depth=1
 
 > `--depth=1` 是为了 Clone 更快，只 Clone 最新提交
 
-GitHub 打不开可以用[镜像站](https://www.library.ac.cn)
+GitHub 打不开可以用[镜像站](https://hub.njuu.cf)
 
-比如我的主题是 [ParticleX](https://github.com/argvchs/hexo-theme-particlex)，就是 `git clone https://github.com/argvchs/hexo-theme-particlex.git particlex --depth=1`
+例如我的主题是 [ParticleX](https://github.com/theme-particlex/hexo-theme-particlex)，则为
+
+```bash
+git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex --depth=1
+```
 
 安装完成后，在博客根目录下的 `_config.yml` 中设置 theme 参数为你的主题名称，就可以切换主题，一般主题在 GitHub 项目页下都会有介绍和配置说明，可以按照说明自定义页面
 

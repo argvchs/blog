@@ -9,7 +9,7 @@ categories: 工具
 pinned: 10
 ---
 
-[ParticleX](https://github.com/argvchs/hexo-theme-particlex) 主题，诞生原因是因为原来的 [Particle](https://github.com/korilin/hexo-theme-particle) 主题不维护了，但是我觉得还是很好的
+[ParticleX](https://github.com/theme-particlex/hexo-theme-particlex) 主题，诞生原因是因为原来的 [Particle](https://github.com/korilin/hexo-theme-particle) 主题不维护了，但是我觉得还是很好的
 
 <!-- more -->
 
@@ -31,7 +31,7 @@ pinned: 10
 
 ```bash
 cd themes
-git clone https://github.com/argvchs/hexo-theme-particlex.git particlex --depth=1
+git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex --depth=1
 ```
 
 然后在根目录 `_config.yml` 设置主题为 ParticleX 即可
@@ -170,7 +170,7 @@ footer:
 
 使用 [Polyfill.io](https://polyfill.io) 自动根据 UA 处理新的 JS API 兼容
 
-可以配合 [Hexo-Babel](https://github.com/argvchs/hexo-babel) 插件处理 JS 语法兼容
+可以配合 [Hexo-Babel](https://github.com/theme-particlex/hexo-babel) 插件处理 JS 语法兼容
 
 ```yaml
 # Polyfill
@@ -234,7 +234,7 @@ description: |
 
 ### 3.3.7. 文章加密
 
-使用 AES 加密算法，在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `secret` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/argvchs/hexo-helper-crypto)**
+使用 AES 加密算法，在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `secret` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/theme-particlex/hexo-helper-crypto)**
 
 ```yaml
 # Article encryption
