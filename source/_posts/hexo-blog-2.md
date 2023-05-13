@@ -38,17 +38,28 @@ git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex 
 
 # 2. 创建特殊页面
 
-## 2.1. 标签分类页
+## 2.1. 分类页
 
-输入命令 `hexo new page categories` 创建分类页
+```bash
+hexo new page categories
+```
+
 打开 `source/categories/index.md`，在 `---` 括起来的地方添加 `type: categories`
 
-输入命令 `hexo new page tags` 创建标签页
+## 2.1. 标签页
+
+```bash
+hexo new page tags
+```
+
 打开 `source/tags/index.md`，在 `---` 括起来的地方添加 `type: tags`
 
-## 2.2. 关于页
+## 2.3. 关于页
 
-输入命令 `hexo new page about` 创建关于页
+```bash
+hexo new page about
+```
+
 打开 `source/about/index.md` 在下面添加内容即可
 
 ---
@@ -58,47 +69,9 @@ git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex 
 
 # 3. 自定义网站配置
 
-打开博客根目录下的 `_config.yml`，下面是主要参数的介绍
+网站配置存放在博客根目录下的 `_config.yml`
 
-```yaml
-title: # 标题
-subtitle: # 副标题
-description: # 描述
-keywords: # 关键字
-author: # 作者
-language: # 语言
-timezone: # 时区
-url: # 网址
-root: # 根目录
-permalink: # 文章链接格式
-permalink_defaults: # 链接默认值
-source_dir: # 源文件夹，内容的存储位置
-public_dir: # 公用文件夹，静态文件的生成位置
-tag_dir: # 标签目录
-archive_dir: # 存档目录
-category_dir: # 分类目录
-skip_render: # 复制到原始路径，不进行渲染
-new_post_name: # 新帖子的文件名格式
-titlecase: # 将标题转换为小写1/大写2
-external_link.enable: # 在新标签页中打开外部链接
-post_asset_folder: # 启用资源文件夹功能
-filename_case: # 将文件名转换小写小写1/大写2
-relative_link: # 是否创建相对于根文件夹的链接
-index_generator.per_page: # 每页显示的文章数
-index_generator.order_by: # 发布顺序
-date_format: # 日期格式
-time_format: # 时间格式
-per_page: # 每个页面上显示的文章数
-pagination_dir: # 网址格式
-theme: # 主题名称
-theme_config: # 主题配置，覆盖主题默认值
-deploy: # 部署设置
-include: # 包括隐藏文件
-exclude: # 排除文件/文件夹
-ignore: # 忽略文件/文件夹
-```
-
-由于参数过多，只写了一部分，其他可以参考 [Hexo 文档](https://hexo.io/zh-cn/docs/configuration.html)
+可以看文档了解配置格式：[Hexo 文档](https://hexo.io/zh-cn/docs/configuration.html)
 
 **P.S.：`titlecase` 参数改变后部分主题可能检测不到 Categories 和 Tags 页面**
 
