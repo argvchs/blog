@@ -41,34 +41,7 @@ blog # Hexo 博客根目录
 
 # 3. 我用的自定义文件
 
-## 3.1. Live2D 组件
-
-**已被弃用了，因为写的太乱并且很卡**
-
-将[这里](https://github.com/imuncle/live2d)的 Live2D 模型 Clone 到本地
-选择一个模型（是 Cubism 3 版本的，在 `live2d_3` 文件夹下）复制到 `source/model`
-
-```html
-<div id="L2dCanvas"></div>
-<link rel="stylesheet" href="/css/live2d.min.css" />
-<script src="https://cdn.staticfile.org/pixi.js/4.6.1/pixi.min.js"></script>
-<script src="/js/live2d.min.js"></script>
-<script>
-    var v = new Viewer({
-        width: 240,
-        height: 325,
-        right: "0",
-        bottom: "0",
-        basePath: "/model",
-        role: "<model>",
-        mobile: true,
-    });
-</script>
-```
-
-[`live2d.min.js`](https://static-argvchs.netlify.app/js/live2d.min.js) [`live2d.min.css`](https://static-argvchs.netlify.app/css/live2d.min.css) [`live2d.zip`](https://static-argvchs.netlify.app/assets/model.zip)
-
-## 3.2. 鼠标点击特效
+## 3.1. 鼠标点击特效
 
 ```html
 <canvas
@@ -81,7 +54,7 @@ blog # Hexo 博客根目录
 
 [`fireworks.min.js`](https://static-argvchs.netlify.app/js/fireworks.min.js)
 
-## 3.3. 流星背景特效
+## 3.2. 流星背景特效
 
 ```html
 <canvas
@@ -93,7 +66,7 @@ blog # Hexo 博客根目录
 
 [`background.min.js`](https://static-argvchs.netlify.app/js/background.min.js)
 
-## 3.4. 鼠标指针特效
+## 3.3. 鼠标指针特效
 
 ```html
 <div id="cursor"></div>
@@ -123,7 +96,7 @@ Markdown 是支持渲染 HTML 的，所以可以实现各种效果
 部分文件可能不会下载，直接在浏览器打开，可以用第二种方法
 
 ```markdown
-[...](<file>)
+[...](file)
 <a href="<file>" download>...</a>
 ```
 
