@@ -46,7 +46,7 @@ GitHub 打不开可以用[镜像站](https://hub.njuu.cf)
 
 ```bash
 git init
-heroku git:remote -a <ap>
+heroku git:remote -a <app>
 git add .
 git commit -am "first commit"
 git push heroku master
