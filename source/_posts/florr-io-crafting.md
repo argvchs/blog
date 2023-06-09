@@ -23,32 +23,32 @@ $$
 转换为矩阵乘法即为
 
 $$
-\begin{bmatrix}
+\begin{pmatrix}
 a_n \\
 a_{n + 1} \\
 a_{n + 2} \\
 a_{n + 3} \\
 a_{n + 4} \\
 p
-\end{bmatrix}
+\end{pmatrix}
 =
-\begin{bmatrix}
+\begin{pmatrix}
 0 & 1 & 0 & 0 & 0 & 0 \\
 0 & 0 & 1 & 0 & 0 & 0 \\
 0 & 0 & 0 & 1 & 0 & 0 \\
 0 & 0 & 0 & 0 & 1 & 0 \\
 p & q & q & q & q & 1 \\
 0 & 0 & 0 & 0 & 0 & 1
-\end{bmatrix}
+\end{pmatrix}
 ^ n
-\begin{bmatrix}
+\begin{pmatrix}
 a_0 \\
 a_1 \\
 a_2 \\
 a_3 \\
 a_4 \\
 p
-\end{bmatrix}
+\end{pmatrix}
 $$
 
 其中 $q = \dfrac{1 - p}{4}$
@@ -107,14 +107,12 @@ int main() {
     cin >> n >> p;
     q = (1 - p) / 4;
     assign(a, {{0}, {0}, {0}, {0}, {0}, {p}});
-    assign(b, {
-                  {0, 1, 0, 0, 0, 0},
-                  {0, 0, 1, 0, 0, 0},
-                  {0, 0, 0, 1, 0, 0},
-                  {0, 0, 0, 0, 1, 0},
-                  {p, q, q, q, q, 1},
-                  {0, 0, 0, 0, 0, 1},
-              });
+    assign(b, {{0, 1, 0, 0, 0, 0},
+               {0, 0, 1, 0, 0, 0},
+               {0, 0, 0, 1, 0, 0},
+               {0, 0, 0, 0, 1, 0},
+               {p, q, q, q, q, 1},
+               {0, 0, 0, 0, 0, 1}});
     power(b, b, n);
     product(a, b, a);
     cout << fixed << setprecision(3) << a[1][1];
