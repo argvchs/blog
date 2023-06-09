@@ -16,7 +16,7 @@ $$
 a_n =
 \begin{cases}
 0, & n < 5 \\
-p\left(a_{n - 5} + 1\right) + \left(1 - p\right)\left(\frac{1}{4}a_{n - 4} + \frac{1}{4}a_{n - 3} + \frac{1}{4}a_{n - 2} + \frac{1}{4}a_{n - 1}\right), & n \geq 5 \\
+p\left(a_{n - 5} + 1\right) + \left(1 - p\right)\left(\frac{1}{4}a_{n - 4} + \frac{1}{4}a_{n - 3} + \frac{1}{4}a_{n - 2} + \frac{1}{4}a_{n - 1}\right), & n \geqslant 5 \\
 \end{cases}
 $$
 
