@@ -76,9 +76,9 @@ jobs:
 
 这个是一天同步一次，如果想调整可以修改上面的 `cron` 参数
 
-格式见: [`on.schedule`](https://docs.github.com/zh/actions/using-workflows/workflow-syntax-for-github-actions#onschedule)
+格式见: [`on.schedule`](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onschedule)
 
-**不建议同步过于频繁，因为使用有[时间限制](https://docs.github.com/zh/billing/managing-billing-for-github-actions/about-billing-for-github-actions)**
+**不建议同步过于频繁，因为使用有[时间限制](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)**
 
 ---
 

@@ -71,7 +71,7 @@ hexo new page about
 
 网站配置存放在博客根目录下的 `_config.yml`
 
-可以看文档了解配置格式：[Hexo 文档](https://hexo.io/zh-cn/docs/configuration.html)
+可以看文档了解配置格式：[Hexo 文档](https://hexo.io/docs/configuration.html)
 
 **P.S.：`titlecase` 参数改变后部分主题可能检测不到 Categories 和 Tags 页面**
 
