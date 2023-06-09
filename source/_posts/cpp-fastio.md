@@ -8,7 +8,7 @@ tags:
 categories: 算法
 ---
 
-写了一个 [Fast-IO](https://github.com/argvchs/fast-io) 快读快写库
+[Fast-IO](https://github.com/argvchs/fast-io) 是一个快读快写库
 
 支持基本类型读写，指针地址写入，和 `cin` `cout` 用法类似
 

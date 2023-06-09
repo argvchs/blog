@@ -73,7 +73,6 @@ category_map:
     其他: other
     算法: algorithm
 tag_map:
-    Arras.io: arras-io
     Babel: babel
     C++20: cpp20
     C/C++: c-cpp
@@ -83,6 +82,7 @@ tag_map:
     Clang: clang
     Crypto-js: crypto-js
     Fast-IO: fast-io
+    Florr.io: florr-io
     GCC: gcc
     Giscus: giscus
     Git: git
@@ -100,7 +100,6 @@ tag_map:
     PIP: pip
     ParticleX: particlex
     Python: python
-    Scenexe.io: scenexe-io
     Vercel: vercel
     插件: plugin
     洛谷: luogu
