@@ -20,11 +20,12 @@ type: about
 
 ## :sparkles: 帐号
 
-|  网站   | 帐号                                                                       |
-| :-----: | :------------------------------------------------------------------------- |
-|   QQ    | [3364555156](http://wpa.qq.com/msgrd?v=3&uin=3364555156&site=qq&menu=yes) |
-| GitHub  | [argvchs](https://github.com/argvchs)                                      |
-| Twitter | [argvchs](https://twitter.com/argvchs)                                     |
-|  洛谷   | [533270](https://www.luogu.com.cn/user/533270)                             |
+|   网站   | 帐号                                                                      |
+| :------: | :------------------------------------------------------------------------ |
+|    QQ    | [3364555156](http://wpa.qq.com/msgrd?v=3&uin=3364555156&site=qq&menu=yes) |
+|  GitHub  | [argvchs](https://github.com/argvchs)                                     |
+| Twitter  | [argvchs](https://twitter.com/argvchs)                                    |
+|   洛谷   | [533270](https://www.luogu.com.cn/user/533270)                            |
+| Florr.io | Noooooob                                                                  |
 
 ![avatar](https://static-argvchs.netlify.app/images/avatar.jpg){width=50% style="border-radius: 50%"}
