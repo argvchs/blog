@@ -4,7 +4,7 @@ date: 2022-07-06 15:47:11
 tags:
     - Python
     - PIP
-categories: 工具
+categories: 教程
 ---
 
 [EasyPyTool](https://github.com/argvchs/easypytool) 是一个简单的 Python 环境配置工具
