@@ -1,6 +1,6 @@
 ---
 title: 安装 MinGW-w64 II
-date: 2023-06-24 05:28:06
+date: 2023-06-24 09:28:06
 tags:
     - C/C++
     - MinGW
