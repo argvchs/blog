@@ -5,7 +5,7 @@ tags:
     - Hexo
     - 插件
     - Babel
-categories: 工具
+categories: 教程
 ---
 
 [Hexo-Babel](https://github.com/theme-particlex/hexo-babel) 插件，使用 Babel 编译转换 JS 文件

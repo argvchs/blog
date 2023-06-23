@@ -4,7 +4,7 @@ date: 2022-12-12 14:22:40
 tags:
     - Hexo
     - CSS
-categories: 工具
+categories: 教程
 ---
 
 CSS 兼容性太麻烦了，所以要自动处理

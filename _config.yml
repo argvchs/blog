@@ -68,7 +68,6 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
-    工具: tool
     教程: tutorial
     其他: other
     算法: algorithm

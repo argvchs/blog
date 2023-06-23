@@ -5,7 +5,7 @@ tags:
     - Hexo
     - 主题
     - ParticleX
-categories: 工具
+categories: 教程
 pinned: 10
 ---
 

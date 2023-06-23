@@ -5,7 +5,7 @@ tags:
     - Hexo
     - 插件
     - Crypto-js
-categories: 工具
+categories: 教程
 description: |
     [Hexo-Helper-Crypto](https://github.com/theme-particlex/hexo-helper-crypto) 插件，用于在模板文件内加/解密数据，使用 [Crypto-js](https://github.com/brix/crypto-js)
 

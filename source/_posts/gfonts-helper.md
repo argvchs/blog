@@ -3,7 +3,7 @@ title: GFonts-Helper 使用说明
 date: 2022-07-25 13:29:33
 tags:
     - 字体
-categories: 工具
+categories: 教程
 ---
 
 [GFonts-Helper](https://github.com/argvchs/gfonts-helper) 是一个下载并压缩 Google Fonts 的工具
