@@ -16,55 +16,43 @@ categories: 算法
 
 虽然相对于原版函数式 `fread` 快读会有点慢，但还是比 `getchar` `putchar` 要快的
 
-Fast-IO 用了 C++20，用以下编译参数即可
+FastIO 用了 C++20，用以下编译参数即可
 
 ```bash
-g++ <file>.cpp -o <file> -std=c++20 -Wall
+g++ <filename>.cpp -o <filename> -std=c++20 -Wall
 ```
 
 # 1. 目录解释
 
 ```
 fastio.cpp          # 测试代码
-fastio.h            # Fast-IO 库源代码
-fastio.in           # 输入测试数据
+fastio.h            # FastIO 库源代码
+fastio.old.h        # FastIO 库源代码，兼容 C++17
+fastio.in           # 读写测试数据
 fastio.speed.in     # 速度测试数据
-README.md           # README
 ```
 
 # 2. 使用
 
 -   `using namespace fastio;`
 
-    使用 Fast-IO
+    使用 FastIO
 
 -   `using namespace fastio::symbols;`
 
-    使用输入输出符号，如 `endl`
+    使用读写符号，如 `endl`
 
--   `is >> x;`
+-   `is >> n;`
 
-    读取 `x`
+    读取 `n`
 
--   `is >> x >> y >> z;`
+-   `is >> n >> m >> k;`
 
-    读取 `x` `y` `z`
+    读取 `n` `m` `k`
 
 -   `c = is.get();`
 
     读取一个字符到 `c`
-
--   `is.read(x, y, z);`
-
-    读取 `x` `y` `z`
-
--   `x = is.read<int>();`
-
-    读取一个 `int` 类型的数据到 `x`
-
--   `x = is.read<T>();`
-
-    读取一个 `T` 类型的数据到 `x`
 
 -   `is >> s;`
 
@@ -86,7 +74,7 @@ README.md           # README
 
     忽略字符到 c 停止
 
--   `while (is >> x);`
+-   `while (is >> n);`
 
     一直读取直到末尾
 
@@ -98,7 +86,7 @@ README.md           # README
 
     忽略前导空格
 
--   `is.setbase(base);`
+-   `is.setbase(n);`
 
     按 `base` 进制读取数 $(2 \le base \le 36)$
 
@@ -106,21 +94,17 @@ README.md           # README
 
     取消前面的所有设置
 
--   `os << x;`
+-   `os << n;`
 
-    写入 `x`
+    写入 `n`
 
--   `os << x << y << z;`
+-   `os << n << m << k;`
 
-    写入 `x` `y` `z`
+    写入 `n` `m` `k`
 
 -   `os.put(c);`
 
     写入一个字符 `c`
-
--   `os.write(x, y, z);`
-
-    写入 `x` `y` `z`
 
 -   `os.flush();` `os << flush;`
 
@@ -172,25 +156,33 @@ README.md           # README
 
 -   `os << showbase;`
 
-    写入 8、16 进制的数时，在前面显示 `0` `0x`
+    写入 2、8、16 进制的数时，在前面显示 `0b` `0` `0x`
 
 -   `os << noshowbase;`
 
-    写入 8、16 进制的数时，不在前面显示 `0` `0x`
+    写入 2、8、16 进制的数时，不在前面显示 `0b` `0` `0x`
 
--   `os << setbase(base);`
+-   `os << setbase(n);`
 
     按 `base` 进制写入数，超出范围默认 10 进制 $(2 \le base \le 36)$
 
--   `os << setw(width);`
+-   `os << setw(n);`
 
     设置下一次写入宽度若小于 `width`，就填补字符（下一次写入重置）
 
--   `os << setfill(fill);`
+-   `os << setfill(c);`
 
     设置 `setw` 填补的字符，默认为空格
 
--   `os << setprecision(precision);`
+-   `os << left;`
+
+    设置 `setw` 填补的字符在左边
+
+-   `os << right;`
+
+    设置 `setw` 填补的字符在右边
+
+-   `os << setprecision(n);`
 
     设置浮点数保留位数，默认保留 3 位
 
@@ -198,13 +190,13 @@ README.md           # README
 
     取消前面的所有设置
 
--   `ifstream ifs(path);`
+-   `ifstream ifs(s);`
 
-    创建文件读流，从 `path` 路径文件读取（也可以是 `FILE*` 文件指针），和普通读流用法相同
+    创建文件读流，文件路径为 `s`，和普通读流用法相同
 
--   `ofstream ofs(path);`
+-   `ofstream ofs(s);`
 
-    创建文件写流，写入 `path` 路径的文件（也可以是 `FILE*` 文件指针），和普通写流用法相同
+    创建文件写流，文件路径为 `s`，和普通写流用法相同
 
 # 3. 接口
 
@@ -221,21 +213,22 @@ auto &operator<<(fastio::interface::istream &is, string &s) {
     s = buf;
     return is;
 }
-auto &operator<<(fastio::interface::ostream &os, const string s) { return os << s.c_str(); }
+auto &operator<<(fastio::interface::ostream &os, const string &s) { return os << s.c_str(); }
 ```
 
 ```cpp
-template<class T> auto& operator<<(fastio::interface::istream& is, const vector<T>& v) {
+template<class T> auto& operator<<(fastio::interface::istream& is, vector<T>& v) {
     v.clear();
-    T x;
-    int n = is.read<size_t>();
+    int n;
+    is >> n;
     while (n--) {
+        T x;
         is >> x;
         v.push_back(x);
     }
     return os;
 }
-template<class T> auto& operator<<(fastio::interface::ostream& os, const vector<T> v) {
+template<class T> auto& operator<<(fastio::interface::ostream& os, const vector<T> &v) {
     for (T x : v) os << x << ' ';
     return os;
 }
