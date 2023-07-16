@@ -80,7 +80,7 @@ tag_map:
     CSS: css
     Clang: clang
     Crypto-js: crypto-js
-    Fast-IO: fast-io
+    FastIO: fastio
     Florr.io: florr-io
     GCC: gcc
     Giscus: giscus

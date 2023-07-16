@@ -1,14 +1,14 @@
 ---
-title: C++ Fast-IO
+title: C++ FastIO
 date: 2022-08-11 13:45:19
 tags:
     - C/C++
     - C++20
-    - Fast-IO
+    - FastIO
 categories: 算法
 ---
 
-[Fast-IO](https://github.com/argvchs/fast-io) 是一个快读快写库
+[FastIO](https://github.com/argvchs/fastio) 是一个快读快写库
 
 支持基本类型读写，指针地址写入，和 `cin` `cout` 用法类似
 
