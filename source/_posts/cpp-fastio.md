@@ -29,7 +29,6 @@ fastio.cpp          # 测试代码
 fastio.h            # FastIO 库源代码
 fastio.old.h        # FastIO 库源代码，兼容 C++17
 fastio.in           # 读写测试数据
-fastio.speed.in     # 速度测试数据
 ```
 
 # 2. 使用
@@ -148,11 +147,11 @@ fastio.speed.in     # 速度测试数据
 
 -   `os << lowercase;`
 
-    按大于 10 的进制写入数时，字母大写（默认小写）
+    写入特殊内容时使用大写
 
 -   `os << uppercase;`
 
-    按大于 10 的进制写入数时，字母小写（默认小写）
+    写入特殊内容时使用小写
 
 -   `os << showbase;`
 
