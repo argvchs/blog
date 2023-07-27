@@ -68,9 +68,9 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+    OI: oi
     教程: tutorial
     其他: other
-    算法: algorithm
 tag_map:
     Babel: babel
     C++20: cpp20

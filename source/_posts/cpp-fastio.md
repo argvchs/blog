@@ -5,7 +5,7 @@ tags:
     - C/C++
     - C++20
     - FastIO
-categories: 算法
+categories: OI
 ---
 
 [FastIO](https://github.com/argvchs/fastio) 是一个快读快写库

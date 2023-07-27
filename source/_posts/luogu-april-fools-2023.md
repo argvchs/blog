@@ -3,7 +3,7 @@ title: 2023 年洛谷愚人节比赛
 date: 2023-04-09 18:19:08
 tags:
     - 洛谷
-categories: 算法
+categories: OI
 ---
 
 2023 年洛谷愚人节比赛，我竟然拿到 #4 了
