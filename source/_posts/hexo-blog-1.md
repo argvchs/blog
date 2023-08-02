@@ -20,14 +20,17 @@ Markdown 可以看 GitHub 的[基本撰写和格式语法](https://docs.github.c
 
 # 1. 安装 Git 和 Node.js
 
--   [Git](https://git-scm.com/downloads)
+## 1.1 Git
 
-    完成后用 `git --version` 命令检查，有提示即安装正确
+https://git-scm.com/downloads
 
--   [Node.js](https://nodejs.org)
+完成后用 `git --version` 命令检查，有提示即安装正确
 
-    选择 LTS 或 Current 版本，安装一路确认即可
-    完成后用 `node -v` 命令检查，有提示即安装正确
+## 1.2 Node.js
+
+https://nodejs.org
+
+完成后用 `node -v` 命令检查，有提示即安装正确
 
 # 2. 启用 Corepack
 

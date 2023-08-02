@@ -13,7 +13,18 @@ categories: 教程
 
 <!-- more -->
 
-# 1. 配置 SSH 密钥
+# 1. 更改默认分支
+
+默认分支以前是 `master`，现在改成了 `main`
+网上搜到关于 GitHub 的文章，大部分默认分支都是 `master`
+
+打开 https://github.com/settings/repositories
+
+第一个输入框就是你的默认分支，更改后点击 Update 即可
+
+也可以不更改，但以后的操作都要改成 `main`
+
+# 2. 配置 SSH 密钥
 
 首先要有一个 [GitHub](https://github.com) 帐号
 
@@ -47,17 +58,6 @@ clip < %USERPROFILE%\.ssh\id_ed25519.pub
 打开你 GitHub 右上角的头像中的 Settings 设置，点击左边的 SSH and GPG keys，点击右上角的 New SSH key，将 SSH 密钥复制到 Key 中，Title 不用写，点击 Add SSH key 添加密钥
 
 设置好 SSH 密钥后用 `ssh -T git@github.com` 检测，如果出现 `Hi! You've successfully authenticated` 则配置成功
-
-# 2. 更改默认分支（可选）
-
-默认分支以前是 `master`，现在改成了 `main`
-网上搜到关于 GitHub 的文章，大部分默认分支都是 `master`
-
-打开 https://github.com/settings/repositories
-
-第一个输入框就是你的默认分支，更改后点击 Update 即可
-
-也可以不更改，但以后的操作都要改成 `main`
 
 # 3. 部署到 GitHub Pages
 
