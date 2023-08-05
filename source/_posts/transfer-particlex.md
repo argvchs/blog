@@ -4,7 +4,6 @@ date: 2023-05-18 19:27:56
 tags:
     - ParticleX
 categories: 其他
-pinned: 1
 ---
 
 把 ParticleX 从我自己账号下转移到 `theme-particlex` 下了
