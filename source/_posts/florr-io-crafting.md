@@ -6,11 +6,11 @@ tags:
 categories: OI
 ---
 
-写了一个 [Florr.io](https://florr.io) 合卡概率计算器
+写了一个 [Florr.io](https://florr.io) 合卡概率计算器。
 
 <!-- more -->
 
-设 $a_n$ 表示消耗 $n$ 个卡期望合成卡的数量，若合成概率为 $p$，则
+设 $a_n$ 表示消耗 $n$ 个卡期望合成卡的数量，若合成概率为 $p$，则：
 
 $$
 a_n =
@@ -20,7 +20,7 @@ p\left(a_{n - 5} + 1\right) + \left(1 - p\right)\left(\frac{1}{4}a_{n - 4} + \fr
 \end{cases}
 $$
 
-转换为矩阵乘法即为
+转换为矩阵乘法即为：
 
 $$
 \begin{pmatrix}
@@ -51,7 +51,7 @@ p
 \end{pmatrix}
 $$
 
-其中 $q = \dfrac{1 - p}{4}$
+其中 $q = \dfrac{1 - p}{4}$。
 
 ```cpp
 #include <iomanip>

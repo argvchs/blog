@@ -6,20 +6,20 @@ tags:
 categories: 其他
 ---
 
-这几天 GitHub 几乎都是无法打开，改 Hosts 也不行，只能用龟速的 Tor
+这几天 GitHub 几乎都是无法打开，改 Hosts 也不行，只能用龟速的 Tor。
 
 <!-- more -->
 
-终于找到一个很好的工具
+终于找到一个很好的工具。
 
 ### [Dev-Sidecar](https://hub.njuu.cf/docmirror/dev-sidecar/releases)
 
-按照[教程](https://hub.njuu.cf/docmirror/dev-sidecar)安装即可
+按照[教程](https://hub.njuu.cf/docmirror/dev-sidecar)安装即可。
 
 附 GitHub 镜像站：https://hub.njuu.cf
 
-> 这个 Dev-Sidecar 其实是有 :ladder: 功能的
+> 这个 Dev-Sidecar 其实是有 :ladder: 功能的。
 >
-> 是个解谜游戏，通过后会告诉你开启的办法，不过太简单就不说了
+> 是个解谜游戏，通过后会告诉你开启的办法，不过太简单就不说了。
 >
-> 提示：彩蛋按钮在 [`footer`](https://hub.njuu.cf/docmirror/dev-sidecar/blob/master/packages/gui/src/view/pages/index.vue#L80) 部分
+> 提示：彩蛋按钮在 [`footer`](https://hub.njuu.cf/docmirror/dev-sidecar/blob/master/packages/gui/src/view/pages/index.vue#L80) 部分。

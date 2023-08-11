@@ -5,4 +5,4 @@ tags:
 categories:
 ---
 
-Hexo 博客今天终于搭建好了，纪念一下
+Hexo 博客今天终于搭建好了，纪念一下。

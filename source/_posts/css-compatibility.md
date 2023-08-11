@@ -7,13 +7,13 @@ tags:
 categories: 教程
 ---
 
-CSS 兼容性太麻烦了，所以要自动处理
+CSS 兼容性太麻烦了，所以要自动处理。
 
 <!-- more -->
 
 # 1. 安装插件
 
-Hexo-Autoprefixer 可以自动处理 CSS 兼容性
+Hexo-Autoprefixer 可以自动处理 CSS 兼容性。
 
 ```bash
 pnpm add hexo-autoprefixer
@@ -35,4 +35,4 @@ autoprefixer:
 last 5 versions, not dead, > 0.3%
 ```
 
-上面的 Browserslist 是我的配置，更详细的可以看[这里](https://github.com/browserslist/browserslist#config-file)
+上面的 Browserslist 是我的配置，更详细的可以看[这里](https://github.com/browserslist/browserslist#config-file)。
