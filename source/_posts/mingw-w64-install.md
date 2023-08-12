@@ -9,7 +9,6 @@ categories: 教程
 ---
 
 看了好多 MinGW-w64 安装教程，都是从 SourceForge 上下载，版本很旧，甚至不能用万能头，就很难受啊。
-
 这篇文章教你如何找到最新 MinGW-w64 版本。
 
 <!-- more -->

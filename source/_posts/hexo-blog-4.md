@@ -18,9 +18,9 @@ categories: 教程
 默认分支以前是 `master`，现在改成了 `main`。
 网上搜到关于 GitHub 的文章，大部分默认分支都是 `master`。
 
-打开 https://github.com/settings/repositories。
+https://github.com/settings/repositories
 
-第一个输入框就是你的默认分支，更改后点击 Update 即可。
+打开上面的链接，第一个输入框就是你的默认分支，更改后点击 Update 即可。
 
 也可以不更改，但以后的操作都要改成 `main`。
 

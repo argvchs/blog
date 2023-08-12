@@ -110,8 +110,7 @@ git push -u origin master
 
 Note 随便填，例如 `cdn`；
 Expiration 选 No expiration；
-Select Scopes 勾选 `repo`，下面的会自动勾选。
-
+Select Scopes 勾选 `repo`，下面的会自动勾选；
 然后 Generate token 就可以了。
 
 **生成后会有一个复制按钮，存下来一会要用到。**
@@ -127,7 +126,6 @@ New repository secret 创建 `TOKEN`，值为刚才生成的 Access token。
 然后切换到 Variables，点击 New repository。
 
 New repository variable 创建 `LIBS`，值为你想要添加的库文件，用空格分割，**不能用换行分割**。
-在 [CDNJS](https://cdnjs.com) 搜索。
 
 **然后就可以自动同步了！**
 

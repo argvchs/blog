@@ -15,6 +15,7 @@ Gitalk 官方代理使用 Cloudflare，速度过慢，这里介绍一下自己�
 # 1. 下载项目
 
 打开 [CORS Anywhere](https://github.com/Rob--W/cors-anywhere) 项目地址，点击右上角 Fork 按钮，点 Create Fork，复制到你的仓库。
+
 在任意位置输入以下命令，克隆项目到本地：
 
 ```bash
@@ -42,6 +43,7 @@ GitHub 打不开可以用[镜像站](https://hub.njuu.cf)。
 下载 [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)，安装完运行 `heroku -v`检测安装。
 
 然后登陆 Heroku CLI，运行 `heroku login -i`，填入你的邮箱和密码。
+
 找到你刚才下载 CORS Anywhere 项目的位置，`cd` 到项目根目录，执行以下命令部署：
 
 ```bash
@@ -56,7 +58,8 @@ git push heroku master
 
 如果你的 CORS 代理被别人得知，用于许多人的 Gitalk 代理中，你的代理就会很卡，这种情况就要设置访问黑/白名单。
 
-进入你 Heroku 的项目主页，点击右边的 Settings，找到 Reveal Config Vars 按钮，打开配置变量设置；
+进入你 Heroku 的项目主页，点击右边的 Settings，找到 Reveal Config Vars 按钮，打开配置变量设置。
+
 在左边输入 `CORSANYWHERE_BLACKLIST`（黑名单）或 `CORSANYWHERE_WHITELIST`（白名单），在右边输入你要设置黑/白名单的网站域名，要加上 `http://` 或 `https://` 前缀，用 `,` 分割。
 
 **同一个域名要分别用 `http://` 和 `https://` 设置两次，协议不同被视为不同源。**

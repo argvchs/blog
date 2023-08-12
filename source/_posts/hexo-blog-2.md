@@ -64,7 +64,8 @@ hexo new page about
 
 ---
 
-如果想让标题大写的话可以将 `title` 参数改为大写，例如 `title: About`；
+如果想让标题大写的话可以将 `title` 参数改为大写，例如 `title: About`。
+
 虽然 ParticleX 是根据 `type` 参数来检测的，**但是一些主题是根据 `title` 检测的，可能检测不到**。
 
 # 3. 自定义网站配置

@@ -34,7 +34,8 @@ https://nodejs.org
 
 # 2. 启用 Corepack
 
-运行 `corepack enable` 启用 Corepack；
+运行 `corepack enable` 启用 Corepack。
+
 启用后自动安装 Yarn 和 PNPM，这样以后的命令都可以换成喜欢的包管理器，我一般用 PNPM。
 
 这里是速度参考：
@@ -53,11 +54,11 @@ pnpm i
 
 # 4. Hexo 的一些命令
 
--   生成静态文件：`hexo g`。
--   清空静态文件：`hexo cl`。
--   在本地运行：`hexo s`。
--   部署到网站：`hexo d`。
--   生成静态文件并部署到网站：`hexo d -g` 或 `hexo g -d`。
+-   生成静态文件：`hexo g`；
+-   清空静态文件：`hexo cl`；
+-   在本地运行：`hexo s`；
+-   部署到网站：`hexo d`；
+-   生成静态文件并部署到网站：`hexo d -g` 或 `hexo g -d`；
 -   创建新文章：`hexo new <file>`。
 
 **P.S. 创建新文章命令中的 `<file>` 是文件名，标题在文章中的 `title` 参数中修改。**

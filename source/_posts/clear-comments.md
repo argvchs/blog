@@ -7,7 +7,6 @@ categories: 其他
 ---
 
 用这个文章来记录 Argvchs 的评论清除事件。
-
 不要误会啊，是技术原因导致的，我没有评论审查。
 
 <!-- more -->
@@ -24,5 +23,6 @@ categories: 其他
 
 于是我把自建服务的仓库和对应 Github App `giscus-argvchs[bot]` 都删了。
 
-但是由于 Discussion 全部由 `giscus-argvchs[bot]` 创建，删除后全部替换为 [`Ghost`](https://github.com/ghost) 帐号了；
+但是由于 Discussion 全部由 `giscus-argvchs[bot]` 创建，删除后全部替换为 [`Ghost`](https://github.com/ghost) 帐号了。
+
 可是 Giscus 无法搜索由 Ghost 创建的评论啊，所以就没了。
