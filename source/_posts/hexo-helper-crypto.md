@@ -13,7 +13,7 @@ description: |
 secret: "123456"
 ---
 
-[Hexo-Helper-Crypto](https://github.com/theme-particlex/hexo-helper-crypto) 插件，用于在模板文件内加/解密数据，使用 [Crypto-js](https://github.com/brix/crypto-js)
+[Hexo-Helper-Crypto](https://github.com/theme-particlex/hexo-helper-crypto) 插件，用于在模板文件内加/解密数据，使用 [Crypto-js](https://github.com/brix/crypto-js)。
 
 <!-- more -->
 
@@ -31,9 +31,9 @@ pnpm add hexo-helper-crypto
 <% const CryptoJS = crypto(); %>
 ```
 
-然后可以直接使用 `CryptoJS`，和 [Crypto-js](https://github.com/brix/crypto-js) 接口一样
+然后可以直接使用 `CryptoJS`，和 [Crypto-js](https://github.com/brix/crypto-js) 接口一样。
 
-以下例子获取了页面标题的 SHA256 值，并用 Base64 编码
+以下例子获取了页面标题的 SHA256 值，并用 Base64 编码。
 
 ```ejs
 <% const CryptoJS = crypto(); %>

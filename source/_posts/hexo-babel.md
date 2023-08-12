@@ -8,7 +8,7 @@ tags:
 categories: 教程
 ---
 
-[Hexo-Babel](https://github.com/theme-particlex/hexo-babel) 插件，使用 Babel 编译转换 JS 文件
+[Hexo-Babel](https://github.com/theme-particlex/hexo-babel) 插件，使用 Babel 编译转换 JS 文件。
 
 <!-- more -->
 
@@ -27,9 +27,9 @@ babel:
         - "*.min.js"
 ```
 
-`options` 详见 [Options · Babel](https://babel.dev/docs/en/options) 和 [@babel/preset-env · Babel](https://babel.dev/docs/en/babel-preset-env#options)
+`options` 详见 [Options · Babel](https://babel.dev/docs/en/options) 和 [@babel/preset-env · Babel](https://babel.dev/docs/en/babel-preset-env#options)。
 
-例如这是一种配置（要先安装 `@babel/preset-env`）
+例如这是一种配置（要先安装 `@babel/preset-env`）：
 
 ```bash
 pnpm add @babel/core @babel/preset-env -D
@@ -46,7 +46,7 @@ babel:
         - "*.min.js"
 ```
 
-或者不填 `options` 参数，使用 `babel.config.json`
+或者不填 `options` 参数，使用 `babel.config.json`。
 
 ```json
 {
