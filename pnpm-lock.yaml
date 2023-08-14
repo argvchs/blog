@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   hexo:
     specifier: ^6.3.0
@@ -35,8 +39,8 @@ dependencies:
     specifier: ^2.0.0
     version: 2.0.0
   hexo-helper-crypto:
-    specifier: ^1.1.3
-    version: 1.1.3
+    specifier: ^1.1.4
+    version: 1.1.4
   hexo-html-minifier:
     specifier: ^1.0.0
     version: 1.0.0
@@ -51,7 +55,7 @@ dependencies:
     version: 3.0.0
   hexo-theme-particlex:
     specifier: github:argvchs/hexo-theme-particlex
-    version: github.com/argvchs/hexo-theme-particlex/02cfbc4b1ca88edc972f2d1b62db4d9647fdfd42
+    version: git/github.com+argvchs/hexo-theme-particlex/c7b9fc97d998cc71eaf427e27df2b433886d32a8
   hexo-uglify:
     specifier: ^2.0.0
     version: 2.0.0
@@ -1937,8 +1941,8 @@ packages:
       hexo-pagination: 3.0.0
     dev: false
 
-  /hexo-helper-crypto@1.1.3:
-    resolution: {integrity: sha512-38EBUkG+bKzRrwlkiTa2TVhiMjLWKmtnrxqJE7VLa4W8Qk4x8T3j8j5yfcbOnwPwjXR6Oo/P1c5KMetB3z3fjA==}
+  /hexo-helper-crypto@1.1.4:
+    resolution: {integrity: sha512-FGLqbpZS15daGXQQkGxng7qimq1zSnh61xNbM3w4mfIMv117/xNemzlSydc3TY7foZ6XExHZUwI+dRgwyjJhrA==}
     dependencies:
       crypto-js: 4.1.1
     dev: false
@@ -2804,11 +2808,11 @@ packages:
   /yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  github.com/argvchs/hexo-theme-particlex/02cfbc4b1ca88edc972f2d1b62db4d9647fdfd42:
-    resolution: {commit: 02cfbc4b1ca88edc972f2d1b62db4d9647fdfd42, repo: git+ssh://git@github.com/argvchs/hexo-theme-particlex.git, type: git}
+  git/github.com+argvchs/hexo-theme-particlex/c7b9fc97d998cc71eaf427e27df2b433886d32a8:
+    resolution: {commit: c7b9fc97d998cc71eaf427e27df2b433886d32a8, repo: git@github.com:argvchs/hexo-theme-particlex.git, type: git}
     name: hexo-theme-particlex
-    version: 2.7.0
+    version: 2.7.1
     dependencies:
-      hexo-helper-crypto: 1.1.3
+      hexo-helper-crypto: 1.1.4
       hexo-renderer-ejs: 2.0.0
     dev: false
