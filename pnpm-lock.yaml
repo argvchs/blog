@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   hexo:
     specifier: ^6.3.0
@@ -8,8 +12,8 @@ dependencies:
     specifier: ^2.0.0
     version: 2.0.0
   hexo-babel:
-    specifier: ^1.1.9
-    version: 1.1.9
+    specifier: ^1.1.10
+    version: 1.1.10
   hexo-clean-css:
     specifier: ^2.0.0
     version: 2.0.0
@@ -51,7 +55,7 @@ dependencies:
     version: 3.0.0
   hexo-theme-particlex:
     specifier: github:argvchs/hexo-theme-particlex
-    version: github.com/argvchs/hexo-theme-particlex/02cfbc4b1ca88edc972f2d1b62db4d9647fdfd42
+    version: git/github.com+argvchs/hexo-theme-particlex/c7b9fc97d998cc71eaf427e27df2b433886d32a8
   hexo-uglify:
     specifier: ^2.0.0
     version: 2.0.0
@@ -1813,8 +1817,8 @@ packages:
       postcss: 7.0.39
     dev: false
 
-  /hexo-babel@1.1.9:
-    resolution: {integrity: sha512-Uocci9Wvam7MWQNpCBZp+8lKj8J2LZifK+18ukkJHmFm+0FyVK5J7TVd1w0/OlCsd0XhB7MPIH6K0zOlvUkP9w==}
+  /hexo-babel@1.1.10:
+    resolution: {integrity: sha512-x1B7H2wwdPWk/2JM9S9vih0haWOWtheWr9Nv9tCQtBH3HRkVTogL0VLzP1Cku2lHCRPSqDZCFDQwRmZnDoJ7KA==}
     dependencies:
       '@babel/core': 7.22.9
       micromatch: 4.0.5
@@ -2804,10 +2808,10 @@ packages:
   /yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  github.com/argvchs/hexo-theme-particlex/02cfbc4b1ca88edc972f2d1b62db4d9647fdfd42:
-    resolution: {commit: 02cfbc4b1ca88edc972f2d1b62db4d9647fdfd42, repo: git+ssh://git@github.com/argvchs/hexo-theme-particlex.git, type: git}
+  git/github.com+argvchs/hexo-theme-particlex/c7b9fc97d998cc71eaf427e27df2b433886d32a8:
+    resolution: {commit: c7b9fc97d998cc71eaf427e27df2b433886d32a8, repo: git@github.com:argvchs/hexo-theme-particlex.git, type: git}
     name: hexo-theme-particlex
-    version: 2.7.0
+    version: 2.7.1
     dependencies:
       hexo-helper-crypto: 1.1.3
       hexo-renderer-ejs: 2.0.0
