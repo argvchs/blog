@@ -100,6 +100,7 @@ tag_map:
     ParticleX: particlex
     Python: python
     Vercel: vercel
+    VSCode: vscode
     插件: plugin
     洛谷: luogu
     评论: comment
