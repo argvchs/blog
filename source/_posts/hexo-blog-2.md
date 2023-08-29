@@ -26,7 +26,7 @@ git clone <link>.git <theme> --depth=1
 
 > `--depth=1` 是为了 Clone 更快，只 Clone 最新提交。
 
-GitHub 打不开可以用[镜像站](https://hub.njuu.cf)。
+GitHub 打不开可以用[镜像站](https://githubfast.com)。
 
 例如我的主题是 [ParticleX](https://github.com/theme-particlex/hexo-theme-particlex)，则为：
 

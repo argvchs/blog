@@ -46,7 +46,7 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 
     解压后安装 `SubsetOTF/CN` 下的所有字体。
 
-若 GitHub 打不开可以将 `github.com` 替换为 `hub.njuu.cf`。
+若 GitHub 打不开可以将 `github.com` 替换为 `githubfast.com`。
 
 # 5. 安装 Git Bash
 

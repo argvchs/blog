@@ -32,7 +32,7 @@ CORS Anywhere 是在 Heroku 上运行的，所以要注册一下，在[这里](h
 诶？哪有 CAPTCHA？
 Heroku 因为用了 Google 的 CHAPCHA 服务，[所以就要](/2022/12/07/fix-github)。。。
 
-GitHub 打不开可以用[镜像站](https://hub.njuu.cf)。
+GitHub 打不开可以用[镜像站](https://githubfast.com)。
 
 重新打开页面，就会出现 CHAPCHA 检测了。
 
