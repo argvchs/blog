@@ -51,7 +51,7 @@ dependencies:
     version: 3.0.0
   hexo-theme-particlex:
     specifier: github:argvchs/hexo-theme-particlex
-    version: github.com/argvchs/hexo-theme-particlex/b0548282a7be0a5d9fc1ffafc94cdddd046a3fc1
+    version: github.com/argvchs/hexo-theme-particlex/0ff1a122fd078e0c0839e0dcd467043b114513a3
   hexo-uglify:
     specifier: ^2.0.0
     version: 2.0.0
@@ -1402,7 +1402,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001524
-      electron-to-chromium: 1.4.504
+      electron-to-chromium: 1.4.505
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
 
@@ -1655,8 +1655,8 @@ packages:
       jake: 10.8.7
     dev: false
 
-  /electron-to-chromium@1.4.504:
-    resolution: {integrity: sha512-cSMwIAd8yUh54VwitVRVvHK66QqHWE39C3DRj8SWiXitEpVSY3wNPD9y1pxQtLIi4w3UdzF9klLsmuPshz09DQ==}
+  /electron-to-chromium@1.4.505:
+    resolution: {integrity: sha512-0A50eL5BCCKdxig2SsCXhpuztnB9PfUgRMojj5tMvt8O54lbwz3t6wNgnpiTRosw5QjlJB7ixhVyeg8daLQwSQ==}
 
   /encodeurl@1.0.2:
     resolution: {integrity: sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==}
@@ -1991,7 +1991,7 @@ packages:
     engines: {node: '>= 10.13.0'}
     dependencies:
       micromatch: 4.0.5
-      terser: 5.19.2
+      terser: 5.19.3
     dev: false
 
   /hexo-util@2.7.0:
@@ -2648,8 +2648,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  /terser@5.19.2:
-    resolution: {integrity: sha512-qC5+dmecKJA4cpYxRa5aVkKehYsQKc+AHeKl0Oe62aYjBL8ZA33tTljktDHJSaxxMnbI5ZYw+o/S2DxxLu8OfA==}
+  /terser@5.19.3:
+    resolution: {integrity: sha512-pQzJ9UJzM0IgmT4FAtYI6+VqFf0lj/to58AV0Xfgg0Up37RyPG7Al+1cepC6/BVuAxR9oNb41/DL4DEoHJvTdg==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -2786,10 +2786,10 @@ packages:
   /yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  github.com/argvchs/hexo-theme-particlex/b0548282a7be0a5d9fc1ffafc94cdddd046a3fc1:
-    resolution: {tarball: https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/b0548282a7be0a5d9fc1ffafc94cdddd046a3fc1}
+  github.com/argvchs/hexo-theme-particlex/0ff1a122fd078e0c0839e0dcd467043b114513a3:
+    resolution: {commit: 0ff1a122fd078e0c0839e0dcd467043b114513a3, repo: git+ssh://git@github.com/argvchs/hexo-theme-particlex.git, type: git}
     name: hexo-theme-particlex
-    version: 2.7.3
+    version: 2.7.4
     dependencies:
       hexo-helper-crypto: 1.1.4
       hexo-renderer-ejs: 2.0.0
