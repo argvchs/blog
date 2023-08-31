@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   hexo:
     specifier: ^6.3.0
@@ -51,7 +55,7 @@ dependencies:
     version: 3.0.0
   hexo-theme-particlex:
     specifier: github:argvchs/hexo-theme-particlex
-    version: github.com/argvchs/hexo-theme-particlex/0ff1a122fd078e0c0839e0dcd467043b114513a3
+    version: git/github.com+argvchs/hexo-theme-particlex/0ff1a122fd078e0c0839e0dcd467043b114513a3
   hexo-uglify:
     specifier: ^2.0.0
     version: 2.0.0
@@ -61,8 +65,8 @@ devDependencies:
     specifier: ^7.22.11
     version: 7.22.11
   '@babel/preset-env':
-    specifier: ^7.22.10
-    version: 7.22.10(@babel/core@7.22.11)
+    specifier: ^7.22.14
+    version: 7.22.14(@babel/core@7.22.11)
 
 packages:
 
@@ -1060,8 +1064,8 @@ packages:
       '@babel/helper-plugin-utils': 7.22.5
     dev: true
 
-  /@babel/preset-env@7.22.10(@babel/core@7.22.11):
-    resolution: {integrity: sha512-riHpLb1drNkpLlocmSyEg4oYJIQFeXAK/d7rI6mbD0XsvoTOOweXDmQPG/ErxsEhWk3rl3Q/3F6RFQlVFS8m0A==}
+  /@babel/preset-env@7.22.14(@babel/core@7.22.11):
+    resolution: {integrity: sha512-daodMIoVo+ol/g+//c/AH+szBkFj4STQUikvBijRGL72Ph+w+AMTSh55DUETe8KJlPlDT1k/mp7NBfOuiWmoig==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -2786,15 +2790,11 @@ packages:
   /yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  github.com/argvchs/hexo-theme-particlex/0ff1a122fd078e0c0839e0dcd467043b114513a3:
-    resolution: {commit: 0ff1a122fd078e0c0839e0dcd467043b114513a3, repo: git+ssh://git@github.com/argvchs/hexo-theme-particlex.git, type: git}
+  git/github.com+argvchs/hexo-theme-particlex/0ff1a122fd078e0c0839e0dcd467043b114513a3:
+    resolution: {commit: 0ff1a122fd078e0c0839e0dcd467043b114513a3, repo: git@github.com:argvchs/hexo-theme-particlex.git, type: git}
     name: hexo-theme-particlex
     version: 2.7.4
     dependencies:
       hexo-helper-crypto: 1.1.4
       hexo-renderer-ejs: 2.0.0
     dev: false
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
