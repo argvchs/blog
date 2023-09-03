@@ -66,8 +66,9 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 6. Fluent Icons
 7. Markdown Preview Github Styling
 8. Prettier
+9. Chinese (Simplified) Language Pack for Visual Studio Code
 
-有些教程说要配置 `tasks.json` 才能运行，但是这样太麻烦了。
+有些教程说要配置 `launch.json` `tasks.json` 才能运行，但是这样太麻烦了。
 
 我们安装 Code Runner 扩展后按 `Ctrl+Alt+N` 就可以了，或者你可以直接用 CPH。
 
@@ -91,6 +92,7 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 {
     "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
     "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "C_Cpp.autoAddFileAssociations": false,
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, AccessModifierOffset: -2, AlwaysBreakTemplateDeclarations: true, AllowShortBlocksOnASingleLine: true, AllowShortCaseLabelsOnASingleLine: true, AllowShortEnumsOnASingleLine: true, AllowShortFunctionsOnASingleLine: true, AllowShortIfStatementsOnASingleLine: AllIfsAndElse, AllowShortLambdasOnASingleLine: All, AllowShortLoopsOnASingleLine: true, ColumnLimit: 100, FixNamespaceComments: false, IndentWidth: 4, TabWidth: 4, UseTab: Never }",
     "code-runner.executorMap": {
         "c": "gcc $fileName -o $fileNameWithoutExt -std=c17 -Wall -O2 && ./$fileNameWithoutExt",
@@ -127,6 +129,8 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
     },
     "files.autoGuessEncoding": true,
     "markdown.preview.fontFamily": "'Fira Code', 'Source Han Sans SC'",
+    "prettier.printWidth": 100,
+    "prettier.tabWidth": 4,
     "search.followSymlinks": false,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "terminal.integrated.enableMultiLinePasteWarning": false,
