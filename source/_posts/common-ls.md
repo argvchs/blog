@@ -1,14 +1,4 @@
----
-title: Common Luogu-Paste Script
-date: 2023-09-17 22:01:53
-tags:
-    - 洛谷
-categories: 其他
----
-
 Common Luogu-Paste Script（简称 Common LS、CLS）是一个洛谷剪贴板模块规范。
-
-<!-- more -->
 
 # 1. 使用
 
@@ -36,7 +26,7 @@ const mod = await require("00000001");
 
 ## 1.3. `require_cache`
 
-`require` 的缓存。
+`require` 的缓存，注意其类型为 [`Map`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 而不是 `Object`。
 
 ```js
 // paste: 00000001
@@ -50,7 +40,7 @@ console.log((await require("0bwumvaq")).count()); // output: 1
 console.log((await require("0bwumvaq")).count()); // output: 2
 console.log((await require("0bwumvaq")).count()); // output: 3
 
-delete require_cache["0bwumvaq"];
+require_cache.delete("0bwumvaq");
 
 console.log((await require("0bwumvaq")).count()); // output: 1
 ```
@@ -121,7 +111,7 @@ decode.reverse = code => code.split("").reverse().join("");
 
 ```js
 // paste: 00000002
-requires("00000001");
+require("00000001");
 // output: Hello World!
 ```
 
@@ -159,32 +149,39 @@ exports.cube = x => x * mod.square(x);
 console.log(await linker("00000002"));
 /*
 output (formatted):
+
 (async () => {
-    const _linked_modules = {};
-    _linked_modules["00000002"] = async () => {
+    const _linked_modules = new Map();
+
+    _linked_modules.set("00000002", async () => {
         const module = { exports: {} };
         await (async (exports, module) => {
             const mod = await require("00000001");
             exports.cube = x => x * mod.square(x);
         })(module.exports, module);
         return module.exports;
-    };
-    _linked_modules["00000001"] = async () => {
+    });
+
+    _linked_modules.set("00000001", async () => {
         const module = { exports: {} };
         await (async (exports, module) => {
             exports.square = x => x * x;
         })(module.exports, module);
         return module.exports;
-    };
-    const require_cache = {};
+    });
+
+    const require_cache = new Map();
     const require = async url => {
+        if (!_linked_modules.has(url)) throw Error(`Cannot find module '${url}'`);
         let flag;
         await navigator.locks.request("require_cache", async () => {
-            flag = Object.hasOwn(require_cache, url);
-            if (!flag) require_cache[url] = null;
+            flag = require_cache.has(url);
+            if (!flag) require_cache.set(url);
         });
-        if (flag) return require_cache[url];
-        return (require_cache[url] = await _linked_modules[url]());
+        if (flag) return require_cache.get(url);
+        let result = await _linked_modules.get(url)();
+        require_cache.set(url, result);
+        return result;
     };
     return require("00000002");
 })();
@@ -198,11 +195,10 @@ output (formatted):
 将 CLS Polyfill 放到顶层模块代码的前面就可以了。
 
 ```js
-const _reg1 = /^\s*\/\/\s*begin\s+module\s*$((.|\n)*)^\s*\/\/\s*end\s+module\s*$/gm;
-const _reg2 = /^\s*\/\/\s*encode\s+(\w+)\s*$/gm;
-const _reg3 = /^\s*\/\/\s*require((\s+\w+)*)\s*$/gm;
-const _reg4 = /^[0-9a-z]{8}$/g;
 const _async_function = (async () => {}).constructor;
+const _reg1 = /^\s*\/\/\s*begin\s+module\s*$((.|\n)*)^\s*\/\/\s*end\s+module\s*$/m;
+const _reg2 = /^\s*\/\/\s*encode\s+(\w+)\s*$/m;
+const _reg3 = /^\s*\/\/\s*require((\s+\w+)*)\s*$/m;
 
 const encode = {};
 const decode = {};
@@ -222,68 +218,73 @@ decode.hex = code => {
     return new TextDecoder().decode(array);
 };
 
-const require_cache = {};
+const require_cache = new Map();
 const require = async url => {
     let flag;
     await navigator.locks.request("require_cache", async () => {
-        flag = Object.hasOwn(require_cache, url);
-        if (!flag) require_cache[url] = null;
+        flag = require_cache.has(url);
+        if (!flag) require_cache.set(url);
     });
-    if (flag) return require_cache[url];
-    let response = await fetch("/paste/" + url + "?_contentOnly");
+    if (flag) return require_cache.get(url);
+    let response = await fetch(`/paste/${url}?_contentOnly`);
     let json = await response.json();
     let data = json.currentData.paste.data;
-    _reg1.lastIndex = _reg2.lastIndex = 0;
-    let source = _reg1.exec(data)?.[1] || data;
-    let encode = _reg2.exec(data)?.[1] || "plain";
-    return (require_cache[url] = await (async () => {
+    let source = data.match(_reg1)?.[1] || data;
+    let encode = data.match(_reg2)?.[1] || "plain";
+    let result = await (async () => {
         const module = { exports: {} };
         await _async_function("exports", "module", decode[encode](source))(module.exports, module);
         return module.exports;
-    })());
+    })();
+    require_cache.set(url, result);
+    return result;
 };
 
 const linker = async url => {
     let result = `
     (async () => {
-        const _linked_modules = {};
+        const _linked_modules = new Map();
     `;
     const impl_cache = new Set();
     const impl = async url => {
-        if (impl_cache.has(url)) return;
-        impl_cache.add(url);
-        let response = await fetch("/paste/" + url + "?_contentOnly");
+        let flag;
+        await navigator.locks.request("linker_impl_cache", async () => {
+            flag = impl_cache.has(url);
+            if (!flag) impl_cache.add(url);
+        });
+        if (flag) return;
+        let response = await fetch(`/paste/${url}?_contentOnly`);
         let json = await response.json();
         let data = json.currentData.paste.data;
-        _reg1.lastIndex = _reg2.lastIndex = _reg3.lastIndex = 0;
-        let source = _reg1.exec(data)?.[1] || data;
-        let encode = _reg2.exec(data)?.[1] || "plain";
-        let module = _reg3.exec(data)?.[1] || "";
+        let source = data.match(_reg1)?.[1] || data;
+        let encode = data.match(_reg2)?.[1] || "plain";
+        let module = data.match(_reg3)?.[1] || "";
         result += `
-        _linked_modules["${url}"] = async () => {
+        _linked_modules.set("${url}", async () => {
             const module = { exports: {} };
             await (async (exports, module) => {
-                ${decode[encode](source)}\n
+                ${decode[encode](source)}
             })(module.exports, module);
             return module.exports;
-        };
+        });
         `;
-        for (let i of module.split(/\s+/)) {
-            _reg4.lastIndex = 0;
-            if (_reg4.test(i)) await impl(i);
-        }
+        module = module.trim();
+        if (module !== "") await Promise.all(module.split(/\s+/).map(impl));
     };
     await impl(url);
     result += `
-        const require_cache = {};
+        const require_cache = new Map();
         const require = async url => {
+            if (!_linked_modules.has(url)) throw Error(\`Cannot find module '\${url}'\`);
             let flag;
             await navigator.locks.request("require_cache", async () => {
-                flag = Object.hasOwn(require_cache, url);
-                if (!flag) require_cache[url] = null;
+                flag = require_cache.has(url);
+                if (!flag) require_cache.set(url);
             });
-            if (flag) return require_cache[url];
-            return (require_cache[url] = await _linked_modules[url]());
+            if (flag) return require_cache.get(url);
+            let result = await _linked_modules.get(url)();
+            require_cache.set(url, result);
+            return result;
         };
         return require("${url}");
     })();
