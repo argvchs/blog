@@ -1,4 +1,14 @@
+---
+title: Common Luogu-Paste Script
+date: 2023-09-17 22:01:53
+tags:
+    - 洛谷
+categories: 其他
+---
+
 Common Luogu-Paste Script（简称 Common LS、CLS）是一个洛谷剪贴板模块规范。
+
+<!-- more -->
 
 # 1. 使用
 
@@ -30,7 +40,7 @@ const mod = await require("00000001");
 
 ```js
 // paste: 00000001
-let x = 0
+let x = 0;
 exports.count = () => ++x;
 ```
 
