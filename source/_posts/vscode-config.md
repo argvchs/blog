@@ -30,6 +30,8 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 
 解压到合适的位置然后将其中的 `mingw64/bin` 添加到环境变量。
 
+不用 LLVM MinGW 的原因是那个没有 `pb_ds`。
+
 # 4. 安装字体
 
 -   Fira Code
@@ -59,52 +61,58 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 打开 VSCode 然后安装以下扩展：
 
 1. C++ Extension Pack
-2. Code Runner
-3. Competitive Programming Helper (cph)
-4. One Dark Pro
-5. vscode-icons
-6. Fluent Icons
-7. Markdown Preview Github Styling
-8. Prettier
-9. Chinese (Simplified) Language Pack for Visual Studio Code
+2. clangd
+3. Code Runner
+4. Competitive Programming Helper (cph)
+5. One Dark Pro
+6. vscode-icons
+7. Fluent Icons
+8. Error Lens
+9. Better Comments
+10. Prettier
+11. Github Markdown Preview
+12. Chinese (Simplified) Language Pack for Visual Studio Code
 
 有些教程说要配置 `launch.json` `tasks.json` 才能运行，但是这样太麻烦了。
 
-我们安装 Code Runner 扩展后按 `Ctrl+Alt+N` 就可以了，或者你可以直接用 CPH。
+我们安装 Code Runner 扩展后按 `Ctrl + Alt + N` 就可以了，或者你可以直接用 CPH。
 
 # 7. 创建文件夹
 
 在一个合适的位置创建一个合适的文件夹用于存储你所有的 C++ 文件。
 
-然后在里面创建 `.vscode` 文件夹用于存储配置文件，有两个配置文件，创建完成后目录结构应为如下：
+然后在里面创建 `.vscode` 文件夹用于存储配置文件，创建完成后目录结构应为如下：
 
 ```
+cpp
 |---.vscode
-    |---settings.json
-    |---c_cpp_properties.json
+|   |---settings.json
+|   |---c_cpp_properties.json
+|---.clang-format
+|---.clangd
 ```
 
-# 8. 配置 `settings.json`
-
-这个 `settings.json` 是我的配置。
+# 8. 配置文件
 
 ```json
+// settings.json
 {
     "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
     "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[yaml]": { "editor.tabSize": 4 },
     "C_Cpp.autoAddFileAssociations": false,
-    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, AccessModifierOffset: -2, AlwaysBreakTemplateDeclarations: true, AllowShortBlocksOnASingleLine: true, AllowShortCaseLabelsOnASingleLine: true, AllowShortEnumsOnASingleLine: true, AllowShortFunctionsOnASingleLine: true, AllowShortIfStatementsOnASingleLine: AllIfsAndElse, AllowShortLambdasOnASingleLine: All, AllowShortLoopsOnASingleLine: true, ColumnLimit: 100, FixNamespaceComments: false, IndentWidth: 4, TabWidth: 4, UseTab: Never }",
+    "C_Cpp.intelliSenseEngine": "disabled",
     "code-runner.executorMap": {
-        "c": "gcc $fileName -o $fileNameWithoutExt -std=c17 -Wall -O2 && ./$fileNameWithoutExt",
-        "cpp": "g++ $fileName -o $fileNameWithoutExt -std=c++20 -Wall -O2 && ./$fileNameWithoutExt"
+        "c": "clang $fileName -o $fileNameWithoutExt -std=c17 -Wall -O2 && ./$fileNameWithoutExt",
+        "cpp": "clang++ $fileName -o $fileNameWithoutExt -std=c++20 -Wall -O2 && ./$fileNameWithoutExt"
     },
     "code-runner.fileDirectoryAsCwd": true,
     "code-runner.ignoreSelection": true,
     "code-runner.runInTerminal": true,
     "cph.language.c.Args": "-std=c17 -Wall -O2",
-    "cph.language.c.Command": "gcc",
+    "cph.language.c.Command": "clang",
     "cph.language.cpp.Args": "-std=c++20 -Wall -O2",
-    "cph.language.cpp.Command": "g++",
+    "cph.language.cpp.Command": "clang++",
     "debug.console.fontFamily": "'Fira Code', 'Source Han Sans SC'",
     "editor.bracketPairColorization.enabled": false,
     "editor.codeLensFontFamily": "'Fira Code', 'Source Han Sans SC'",
@@ -118,18 +126,24 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
     "editor.minimap.renderCharacters": false,
     "editor.minimap.scale": 3,
     "editor.renderWhitespace": "boundary",
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": { "operator": "#c678dd" }
+    },
     "editor.wordWrap": "on",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.sortOrder": "type",
     "files.associations": {
+        "*.ans": "plaintext",
         "*.in": "plaintext",
         "*.out": "plaintext",
-        "*.ans": "plaintext"
+        ".clang-format": "yaml",
+        ".clangd": "yaml"
     },
     "files.autoGuessEncoding": true,
     "markdown.preview.fontFamily": "'Fira Code', 'Source Han Sans SC'",
-    "prettier.printWidth": 100,
+    "prettier.printWidth": 120,
     "prettier.tabWidth": 4,
     "search.followSymlinks": false,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
@@ -147,25 +161,58 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 }
 ```
 
-# 9. 配置 `c_cpp_properties.json`
-
-注意下面的 `path/to/mingw64/bin/gcc.exe` 要换成你的编译器路径。
-
 ```json
+// c_cpp_properties.json
 {
     "configurations": [
         {
             "name": "Win32",
             "includePath": ["${workspaceFolder}/**"],
             "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
-            "compilerPath": "path/to/mingw64/bin/gcc.exe",
+            "compilerPath": "path/to/clang.exe",
             "cStandard": "c17",
             "cppStandard": "c++20",
-            "intelliSenseMode": "windows-gcc-x64"
+            "intelliSenseMode": "windows-clang-x64"
         }
     ],
     "version": 4
 }
 ```
+
+```yaml
+# .clang-format
+BasedOnStyle: LLVM
+AccessModifierOffset: -2
+AlwaysBreakTemplateDeclarations: true
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortEnumsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortLambdasOnASingleLine: All
+AllowShortLoopsOnASingleLine: true
+ColumnLimit: 90
+FixNamespaceComments: false
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+```
+
+```yaml
+# .clangd
+CompileFlags:
+    Add: [-std=c++20, -Wall, -O2]
+    Compiler: clang++
+Index:
+    Background: Skip
+InlayHints:
+    Enabled: false
+```
+
+这个配置的编译器用的是 Clang，如果你想用 GCC 可以自行修改。
+
+如果是 Windows 7 要把 `editor.cursorSmoothCaretAnimation` 值改为 `true`。
+
+还有上面的 `path/to/clang.exe` 要换成你的编译器路径。
 
 # VSCode，启动！

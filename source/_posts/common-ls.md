@@ -305,7 +305,7 @@ const linker = async url => {
 
 ## 2.2. CDN
 
-我给 CLS 单独创建了一个[剪贴板](https://www.luogu.com.cn/paste/3zhbijww) 用于简化运行过程。
+我给 CLS 单独创建了一个[剪贴板](https://www.luogu.com.cn/paste/3zhbijww)用于简化运行过程。
 
 ```js
 await eval((await (await fetch("/paste/3zhbijww?_contentOnly")).json()).currentData.paste.data)("00000001");
