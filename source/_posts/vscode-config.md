@@ -61,18 +61,17 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 打开 VSCode 然后安装以下扩展：
 
 1. C++ Extension Pack
-2. clangd
-3. Code Runner
-4. Competitive Programming Helper (cph)
-5. One Dark Pro
-6. vscode-icons
-7. Fluent Icons
-8. Error Lens
-9. Better Comments
-10. Prettier
-11. Github Markdown Preview
-12. vscode-pdf
-13. Chinese (Simplified) Language Pack for Visual Studio Code
+2. Code Runner
+3. Competitive Programming Helper (cph)
+4. One Dark Pro
+5. vscode-icons
+6. Fluent Icons
+7. Error Lens
+8. Better Comments
+9. Prettier
+10. Github Markdown Preview
+11. vscode-pdf
+12. Chinese (Simplified) Language Pack for Visual Studio Code
 
 有些教程说要配置 `launch.json` `tasks.json` 才能运行，但是这样太麻烦了。
 
@@ -90,10 +89,11 @@ cpp
 |   |---settings.json
 |   |---c_cpp_properties.json
 |---.clang-format
-|---.clangd
 ```
 
 # 8. 配置文件
+
+配置文件的内容：
 
 ```json
 // settings.json
@@ -102,18 +102,17 @@ cpp
     "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
     "[yaml]": { "editor.tabSize": 4 },
     "C_Cpp.autoAddFileAssociations": false,
-    "C_Cpp.intelliSenseEngine": "disabled",
     "code-runner.executorMap": {
-        "c": "clang $fileName -o $fileNameWithoutExt -std=c17 -Wall -O2 && ./$fileNameWithoutExt",
-        "cpp": "clang++ $fileName -o $fileNameWithoutExt -std=c++20 -Wall -O2 && ./$fileNameWithoutExt"
+        "c": "gcc $fileName -o $fileNameWithoutExt -std=c17 -Wall -O2 && ./$fileNameWithoutExt",
+        "cpp": "g++ $fileName -o $fileNameWithoutExt -std=c++20 -Wall -O2 && ./$fileNameWithoutExt"
     },
     "code-runner.fileDirectoryAsCwd": true,
     "code-runner.ignoreSelection": true,
     "code-runner.runInTerminal": true,
     "cph.language.c.Args": "-std=c17 -Wall -O2",
-    "cph.language.c.Command": "clang",
+    "cph.language.c.Command": "gcc",
     "cph.language.cpp.Args": "-std=c++20 -Wall -O2",
-    "cph.language.cpp.Command": "clang++",
+    "cph.language.cpp.Command": "g++",
     "debug.console.fontFamily": "'Fira Code', 'Source Han Sans SC'",
     "editor.bracketPairColorization.enabled": false,
     "editor.codeLensFontFamily": "'Fira Code', 'Source Han Sans SC'",
@@ -127,10 +126,6 @@ cpp
     "editor.minimap.renderCharacters": false,
     "editor.minimap.scale": 3,
     "editor.renderWhitespace": "boundary",
-    "editor.semanticTokenColorCustomizations": {
-        "enabled": true,
-        "rules": { "operator": "#c678dd", "operator.userDefined": { "bold": true } }
-    },
     "editor.wordWrap": "on",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
@@ -139,8 +134,7 @@ cpp
         "*.ans": "plaintext",
         "*.in": "plaintext",
         "*.out": "plaintext",
-        ".clang-format": "yaml",
-        ".clangd": "yaml"
+        ".clang-format": "yaml"
     },
     "files.autoGuessEncoding": true,
     "markdown.preview.fontFamily": "'Fira Code', 'Source Han Sans SC'",
@@ -170,10 +164,10 @@ cpp
             "name": "Win32",
             "includePath": ["${workspaceFolder}/**"],
             "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
-            "compilerPath": "path/to/clang.exe",
+            "compilerPath": "path/to/gcc.exe",
             "cStandard": "c17",
             "cppStandard": "c++20",
-            "intelliSenseMode": "windows-clang-x64"
+            "intelliSenseMode": "windows-gcc-x64"
         }
     ],
     "version": 4
@@ -199,10 +193,62 @@ TabWidth: 4
 UseTab: Never
 ```
 
+这个配置的编译器用的是 GCC，如果你想用 Clang 可以自行修改。
+
+如果是 Windows 7 要把 `editor.cursorSmoothCaretAnimation` 值改为 `true`。
+
+还有上面的 `path/to/gcc.exe` 要换成你的编译器路径。
+
+# 9. Clangd（可选）
+
+Clangd 提供了比 IntelliSense 更好的语言服务器。
+
+其实并不建议使用 Clangd，因为其处理大结构体数组时很慢。例如：
+
+```cpp
+struct node {
+    int a, b;
+} a[100000005];
+```
+
+这样就可以卡崩 Clangd。
+
+但是有时 IntelliSense 因为玄学原因用不了，就只能用 Clangd 了。
+
+配置 Clangd 后的目录结构应为如下：
+
+```
+cpp
+|---.vscode
+|   |---settings.json
+|---.clang-format
+|---.clangd
+```
+
+需要添加或更改的配置文件内容：
+
+```json
+// settings.json
+{
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": { "operator": "#c678dd", "operator.userDefined": { "bold": true } }
+    },
+    "files.associations": {
+        "*.ans": "plaintext",
+        "*.in": "plaintext",
+        "*.out": "plaintext",
+        ".clang-format": "yaml",
+        ".clangd": "yaml"
+    }
+}
+```
+
 ```yaml
 # .clangd
 CompileFlags:
-    Add: [-std=c++20, -Wall, -O2]
+    Add: [-std=c++20, -Wall]
     Compiler: clang++
 Index:
     Background: Skip
@@ -210,10 +256,8 @@ InlayHints:
     Enabled: false
 ```
 
-这个配置的编译器用的是 Clang，如果你想用 GCC 可以自行修改。
+注意 `CompileFlags.Compiler` 必须为 `clang++`，因为 Clangd 语言服务器是基于 Clang 的，但是你编译的时候还是可以用 GCC。
 
-如果是 Windows 7 要把 `editor.cursorSmoothCaretAnimation` 值改为 `true`。
-
-还有上面的 `path/to/clang.exe` 要换成你的编译器路径。
+还有如果你配置了 Clangd 就不需要 IntelliSense 的 `c_cpp_properties.json` 了，可以直接删掉。
 
 # VSCode，启动！

@@ -32,7 +32,7 @@ https://nodejs.org
 
 完成后用 `node -v` 命令检查，有提示即安装正确。
 
-# 2. 启用 Corepack
+# 2. 启用 Corepack（可选）
 
 运行 `corepack enable` 启用 Corepack。
 
