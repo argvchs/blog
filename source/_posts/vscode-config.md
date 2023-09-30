@@ -128,7 +128,7 @@ cpp
     "editor.renderWhitespace": "boundary",
     "editor.semanticTokenColorCustomizations": {
         "enabled": true,
-        "rules": { "operator": "#c678dd" }
+        "rules": { "operator": "#c678dd", "operator.userDefined": { "bold": true } }
     },
     "editor.wordWrap": "on",
     "explorer.confirmDelete": false,
