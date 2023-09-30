@@ -71,7 +71,8 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 9. Better Comments
 10. Prettier
 11. Github Markdown Preview
-12. Chinese (Simplified) Language Pack for Visual Studio Code
+12. vscode-pdf
+13. Chinese (Simplified) Language Pack for Visual Studio Code
 
 有些教程说要配置 `launch.json` `tasks.json` 才能运行，但是这样太麻烦了。
 
