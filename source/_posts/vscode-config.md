@@ -318,9 +318,9 @@ pacman -S mingw-w64-ucrt-x86_64-clang
 
 **如果你选择的不是 UCRT64 要把其中的 `ucrt-x86_64` 替换为下表所示。**
 
-| UCRT64      | CLANG32    | CLANG64      | CLANGARM64    | MINGW32 | MINGW64 |
-| ----------- | ---------- | ------------ | ------------- | ------- | ------- |
-| ucrt-x86_64 | clang-i686 | clang-x86_64 | clang-aarch64 | i686    | x86-64  |
+|   UCRT64    |  CLANG32   |   CLANG64    |  CLANGARM64   | MINGW32 | MINGW64 |
+| :---------: | :--------: | :----------: | :-----------: | :-----: | :-----: |
+| ucrt-x86_64 | clang-i686 | clang-x86_64 | clang-aarch64 |  i686   | x86-64  |
 
 ## 4.3 安装 Clangd
 

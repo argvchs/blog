@@ -15,7 +15,9 @@ categories: 教程
 
 <!-- more -->
 
-再次打开这个链接 https://www.mingw-w64.org/downloads，在下面似乎多了一个 [WinLibs.com](https://winlibs.com)。
+再次打开这个链接 https://www.mingw-w64.org/downloads。
+
+在下面似乎多了一个 [WinLibs.com](https://winlibs.com)：
 
 ![winlibs](https://static-argvchs.netlify.app/images/winlibs.png)
 
