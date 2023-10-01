@@ -19,10 +19,8 @@ categories: 教程
 
 ![winlibs](https://static-argvchs.netlify.app/images/winlibs.png)
 
-在下面找到 Download 就可以下载了，我一般选择以下这种格式的。
+在下面找到 Download 就可以下载了。
 
-```
-GCC ... (with POSIX threads) + LLVM/Clang/LLD/LLDB ... + MinGW-w64 (UCRT) - release ... (LATEST)
-```
+一般选择带有 `(with POSIX threads)` `(UCRT)` 的就可以了。
 
 和上一篇一样，解压到一个适合的位置，然后把里面的 `bin` 文件夹添加到环境变量即可。

@@ -29,6 +29,6 @@ categories: 教程
 
 ![mingw-builds](https://static-argvchs.netlify.app/images/mingw-builds.png)
 
-我一般会选带有 `posix-seh-ucrt` 的。
+一般选择带有 `posix-seh-ucrt` 的就可以了。
 
 解压到一个适合的位置，然后把里面的 `bin` 文件夹添加到环境变量即可。

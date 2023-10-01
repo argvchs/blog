@@ -10,19 +10,21 @@ categories: 教程
 
 <!-- more -->
 
-# 1. 安装 Motrix
+# 1. 配置环境
+
+## 1.0. Motrix（可选）
 
 <https://motrix.app>
 
 安装后就可以用 Motrix 快速下载了。
 
-# 2. 安装 VSCode
+## 1.1. 安装 VSCode
 
 <https://code.visualstudio.com>
 
 Windows 7: <https://code.visualstudio.com/updates/v1_70>
 
-# 3. 安装编译器
+## 1.2. 安装编译器
 
 <https://winlibs.com>
 
@@ -30,9 +32,13 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 
 解压到合适的位置然后将其中的 `mingw64/bin` 添加到环境变量。
 
-不用 LLVM MinGW 的原因是那个没有 `pb_ds`。
+## 1.3. 安装 Git Bash
 
-# 4. 安装字体
+<https://git-scm.com/download/win>
+
+安装 Git Bash 是因为 Windows CMD 太难用了。
+
+## 1.4. 安装字体
 
 -   Fira Code
 
@@ -50,13 +56,9 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 
 若 GitHub 打不开可以将 `github.com` 替换为 `githubfast.com`。
 
-# 5. 安装 Git Bash
+# 2. 配置 VSCode
 
-<https://git-scm.com/download/win>
-
-安装 Git Bash 是因为 Windows CMD 太难用了。
-
-# 6. 安装扩展
+## 2.1. 安装扩展
 
 打开 VSCode 然后安装以下扩展：
 
@@ -75,9 +77,9 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 
 有些教程说要配置 `launch.json` `tasks.json` 才能运行，但是这样太麻烦了。
 
-我们安装 Code Runner 扩展后按 `Ctrl + Alt + N` 就可以了，或者你可以直接用 CPH。
+我们安装 Code Runner 扩展后按 `Ctrl + Alt + N` 就可以了，或者你可以直接用 cph。
 
-# 7. 创建文件夹
+## 2.2. 创建文件夹
 
 在一个合适的位置创建一个合适的文件夹用于存储你所有的 C++ 文件。
 
@@ -91,7 +93,7 @@ cpp
 |---.clang-format
 ```
 
-# 8. 配置文件
+# 2.3. 配置文件
 
 配置文件的内容：
 
@@ -199,11 +201,17 @@ UseTab: Never
 
 还有上面的 `path/to/gcc.exe` 要换成你的编译器路径。
 
-# 9. Clangd（可选）
+# VSCode，启动！
+
+---
+
+虽然你已经配置完了 VSCode，但其实还有一些可选的附加内容。
+
+# 3. Clangd（可选）
 
 Clangd 提供了比 IntelliSense 更好的语言服务器。
 
-其实并不建议使用 Clangd，因为其处理大结构体数组时很慢。例如：
+其实并不建议使用 Clangd，因为其处理大结构体数组时很慢，例如这样就可以卡崩 Clangd：
 
 ```cpp
 struct node {
@@ -211,9 +219,13 @@ struct node {
 } a[100000005];
 ```
 
-这样就可以卡崩 Clangd。
-
 但是有时 IntelliSense 因为玄学原因用不了，就只能用 Clangd 了。
+
+## 3.1. 安装扩展
+
+安装 clangd 扩展即可。
+
+## 3.2. 配置文件
 
 配置 Clangd 后的目录结构应为如下：
 
@@ -224,6 +236,8 @@ cpp
 |---.clang-format
 |---.clangd
 ```
+
+没有 `c_cpp_properties.json` 是因为配置了 Clangd 就不需要 IntelliSense 的配置文件了。
 
 需要添加或更改的配置文件内容：
 
@@ -258,6 +272,56 @@ InlayHints:
 
 注意 `CompileFlags.Compiler` 必须为 `clang++`，因为 Clangd 语言服务器是基于 Clang 的，但是你编译的时候还是可以用 GCC。
 
-还有如果你配置了 Clangd 就不需要 IntelliSense 的 `c_cpp_properties.json` 了，可以直接删掉。
+# 4. MSYS2（可选）
 
-# VSCode，启动！
+MSYS2 提供了一个类 UNIX 环境使得管理软件包更加容易。
+
+如果你准备使用 MSYS2 就可以删掉刚才的 Winlibs 了。
+
+## 4.1. 安装 MSYS2
+
+<https://www.msys2.org/#installation>
+
+Windows 7: <https://github.com/msys2/msys2-installer/releases/tag/2022-10-28>
+
+## 4.2. 选择环境
+
+安装完成后可以发现 MSYS2 有许多环境，例如 UCRT64、CLANG32、CLANG64。
+
+一般情况下建议选 UCRT64，如果你喜欢 Clang 也可以选 CLANG32/64/ARM64。
+
+将 `C:\msys64\env\bin` 添加到环境变量，其中 `env` 表示你选择的环境。
+
+如果你改了安装路径可以自行修改。
+
+## 4.2 安装编译器
+
+MSYS2 默认安装的包都很旧了需要先更新一下。
+
+```bash
+pacman -Syu
+pacman -Su
+```
+
+**注意第一行执行完之后会退出，然后你需要重新打开再输入第二行**。
+
+然后安装编译器。
+
+```bash
+pacman -S mingw-w64-ucrt-x86_64-gcc
+pacman -S mingw-w64-ucrt-x86_64-clang
+```
+
+**如果你选择的不是 UCRT64 要把其中的 `ucrt-x86_64` 替换为下表所示。**
+
+| UCRT64        | CLANG32      | CLANG64        | CLANGARM64      | MINGW32 | MINGW64  |
+| ------------- | ------------ | -------------- | --------------- | ------- | -------- |
+| `ucrt-x86_64` | `clang-i686` | `clang-x86_64` | `clang-aarch64` | `i686`  | `x86-64` |
+
+## 4.3 安装 Clangd
+
+安装 Clang 不会附带安装 Clangd，如果你要用 Clangd 需要安装 `clang-tools-extra`。
+
+```bash
+pacman -S mingw-w64-ucrt-x86_64-clang-tools-extra
+```
