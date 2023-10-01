@@ -290,6 +290,8 @@ Windows 7: <https://github.com/msys2/msys2-installer/releases/tag/2022-10-28>
 
 一般情况下建议选 UCRT64，如果你喜欢 Clang 也可以选 CLANG32/64/ARM64。
 
+**不要选 MSYS 因为编译出来在 Windows 无法运行**。
+
 将 `C:\msys64\env\bin` 添加到环境变量，其中 `env` 表示你选择的环境。
 
 如果你改了安装路径可以自行修改。
@@ -297,6 +299,8 @@ Windows 7: <https://github.com/msys2/msys2-installer/releases/tag/2022-10-28>
 ## 4.2 安装编译器
 
 MSYS2 默认安装的包都很旧了需要先更新一下。
+
+**这里必须要在你刚才选择的环境下运行**
 
 ```bash
 pacman -Syu
@@ -314,9 +318,9 @@ pacman -S mingw-w64-ucrt-x86_64-clang
 
 **如果你选择的不是 UCRT64 要把其中的 `ucrt-x86_64` 替换为下表所示。**
 
-| UCRT64        | CLANG32      | CLANG64        | CLANGARM64      | MINGW32 | MINGW64  |
-| ------------- | ------------ | -------------- | --------------- | ------- | -------- |
-| `ucrt-x86_64` | `clang-i686` | `clang-x86_64` | `clang-aarch64` | `i686`  | `x86-64` |
+| UCRT64      | CLANG32    | CLANG64      | CLANGARM64    | MINGW32 | MINGW64 |
+| ----------- | ---------- | ------------ | ------------- | ------- | ------- |
+| ucrt-x86_64 | clang-i686 | clang-x86_64 | clang-aarch64 | i686    | x86-64  |
 
 ## 4.3 安装 Clangd
 
