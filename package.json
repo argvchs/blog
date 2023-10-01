@@ -14,7 +14,7 @@
   "dependencies": {
     "hexo": "^6.3.0",
     "hexo-autoprefixer": "^2.0.0",
-    "hexo-babel": "^1.1.12",
+    "hexo-babel": "^1.1.13",
     "hexo-clean-css": "^2.0.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",

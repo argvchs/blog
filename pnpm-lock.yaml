@@ -12,8 +12,8 @@ dependencies:
     specifier: ^2.0.0
     version: 2.0.0
   hexo-babel:
-    specifier: ^1.1.12
-    version: 1.1.12
+    specifier: ^1.1.13
+    version: 1.1.13
   hexo-clean-css:
     specifier: ^2.0.0
     version: 2.0.0
@@ -55,7 +55,7 @@ dependencies:
     version: 3.0.0
   hexo-theme-particlex:
     specifier: github:argvchs/hexo-theme-particlex
-    version: github.com/argvchs/hexo-theme-particlex/627dad5b6bfca7161a80833fe520d30c684cba46
+    version: git@github.com+argvchs/hexo-theme-particlex/627dad5b6bfca7161a80833fe520d30c684cba46
   hexo-uglify:
     specifier: ^2.0.0
     version: 2.0.0
@@ -1879,8 +1879,8 @@ packages:
       postcss: 7.0.39
     dev: false
 
-  /hexo-babel@1.1.12:
-    resolution: {integrity: sha512-/WdnXguB52bwTWKboNfdjpIwVkbKpz+ASEIbSvoojat0X7nLij8JW0VplPRTDx3+/ubE/mLIsHNkM/893K68cQ==}
+  /hexo-babel@1.1.13:
+    resolution: {integrity: sha512-weMDECHj9x1albl9SDT5zWsGwUIrVvNNyQzzntuoMNcZl+zanls5sEMANTi0uJPRQ3DngzqO7otJzWXp2Uj4Nw==}
     dependencies:
       '@babel/core': 7.23.0
       micromatch: 4.0.5
@@ -2870,8 +2870,8 @@ packages:
   /yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  github.com/argvchs/hexo-theme-particlex/627dad5b6bfca7161a80833fe520d30c684cba46:
-    resolution: {tarball: https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/627dad5b6bfca7161a80833fe520d30c684cba46}
+  git@github.com+argvchs/hexo-theme-particlex/627dad5b6bfca7161a80833fe520d30c684cba46:
+    resolution: {commit: 627dad5b6bfca7161a80833fe520d30c684cba46, repo: git@github.com:argvchs/hexo-theme-particlex.git, type: git}
     name: hexo-theme-particlex
     version: 2.7.4
     dependencies:
