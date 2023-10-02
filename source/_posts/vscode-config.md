@@ -10,9 +10,9 @@ categories: 教程
 
 <!-- more -->
 
-# 1. 配置环境
+# 1. 安装环境
 
-## 1.0. Motrix（可选）
+## 1.0. 安装 Motrix（可选）
 
 <https://motrix.app>
 
@@ -56,7 +56,7 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 
 若 GitHub 打不开可以将 `github.com` 替换为 `githubfast.com`。
 
-# 2. 配置 VSCode
+# 2. VSCode
 
 ## 2.1. 安装扩展
 
@@ -93,7 +93,7 @@ cpp
 |---.clang-format
 ```
 
-# 2.3. 配置文件
+## 2.3. 配置文件
 
 配置文件的内容：
 
@@ -290,7 +290,7 @@ Windows 7: <https://github.com/msys2/msys2-installer/releases/tag/2022-10-28>
 
 一般情况下建议选 UCRT64，如果你喜欢 Clang 也可以选 CLANG32/64/ARM64。
 
-**不要选 MSYS 因为编译出来在 Windows 无法运行**。
+**不要选 MSYS 因为编译出来在 Windows 无法运行。**。
 
 将 `C:\msys64\env\bin` 添加到环境变量，其中 `env` 表示你选择的环境。
 
