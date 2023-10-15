@@ -55,7 +55,7 @@ dependencies:
     version: 3.0.0
   hexo-theme-particlex:
     specifier: github:argvchs/hexo-theme-particlex
-    version: git@github.com+argvchs/hexo-theme-particlex/3421c6b4996b31b207d339ad41af87e3a0773a56
+    version: git@github.com+argvchs/hexo-theme-particlex/5e19e585bebd4c16888d854bdad5e2b12b1c9825
   hexo-uglify:
     specifier: ^2.0.0
     version: 2.0.0
@@ -2870,8 +2870,8 @@ packages:
   /yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  git@github.com+argvchs/hexo-theme-particlex/3421c6b4996b31b207d339ad41af87e3a0773a56:
-    resolution: {commit: 3421c6b4996b31b207d339ad41af87e3a0773a56, repo: git@github.com:argvchs/hexo-theme-particlex.git, type: git}
+  git@github.com+argvchs/hexo-theme-particlex/5e19e585bebd4c16888d854bdad5e2b12b1c9825:
+    resolution: {commit: 5e19e585bebd4c16888d854bdad5e2b12b1c9825, repo: git@github.com:argvchs/hexo-theme-particlex.git, type: git}
     name: hexo-theme-particlex
     version: 2.7.5
     dependencies:
