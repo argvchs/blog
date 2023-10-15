@@ -111,6 +111,8 @@ cpp
     "code-runner.fileDirectoryAsCwd": true,
     "code-runner.ignoreSelection": true,
     "code-runner.runInTerminal": true,
+    "cph.general.autoShowJudge": false,
+    "cph.general.timeOut": 10000,
     "cph.language.c.Args": "-std=c17 -Wall -O2",
     "cph.language.c.Command": "gcc",
     "cph.language.cpp.Args": "-std=c++20 -Wall -O2",
@@ -129,6 +131,7 @@ cpp
     "editor.minimap.scale": 3,
     "editor.renderWhitespace": "boundary",
     "editor.wordWrap": "on",
+    "explorer.autoReveal": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.sortOrder": "type",
@@ -181,16 +184,18 @@ cpp
 BasedOnStyle: LLVM
 AccessModifierOffset: -2
 AlwaysBreakTemplateDeclarations: true
-AllowShortBlocksOnASingleLine: false
+AllowShortBlocksOnASingleLine: Empty
 AllowShortCaseLabelsOnASingleLine: true
 AllowShortEnumsOnASingleLine: true
-AllowShortFunctionsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: All
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: true
 ColumnLimit: 90
 FixNamespaceComments: false
 IndentWidth: 4
+PenaltyExcessCharacter: 10
+PenaltyIndentedWhitespace: 10
 TabWidth: 4
 UseTab: Never
 ```
