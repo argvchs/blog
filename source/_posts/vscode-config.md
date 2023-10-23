@@ -150,7 +150,6 @@ cpp
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "terminal.integrated.fontFamily": "'Fira Code', 'Source Han Sans SC'",
     "terminal.integrated.letterSpacing": 1,
-    "terminal.integrated.rightClickBehavior": "default",
     "window.menuBarVisibility": "compact",
     "window.zoomLevel": 0,
     "workbench.colorTheme": "One Dark Pro Mix",
