@@ -168,7 +168,6 @@ cpp
         {
             "name": "Win32",
             "includePath": ["${workspaceFolder}/**"],
-            "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
             "compilerPath": "path/to/gcc.exe",
             "cStandard": "c17",
             "cppStandard": "c++20",
