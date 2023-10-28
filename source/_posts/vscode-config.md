@@ -20,9 +20,9 @@ categories: 教程
 
 ## 1.1. 安装 VSCode
 
-<https://code.visualstudio.com>
+Windows 10/11：<https://code.visualstudio.com>
 
-Windows 7: <https://code.visualstudio.com/updates/v1_70>
+Windows 7：<https://code.visualstudio.com/updates/v1_70>
 
 ## 1.2. 安装编译器
 
@@ -31,6 +31,8 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 选择 Release versions 里面的最新版本下载。
 
 解压到合适的位置然后将其中的 `mingw64/bin` 添加到环境变量。
+
+这会同时安装 GCC 和 Clang 两个编译器。
 
 ## 1.3. 安装 Git Bash
 
@@ -44,15 +46,17 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 
     <https://github.com/tonsky/FiraCode/releases>
 
-    解压后安装 `ttf` 下的所有字体。
+    解压后安装 `ttf` 下的所有字体即可。
 
--   Source Han Sans
+-   Noto Sans CJK
 
-    <https://github.com/adobe-fonts/source-han-sans/releases>
+    <https://github.com/notofonts/noto-cjk/blob/main/Sans/README.md>
 
-    下载 Region Specific Subset OTFs Simplified Chinese 这个版本。
+    Windows 10/11：下载 Super OTC 这个字体。
 
-    解压后安装 `SubsetOTF/CN` 下的所有字体。
+    Windows 7：下载 Language-specific OTFs 中 Simplified Chinese 这个字体。
+
+    解压后直接安装即可。
 
 若 GitHub 打不开可以将 `github.com` 替换为 `githubfast.com`。
 
@@ -105,27 +109,24 @@ cpp
     "[yaml]": { "editor.tabSize": 4 },
     "C_Cpp.autoAddFileAssociations": false,
     "code-runner.executorMap": {
-        "c": "gcc $fileName -o $fileNameWithoutExt -std=c17 -Wall -O2 && ./$fileNameWithoutExt",
-        "cpp": "g++ $fileName -o $fileNameWithoutExt -std=c++20 -Wall -O2 && ./$fileNameWithoutExt"
+        "c": "gcc '$fileName' -o '$fileNameWithoutExt' -Wall -O2 && './$fileNameWithoutExt.exe'",
+        "cpp": "g++ '$fileName' -o '$fileNameWithoutExt' -Wall -O2 && './$fileNameWithoutExt.exe'"
     },
     "code-runner.fileDirectoryAsCwd": true,
     "code-runner.ignoreSelection": true,
     "code-runner.runInTerminal": true,
     "cph.general.autoShowJudge": false,
     "cph.general.timeOut": 10000,
-    "cph.language.c.Args": "-std=c17 -Wall -O2",
+    "cph.language.c.Args": "-Wall -O2",
     "cph.language.c.Command": "gcc",
-    "cph.language.cpp.Args": "-std=c++20 -Wall -O2",
+    "cph.language.cpp.Args": "-Wall -O2",
     "cph.language.cpp.Command": "g++",
-    "debug.console.fontFamily": "'Fira Code', 'Source Han Sans SC'",
     "editor.bracketPairColorization.enabled": false,
-    "editor.codeLensFontFamily": "'Fira Code', 'Source Han Sans SC'",
     "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorStyle": "block",
-    "editor.fontFamily": "'Fira Code', 'Source Han Sans SC'",
+    "editor.fontFamily": "'Fira Code', 'Noto Sans CJK SC'",
     "editor.fontLigatures": true,
-    "editor.fontWeight": "500",
     "editor.minimap.maxColumn": 30,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.scale": 3,
@@ -142,16 +143,13 @@ cpp
         ".clang-format": "yaml"
     },
     "files.autoGuessEncoding": true,
-    "markdown.preview.fontFamily": "'Fira Code', 'Source Han Sans SC'",
-    "prettier.printWidth": 120,
+    "prettier.printWidth": 90,
     "prettier.tabWidth": 4,
     "search.followSymlinks": false,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "terminal.integrated.fontFamily": "'Fira Code', 'Source Han Sans SC'",
+    "terminal.integrated.fontFamily": "'Fira Code', 'Noto Sans CJK SC'",
     "terminal.integrated.letterSpacing": 1,
-    "window.menuBarVisibility": "compact",
-    "window.zoomLevel": 0,
     "workbench.colorTheme": "One Dark Pro Mix",
     "workbench.editor.pinnedTabSizing": "compact",
     "workbench.iconTheme": "vscode-icons",
@@ -167,10 +165,9 @@ cpp
         {
             "name": "Win32",
             "includePath": ["${workspaceFolder}/**"],
-            "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
             "compilerPath": "path/to/gcc.exe",
             "cStandard": "c17",
-            "cppStandard": "c++20",
+            "cppStandard": "gnu++17",
             "intelliSenseMode": "windows-gcc-x64"
         }
     ],
@@ -201,29 +198,15 @@ UseTab: Never
 
 这个配置的编译器用的是 GCC，如果你想用 Clang 可以自行修改。
 
+最新的 GCC 和 Clang 都默认使用 C++17，如果你想用其他版本可以自行指定 `-std`。
+
 如果是 Windows 7 要把 `editor.cursorSmoothCaretAnimation` 值改为 `true`。
 
 还有上面的 `path/to/gcc.exe` 要换成你的编译器路径。
 
-# VSCode，启动！
-
----
-
-虽然你已经配置完了 VSCode，但其实还有一些可选的附加内容。
-
 # 3. Clangd（可选）
 
 Clangd 提供了比 IntelliSense 更好的语言服务器。
-
-其实并不建议使用 Clangd，因为其处理大结构体数组时很慢，例如这样就可以卡崩 Clangd：
-
-```cpp
-struct node {
-    int a, b;
-} a[100000005];
-```
-
-但是有时 IntelliSense 因为玄学原因用不了，就只能用 Clangd 了。
 
 ## 3.1. 安装扩展
 
@@ -233,7 +216,7 @@ struct node {
 
 配置 Clangd 后的目录结构应为如下：
 
-```
+```plaintext
 cpp
 |---.vscode
 |   |---settings.json
@@ -248,11 +231,8 @@ cpp
 ```json
 // settings.json
 {
+    "[cpp]": { "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd" },
     "C_Cpp.intelliSenseEngine": "disabled",
-    "editor.semanticTokenColorCustomizations": {
-        "enabled": true,
-        "rules": { "operator": "#c678dd", "operator.userDefined": { "bold": true } }
-    },
     "files.associations": {
         "*.ans": "plaintext",
         "*.in": "plaintext",
@@ -266,70 +246,19 @@ cpp
 ```yaml
 # .clangd
 CompileFlags:
-    Add: [-std=c++20, -Wall]
-    Compiler: clang++
+    Add: -Wall
 Index:
     Background: Skip
 InlayHints:
     Enabled: false
 ```
 
-注意 `CompileFlags.Compiler` 必须为 `clang++`，因为 Clangd 语言服务器是基于 Clang 的，但是你编译的时候还是可以用 GCC。
+另外还有一个问题就是 Clangd 可能会被大结构体数组卡崩，例如这样就可以卡崩：
 
-# 4. MSYS2（可选）
-
-MSYS2 提供了一个类 UNIX 环境使得管理软件包更加容易。
-
-如果你准备使用 MSYS2 就可以删掉刚才的 Winlibs 了。
-
-## 4.1. 安装 MSYS2
-
-<https://www.msys2.org/#installation>
-
-Windows 7: <https://github.com/msys2/msys2-installer/releases/tag/2022-10-28>
-
-## 4.2. 选择环境
-
-安装完成后可以发现 MSYS2 有许多环境，例如 UCRT64、CLANG32、CLANG64。
-
-一般情况下建议选 UCRT64，如果你喜欢 Clang 也可以选 CLANG32/64/ARM64。
-
-**不要选 MSYS 因为编译出来在 Windows 无法运行。**。
-
-将 `C:\msys64\env\bin` 添加到环境变量，其中 `env` 表示你选择的环境。
-
-如果你改了安装路径可以自行修改。
-
-## 4.2 安装编译器
-
-MSYS2 默认安装的包都很旧了需要先更新一下。
-
-**这里必须要在你刚才选择的环境下运行**
-
-```bash
-pacman -Syu
-pacman -Su
+```cpp
+pair<int, int> a[100000005];
 ```
 
-**注意第一行执行完之后会退出，然后你需要重新打开再输入第二行**。
+如果被卡崩了，你可以 `Ctrl + Shift + P` 然后输入 `>clangd.restart` 重启 Clangd。
 
-然后安装编译器。
-
-```bash
-pacman -S mingw-w64-ucrt-x86_64-gcc
-pacman -S mingw-w64-ucrt-x86_64-clang
-```
-
-**如果你选择的不是 UCRT64 要把其中的 `ucrt-x86_64` 替换为下表所示。**
-
-|   UCRT64    |  CLANG32   |   CLANG64    |  CLANGARM64   | MINGW32 | MINGW64 |
-| :---------: | :--------: | :----------: | :-----------: | :-----: | :-----: |
-| ucrt-x86_64 | clang-i686 | clang-x86_64 | clang-aarch64 |  i686   | x86-64  |
-
-## 4.3 安装 Clangd
-
-安装 Clang 不会附带安装 Clangd，如果你要用 Clangd 需要安装 `clang-tools-extra`。
-
-```bash
-pacman -S mingw-w64-ucrt-x86_64-clang-tools-extra
-```
+# VSCode，启动！
