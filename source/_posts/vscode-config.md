@@ -44,15 +44,15 @@ Windows 7: <https://code.visualstudio.com/updates/v1_70>
 
     <https://github.com/tonsky/FiraCode/releases>
 
-    解压后安装 `ttf` 下的所有字体。
+    解压后安装 `ttf` 下的所有字体即可。
 
--   Source Han Sans
+-   Noto Sans CJK
 
-    <https://github.com/adobe-fonts/source-han-sans/releases>
+    <https://github.com/notofonts/noto-cjk/blob/Serif2.002/Sans/README.md>
 
-    下载 Region Specific Subset OTFs Simplified Chinese 这个版本。
+    下载 Super OTC 格式的字体。
 
-    解压后安装 `SubsetOTF/CN` 下的所有字体。
+    解压后直接安装即可。
 
 若 GitHub 打不开可以将 `github.com` 替换为 `githubfast.com`。
 
@@ -117,13 +117,13 @@ cpp
     "cph.language.c.Command": "gcc",
     "cph.language.cpp.Args": "-std=c++20 -Wall -O2",
     "cph.language.cpp.Command": "g++",
-    "debug.console.fontFamily": "'Fira Code', 'Source Han Sans SC'",
+    "debug.console.fontFamily": "'Fira Code', 'Noto Sans CJK SC'",
     "editor.bracketPairColorization.enabled": false,
-    "editor.codeLensFontFamily": "'Fira Code', 'Source Han Sans SC'",
+    "editor.codeLensFontFamily": "'Fira Code', 'Noto Sans CJK SC'",
     "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorStyle": "block",
-    "editor.fontFamily": "'Fira Code', 'Source Han Sans SC'",
+    "editor.fontFamily": "'Fira Code', 'Noto Sans CJK SC'",
     "editor.fontLigatures": true,
     "editor.fontWeight": "500",
     "editor.minimap.maxColumn": 30,
@@ -142,13 +142,13 @@ cpp
         ".clang-format": "yaml"
     },
     "files.autoGuessEncoding": true,
-    "markdown.preview.fontFamily": "'Fira Code', 'Source Han Sans SC'",
-    "prettier.printWidth": 120,
+    "markdown.preview.fontFamily": "'Fira Code', 'Noto Sans CJK SC'",
+    "prettier.printWidth": 90,
     "prettier.tabWidth": 4,
     "search.followSymlinks": false,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "terminal.integrated.fontFamily": "'Fira Code', 'Source Han Sans SC'",
+    "terminal.integrated.fontFamily": "'Fira Code', 'Noto Sans CJK SC'",
     "terminal.integrated.letterSpacing": 1,
     "window.menuBarVisibility": "compact",
     "window.zoomLevel": 0,
@@ -158,6 +158,7 @@ cpp
     "workbench.productIconTheme": "fluent-icons",
     "workbench.tree.indent": 20
 }
+
 ```
 
 ```json
@@ -294,7 +295,7 @@ Windows 7: <https://github.com/msys2/msys2-installer/releases/tag/2022-10-28>
 
 一般情况下建议选 UCRT64，如果你喜欢 Clang 也可以选 CLANG32/64/ARM64。
 
-**不要选 MSYS 因为编译出来在 Windows 无法运行。**。
+**不要选 MSYS 因为编译出来在 Windows 无法运行。**
 
 将 `C:\msys64\env\bin` 添加到环境变量，其中 `env` 表示你选择的环境。
 
@@ -304,7 +305,7 @@ Windows 7: <https://github.com/msys2/msys2-installer/releases/tag/2022-10-28>
 
 MSYS2 默认安装的包都很旧了需要先更新一下。
 
-**这里必须要在你刚才选择的环境下运行**
+**这里必须要在你刚才选择的环境下运行。**
 
 ```bash
 pacman -Syu
