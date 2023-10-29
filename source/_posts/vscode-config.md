@@ -125,7 +125,6 @@ cpp
     "editor.cursorStyle": "block",
     "editor.fontFamily": "'Fira Code', 'Noto Sans CJK SC'",
     "editor.fontLigatures": true,
-    "editor.fontWeight": "500",
     "editor.minimap.maxColumn": 30,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.scale": 3,
