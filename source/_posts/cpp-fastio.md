@@ -58,7 +58,15 @@ fastio.in           # 读写测试数据
 
 -   `is.getline(s, end);`
 
-    读取字符到 `s`，一直读到 `end` 停止，**s 只能为字符数组，不能为指针**。
+    读取字符到 `s`，一直读到 `end` 停止。
+
+-   `is.get(s);`
+
+    读取一行到 `s`，但是把换行符保留在流中。
+
+-   `is.get(s, end);`
+
+    读取字符到 `s`，一直读到 `end` 停止，但是把 `end` 保留在流中。
 
 -   `is.ignore();`
 
@@ -68,7 +76,7 @@ fastio.in           # 读写测试数据
 
     忽略字符到 c 停止。
 
--   `while (is >> n);`
+-   `while (is >> n) ;`
 
     一直读取直到末尾。
 
@@ -76,7 +84,7 @@ fastio.in           # 读写测试数据
 
     按 2、8、10、16 进制读取数。
 
--   `is >> skipws;`
+-   `is >> ws;`
 
     忽略前导空格。
 
@@ -100,7 +108,7 @@ fastio.in           # 读写测试数据
 
     写入一个字符 `c`。
 
--   `os.flush();` `os << flush;`
+-   `os << flush;`
 
     刷新流。
 
@@ -130,9 +138,17 @@ fastio.in           # 读写测试数据
 
 -   `os << showpoint;`
 
-    设置写入浮点数时严格保留 `setprecision` 时设置的位数。
+    设置写入浮点数时总是添加小数点。
 
 -   `os << noshowpoint;`
+
+    设置写入浮点数时不总是添加小数点。
+
+-   `os << fixed;`
+
+    设置写入浮点数时严格保留 `setprecision` 时设置的位数。
+
+-   `os << defaultfloat;`
 
     设置写入浮点数时不严格保留 `setprecision` 时设置的位数。
 
@@ -198,23 +214,23 @@ fastio.in           # 读写测试数据
 
 **注意要用 `fastio::interface::istream` `fastio::interface::ostream` 来重载。**
 
-以下是重载 `std::vector` 的示例程序。
+以下是重载 `std::tuple` 的示例程序。
 
 ```cpp
-template <typename T, typename U>
-auto &operator<<(fastio::interface::istream &is, vector<T, U> &a) {
-    T n, m;
-    is >> n;
-    a.clear();
-    while (n--) {
-        is >> m;
-        a.push_back(m);
-    }
+using namespace fastio;
+template <typename... TS>
+interface::istream &operator>>(interface::istream &is, std::tuple<TS...> &a) {
+    std::apply([&](auto &&...args) { ((is >> args), ...); }, a);
     return is;
 }
-template <typename T, typename U>
-auto &operator<<(fastio::interface::ostream &os, const vector<T> &a) {
-    for (const T &i : a) os << i << ' ';
+template <typename... TS>
+interface::istream &operator>>(interface::istream &is, std::tuple<TS...> &&a) {
+    std::apply([&](auto &&...args) { ((is >> args), ...); }, a);
+    return is;
+}
+template <typename... TS>
+interface::ostream &operator<<(interface::ostream &os, std::tuple<TS...> const &a) {
+    std::apply([&](auto &&...args) { ((os << args << ' '), ...); }, a);
     return os;
 }
 ```
