@@ -65,8 +65,8 @@ devDependencies:
     specifier: ^7.23.5
     version: 7.23.5
   '@babel/preset-env':
-    specifier: ^7.23.5
-    version: 7.23.5(@babel/core@7.23.5)
+    specifier: ^7.23.6
+    version: 7.23.6(@babel/core@7.23.5)
 
 packages:
 
@@ -143,6 +143,17 @@ packages:
       lru-cache: 5.1.1
       semver: 6.3.1
 
+  /@babel/helper-compilation-targets@7.23.6:
+    resolution: {integrity: sha512-9JB548GZoQVmzrFgp8o7KxdgkTGm6xs9DW0o/Pim72UDjzr5ObUQ6ZzYPqA+g9OTS2bBQoctLJrky0RDCAWRgQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/compat-data': 7.23.5
+      '@babel/helper-validator-option': 7.23.5
+      browserslist: 4.22.2
+      lru-cache: 5.1.1
+      semver: 6.3.1
+    dev: true
+
   /@babel/helper-create-class-features-plugin@7.23.5(@babel/core@7.23.5):
     resolution: {integrity: sha512-QELlRWxSpgdwdJzSJn4WAhKC+hvw/AtHbbrIoncKHkhKKR/luAlKkgBDcri1EzWAo8f8VvYVryEHN4tax/V67A==}
     engines: {node: '>=6.9.0'}
@@ -179,7 +190,7 @@ packages:
       '@babel/core': ^7.4.0 || ^8.0.0-0 <8.0.0
     dependencies:
       '@babel/core': 7.23.5
-      '@babel/helper-compilation-targets': 7.22.15
+      '@babel/helper-compilation-targets': 7.23.6
       '@babel/helper-plugin-utils': 7.22.5
       debug: 4.3.4
       lodash.debounce: 4.0.8
@@ -629,7 +640,7 @@ packages:
     dependencies:
       '@babel/core': 7.23.5
       '@babel/helper-annotate-as-pure': 7.22.5
-      '@babel/helper-compilation-targets': 7.22.15
+      '@babel/helper-compilation-targets': 7.23.6
       '@babel/helper-environment-visitor': 7.22.20
       '@babel/helper-function-name': 7.23.0
       '@babel/helper-optimise-call-expression': 7.22.5
@@ -714,14 +725,15 @@ packages:
       '@babel/plugin-syntax-export-namespace-from': 7.8.3(@babel/core@7.23.5)
     dev: true
 
-  /@babel/plugin-transform-for-of@7.23.3(@babel/core@7.23.5):
-    resolution: {integrity: sha512-X8jSm8X1CMwxmK878qsUGJRmbysKNbdpTv/O1/v0LuY/ZkZrng5WYiekYSdg9m09OTmDDUWeEDsTE+17WYbAZw==}
+  /@babel/plugin-transform-for-of@7.23.6(@babel/core@7.23.5):
+    resolution: {integrity: sha512-aYH4ytZ0qSuBbpfhuofbg/e96oQ7U2w1Aw/UQmKT+1l39uEhUPoFS3fHevDc1G0OvewyDudfMKY1OulczHzWIw==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.23.5
       '@babel/helper-plugin-utils': 7.22.5
+      '@babel/helper-skip-transparent-expression-wrappers': 7.22.5
     dev: true
 
   /@babel/plugin-transform-function-name@7.23.3(@babel/core@7.23.5):
@@ -731,7 +743,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.23.5
-      '@babel/helper-compilation-targets': 7.22.15
+      '@babel/helper-compilation-targets': 7.23.6
       '@babel/helper-function-name': 7.23.0
       '@babel/helper-plugin-utils': 7.22.5
     dev: true
@@ -876,7 +888,7 @@ packages:
     dependencies:
       '@babel/compat-data': 7.23.5
       '@babel/core': 7.23.5
-      '@babel/helper-compilation-targets': 7.22.15
+      '@babel/helper-compilation-targets': 7.23.6
       '@babel/helper-plugin-utils': 7.22.5
       '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.23.5)
       '@babel/plugin-transform-parameters': 7.23.3(@babel/core@7.23.5)
@@ -1075,15 +1087,15 @@ packages:
       '@babel/helper-plugin-utils': 7.22.5
     dev: true
 
-  /@babel/preset-env@7.23.5(@babel/core@7.23.5):
-    resolution: {integrity: sha512-0d/uxVD6tFGWXGDSfyMD1p2otoaKmu6+GD+NfAx0tMaH+dxORnp7T9TaVQ6mKyya7iBtCIVxHjWT7MuzzM9z+A==}
+  /@babel/preset-env@7.23.6(@babel/core@7.23.5):
+    resolution: {integrity: sha512-2XPn/BqKkZCpzYhUUNZ1ssXw7DcXfKQEjv/uXZUXgaebCMYmkEsfZ2yY+vv+xtXv50WmL5SGhyB6/xsWxIvvOQ==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/compat-data': 7.23.5
       '@babel/core': 7.23.5
-      '@babel/helper-compilation-targets': 7.22.15
+      '@babel/helper-compilation-targets': 7.23.6
       '@babel/helper-plugin-utils': 7.22.5
       '@babel/helper-validator-option': 7.23.5
       '@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression': 7.23.3(@babel/core@7.23.5)
@@ -1123,7 +1135,7 @@ packages:
       '@babel/plugin-transform-dynamic-import': 7.23.4(@babel/core@7.23.5)
       '@babel/plugin-transform-exponentiation-operator': 7.23.3(@babel/core@7.23.5)
       '@babel/plugin-transform-export-namespace-from': 7.23.4(@babel/core@7.23.5)
-      '@babel/plugin-transform-for-of': 7.23.3(@babel/core@7.23.5)
+      '@babel/plugin-transform-for-of': 7.23.6(@babel/core@7.23.5)
       '@babel/plugin-transform-function-name': 7.23.3(@babel/core@7.23.5)
       '@babel/plugin-transform-json-strings': 7.23.4(@babel/core@7.23.5)
       '@babel/plugin-transform-literals': 7.23.3(@babel/core@7.23.5)
