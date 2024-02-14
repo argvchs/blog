@@ -73,29 +73,31 @@ Windows 7：<https://code.visualstudio.com/updates/v1_70>
 5. vscode-icons
 6. Fluent Icons
 7. Error Lens
-8. Better Comments
-9. Prettier
-10. Github Markdown Preview
-11. vscode-pdf
-12. Chinese (Simplified) Language Pack for Visual Studio Code
+8. Prettier
+9. Github Markdown Preview
+10. vscode-pdf
+11. Chinese (Simplified) Language Pack for Visual Studio Code
 
 有些教程说要配置 `launch.json` `tasks.json` 才能运行，但是这样太麻烦了。
 
-我们安装 Code Runner 扩展后按 `Ctrl + Alt + N` 就可以了，或者你可以直接用 cph。
+我们安装 Code Runner 扩展后 `Ctrl+Alt+N` 就可以了，或者你可以直接用 cph。
 
 ## 2.2. 创建文件夹
 
 在一个合适的位置创建一个合适的文件夹用于存储你所有的 C++ 文件。
 
-然后在里面创建 `.vscode` 文件夹用于存储配置文件，创建完成后目录结构应为如下：
+然后还需要创建一些配置文件，创建完成后目录结构应为如下：
 
 ```
 cpp
 |---.vscode
 |   |---settings.json
-|   |---c_cpp_properties.json
 |---.clang-format
 ```
+
+实际上可以不创建而是使用全局的 `settings.json`。
+
+直接按 `Ctrl+Shift+P` 然后输入 `>workbench.action.openSettingsJson` 就可以打开。
 
 ## 2.3. 配置文件
 
@@ -109,44 +111,37 @@ cpp
     "[yaml]": { "editor.tabSize": 4 },
     "C_Cpp.autoAddFileAssociations": false,
     "code-runner.executorMap": {
-        "c": "gcc '$fileName' -o '$fileNameWithoutExt' -Wall -O2 && './$fileNameWithoutExt.exe'",
-        "cpp": "g++ '$fileName' -o '$fileNameWithoutExt' -Wall -O2 && './$fileNameWithoutExt.exe'"
+        "cpp": "g++ '$fileName' -o '$fileNameWithoutExt.exe' -std=gnu++23 -Wall -Wextra -O3 -Wl,--stack,10485760 -march=native && './$fileNameWithoutExt.exe'"
     },
     "code-runner.fileDirectoryAsCwd": true,
     "code-runner.ignoreSelection": true,
     "code-runner.runInTerminal": true,
     "cph.general.autoShowJudge": false,
-    "cph.general.timeOut": 10000,
-    "cph.language.c.Args": "-Wall -O2",
-    "cph.language.c.Command": "gcc",
-    "cph.language.cpp.Args": "-Wall -O2",
+    "cph.general.timeOut": 3000,
+    "cph.language.cpp.Args": "-std=gnu++23 -O3 -Wl,--stack,10485760 -march=native",
     "cph.language.cpp.Command": "g++",
     "editor.bracketPairColorization.enabled": false,
     "editor.cursorBlinking": "smooth",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorStyle": "block",
     "editor.fontFamily": "'Fira Code', 'Noto Sans CJK SC'",
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": "'cv01' on, 'cv02' on, 'ss09' on, 'zero' on",
     "editor.minimap.renderCharacters": false,
     "editor.minimap.scale": 2,
+    "editor.rulers": [90],
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 90,
     "explorer.autoReveal": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.sortOrder": "type",
-    "files.associations": {
-        "*.ans": "plaintext",
-        "*.in": "plaintext",
-        "*.out": "plaintext",
-        ".clang-format": "yaml"
-    },
+    "files.associations": { "*.{in,out,ans}": "plaintext", ".clang-format": "yaml" },
     "files.autoGuessEncoding": true,
     "prettier.printWidth": 90,
     "prettier.tabWidth": 4,
     "search.followSymlinks": false,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
-    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.fontFamily": "'Fira Code', 'Noto Sans CJK SC'",
     "terminal.integrated.letterSpacing": 1,
     "workbench.colorTheme": "One Dark Pro Mix",
@@ -157,37 +152,21 @@ cpp
 }
 ```
 
-```json
-// c_cpp_properties.json
-{
-    "configurations": [
-        {
-            "name": "Win32",
-            "includePath": ["${workspaceFolder}/**"],
-            "compilerPath": "path/to/gcc.exe",
-            "cStandard": "c17",
-            "cppStandard": "gnu++17",
-            "intelliSenseMode": "windows-gcc-x64"
-        }
-    ],
-    "version": 4
-}
-```
-
 ```yaml
 # .clang-format
 BasedOnStyle: LLVM
 AccessModifierOffset: -2
-AlwaysBreakTemplateDeclarations: true
-AllowShortBlocksOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: Always
 AllowShortCaseLabelsOnASingleLine: true
 AllowShortEnumsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: All
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: true
+BreakBeforeConceptDeclarations: Allowed
 ColumnLimit: 90
 FixNamespaceComments: false
+IndentRequiresClause: false
 IndentWidth: 4
 PenaltyExcessCharacter: 10
 PenaltyIndentedWhitespace: 10
@@ -197,9 +176,7 @@ UseTab: Never
 
 这个配置的编译器用的是 GCC，如果你想用 Clang 可以自行修改。
 
-最新的 GCC 和 Clang 都默认使用 C++17，如果你想用其他版本可以自行指定 `-std`。
-
-如果是 Windows 7 要把 `editor.cursorSmoothCaretAnimation` 值改为 `true`。
+`c_cpp_properties.json` 应该会自动配置。
 
 还有上面的 `path/to/gcc.exe` 要换成你的编译器路径。
 
@@ -223,19 +200,14 @@ cpp
 |---.clangd
 ```
 
-没有 `c_cpp_properties.json` 是因为配置了 Clangd 就不需要 IntelliSense 的配置文件了。
-
 需要添加或更改的配置文件内容：
 
 ```json
 // settings.json
 {
-    "[cpp]": { "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd" },
     "C_Cpp.intelliSenseEngine": "disabled",
     "files.associations": {
-        "*.ans": "plaintext",
-        "*.in": "plaintext",
-        "*.out": "plaintext",
+        "*.{in,out,ans}": "plaintext",
         ".clang-format": "yaml",
         ".clangd": "yaml"
     }
@@ -245,11 +217,23 @@ cpp
 ```yaml
 # .clangd
 CompileFlags:
-    Add: -Wall
+    Add:
+        - -std=gnu++23
+        - -Wall
+        - -Wextra
+        - -Wno-unknown-pragmas
 Index:
     Background: Skip
+    StandardLibrary: false
 InlayHints:
     Enabled: false
+Diagnostics:
+    ClangTidy:
+        Add: llvm-*
+        Remove: llvm-namespace-comment
+    MissingIncludes: Strict
+SemanticTokens:
+    DisabledKinds: Operator
 ```
 
 另外还有一个问题就是 Clangd 可能会被大结构体数组卡崩，例如这样就可以卡崩：
@@ -258,6 +242,6 @@ InlayHints:
 pair<int, int> a[100000005];
 ```
 
-如果被卡崩了，你可以 `Ctrl + Shift + P` 然后输入 `>clangd.restart` 重启 Clangd。
+如果被卡崩了，你可以 `Ctrl+Shift+P` 然后输入 `>clangd.restart` 重启 Clangd。
 
 # VSCode，启动！
