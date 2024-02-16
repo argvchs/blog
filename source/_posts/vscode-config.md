@@ -209,22 +209,15 @@ cpp
 // settings.json
 {
     "C_Cpp.intelliSenseEngine": "disabled",
-    "files.associations": {
-        "*.{in,out,ans}": "plaintext",
-        ".clang-format": "yaml",
-        ".clangd": "yaml"
-    }
+    "files.associations": { "*.{in,out,ans}": "plaintext", ".clang{-format,d}": "yaml" }
 }
 ```
 
 ```yaml
 # .clangd
 CompileFlags:
-    Add:
-        - -std=gnu++23
-        - -Wall
-        - -Wextra
-        - -Wno-unknown-pragmas
+    Add: [-std=gnu++23, -Wall, -Wextra, -Wno-unknown-pragmas]
+    Compiler: clang++
 Index:
     Background: Skip
     StandardLibrary: false
