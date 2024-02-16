@@ -20,9 +20,10 @@ categories: 教程
 
 ## 1.1. 安装 VSCode
 
-Windows 10/11：<https://code.visualstudio.com>
+<https://code.visualstudio.com>
 
-Windows 7：<https://code.visualstudio.com/updates/v1_70>
+最后一个支持 Windows 7 的版本：
+<https://code.visualstudio.com/updates/v1_70>
 
 ## 1.2. 安装编译器
 
@@ -74,7 +75,7 @@ Windows 7：<https://code.visualstudio.com/updates/v1_70>
 6. Fluent Icons
 7. Error Lens
 8. Prettier
-9. Github Markdown Preview
+9. Markdown All in One
 10. vscode-pdf
 11. Chinese (Simplified) Language Pack for Visual Studio Code
 
@@ -108,6 +109,7 @@ cpp
 {
     "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
     "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
     "[yaml]": { "editor.tabSize": 4 },
     "C_Cpp.autoAddFileAssociations": false,
     "code-runner.executorMap": {
@@ -137,6 +139,7 @@ cpp
     "explorer.sortOrder": "type",
     "files.associations": { "*.{in,out,ans}": "plaintext", ".clang-format": "yaml" },
     "files.autoGuessEncoding": true,
+    "markdown.preview.fontFamily": "'Noto Sans CJK SC'",
     "prettier.printWidth": 90,
     "prettier.tabWidth": 4,
     "search.followSymlinks": false,
