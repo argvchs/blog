@@ -113,14 +113,13 @@ cpp
     "[yaml]": { "editor.tabSize": 4 },
     "C_Cpp.autoAddFileAssociations": false,
     "code-runner.executorMap": {
-        "cpp": "g++ '$fileName' -o '$fileNameWithoutExt.exe' -std=gnu++23 -Wall -Wextra -O3 -Wl,--stack,10485760 -march=native && './$fileNameWithoutExt.exe'"
+        "cpp": "g++ '$fileName' -o '$fileNameWithoutExt.exe' -std=c++17 -Wall -Wextra -O3 -Wl,--stack,10485760 -march=native && './$fileNameWithoutExt.exe'"
     },
     "code-runner.fileDirectoryAsCwd": true,
     "code-runner.ignoreSelection": true,
     "code-runner.runInTerminal": true,
     "cph.general.autoShowJudge": false,
-    "cph.general.timeOut": 3000,
-    "cph.language.cpp.Args": "-std=gnu++23 -O3 -Wl,--stack,10485760 -march=native",
+    "cph.language.cpp.Args": "-std=c++17 -O3 -Wl,--stack,10485760 -march=native",
     "cph.language.cpp.Command": "g++",
     "editor.bracketPairColorization.enabled": false,
     "editor.cursorBlinking": "smooth",
@@ -131,12 +130,11 @@ cpp
     "editor.minimap.renderCharacters": false,
     "editor.minimap.scale": 2,
     "editor.rulers": [90],
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 90,
+    "editor.stickyScroll.enabled": false,
+    "editor.wordWrap": "on",
     "explorer.autoReveal": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "explorer.sortOrder": "type",
     "files.associations": { "*.{in,out,ans}": "plaintext", ".clang-format": "yaml" },
     "files.autoGuessEncoding": true,
     "markdown.preview.fontFamily": "'Noto Sans CJK SC'",
@@ -216,7 +214,7 @@ cpp
 ```yaml
 # .clangd
 CompileFlags:
-    Add: [-std=gnu++23, -Wall, -Wextra, -Wno-unknown-pragmas]
+    Add: [-std=c++17, -Wall, -Wextra, -Wno-unknown-pragmas]
     Compiler: clang++
 Index:
     Background: Skip
