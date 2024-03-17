@@ -113,13 +113,13 @@ cpp
     "[yaml]": { "editor.tabSize": 4 },
     "C_Cpp.autoAddFileAssociations": false,
     "code-runner.executorMap": {
-        "cpp": "g++ '$fileName' -o '$fileNameWithoutExt.exe' -std=c++17 -Wall -Wextra -O2 -Wl,--stack=2147483647 -march=native && './$fileNameWithoutExt.exe'"
+        "cpp": "g++ '$fileName' -o '$fileNameWithoutExt.exe' -std=c++17 -fno-ms-extensions -Wall -Wextra -O2 -Wl,--stack=2147483647 && './$fileNameWithoutExt.exe'"
     },
     "code-runner.fileDirectoryAsCwd": true,
     "code-runner.ignoreSelection": true,
     "code-runner.runInTerminal": true,
     "cph.general.autoShowJudge": false,
-    "cph.language.cpp.Args": "-std=c++17 -O2 -Wl,--stack=2147483647 -march=native",
+    "cph.language.cpp.Args": "-std=c++17 -fno-ms-extensions -O2 -Wl,--stack=2147483647",
     "cph.language.cpp.Command": "g++",
     "editor.bracketPairColorization.enabled": false,
     "editor.cursorBlinking": "smooth",
@@ -135,6 +135,7 @@ cpp
     "explorer.autoReveal": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
     "files.associations": { "*.{in,out,ans}": "plaintext", ".clang-format": "yaml" },
     "files.autoGuessEncoding": true,
     "markdown.preview.fontFamily": "'Noto Sans CJK SC'",
@@ -157,7 +158,6 @@ cpp
 ```yaml
 # .clang-format
 BasedOnStyle: LLVM
-AccessModifierOffset: -2
 AllowShortBlocksOnASingleLine: Always
 AllowShortCaseLabelsOnASingleLine: true
 AllowShortEnumsOnASingleLine: true
@@ -167,20 +167,13 @@ AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: true
 BreakBeforeConceptDeclarations: Allowed
 ColumnLimit: 90
-FixNamespaceComments: false
 IndentRequiresClause: false
 IndentWidth: 4
-PenaltyExcessCharacter: 10
-PenaltyIndentedWhitespace: 10
-TabWidth: 4
-UseTab: Never
 ```
 
 这个配置的编译器用的是 GCC，如果你想用 Clang 可以自行修改。
 
 `c_cpp_properties.json` 应该会自动配置。
-
-还有上面的 `path/to/gcc.exe` 要换成你的编译器路径。
 
 # 3. Clangd（可选）
 
@@ -225,7 +218,6 @@ InlayHints:
 Diagnostics:
     ClangTidy:
         Add: llvm-*
-        Remove: llvm-namespace-comment
     MissingIncludes: Strict
 SemanticTokens:
     DisabledKinds: Operator
