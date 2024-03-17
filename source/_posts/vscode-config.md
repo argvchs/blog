@@ -113,13 +113,13 @@ cpp
     "[yaml]": { "editor.tabSize": 4 },
     "C_Cpp.autoAddFileAssociations": false,
     "code-runner.executorMap": {
-        "cpp": "g++ '$fileName' -o '$fileNameWithoutExt.exe' -std=c++17 -fno-ms-extensions -Wall -Wextra -O2 -Wl,--stack=2147483647 && './$fileNameWithoutExt.exe'"
+        "cpp": "g++ '$fileName' -o '$fileNameWithoutExt.exe' -std=c++17 -Wall -Wextra -O2 -Wl,--stack=2147483647 -march=native && './$fileNameWithoutExt.exe'"
     },
     "code-runner.fileDirectoryAsCwd": true,
     "code-runner.ignoreSelection": true,
     "code-runner.runInTerminal": true,
     "cph.general.autoShowJudge": false,
-    "cph.language.cpp.Args": "-std=c++17 -fno-ms-extensions -O2 -Wl,--stack=2147483647",
+    "cph.language.cpp.Args": "-std=c++17 -O2 -Wl,--stack=2147483647 -march=native",
     "cph.language.cpp.Command": "g++",
     "editor.bracketPairColorization.enabled": false,
     "editor.cursorBlinking": "smooth",
