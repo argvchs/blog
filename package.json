@@ -9,10 +9,10 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "6.3.0"
+    "version": "7.1.1"
   },
   "dependencies": {
-    "hexo": "^6.3.0",
+    "hexo": "^7.1.1",
     "hexo-autoprefixer": "github:hexojs/hexo-autoprefixer",
     "hexo-babel": "^1.1.14",
     "hexo-clean-css": "^2.0.0",
@@ -23,7 +23,7 @@
     "hexo-generator-index": "^3.0.0",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
-    "hexo-helper-crypto": "^1.1.5",
+    "hexo-helper-crypto": "^1.1.6",
     "hexo-html-minifier": "^1.0.0",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-pandoc": "^0.4.0",
@@ -32,7 +32,7 @@
     "hexo-uglify": "^2.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.0",
-    "@babel/preset-env": "^7.24.0"
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4"
   }
 }
