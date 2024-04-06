@@ -12,13 +12,13 @@ categories: 教程
 
 # 1. 安装
 
-```bash
+```shell
 pnpm add gfonts-helper -g
 ```
 
 # 2. 使用
 
-```bash
+```shell
 gfonts-helper <source> <group>
 ```
 
@@ -28,7 +28,7 @@ gfonts-helper <source> <group>
 
 e.g.
 
-```bash
+```shell
 gfonts-helper "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
 gfonts-helper "https://fonts.loli.net/css2?family=Roboto&display=swap"
 gfonts-helper "https://fonts.geekzu.org/css2?family=Roboto&display=swap"

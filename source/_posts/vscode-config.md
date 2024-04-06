@@ -25,15 +25,15 @@ categories: 教程
 最后一个支持 Windows 7 的版本：
 <https://code.visualstudio.com/updates/v1_70>
 
-## 1.2. 安装编译器
+## 1.2. 安装 MinGW-W64
 
-<https://winlibs.com>
+<https://github.com/niXman/mingw-builds-binaries>
 
-选择 Release versions 里面的最新版本下载。
+点击右边的 Latest 可以找到最新版本。
+
+下载文件名形如 `x86_64-*-release-posix-seh-ucrt-*.7z` 的文件。
 
 解压到合适的位置然后将其中的 `mingw64/bin` 添加到环境变量。
-
-这会同时安装 GCC 和 Clang 两个编译器。
 
 ## 1.3. 安装 Git Bash
 
@@ -45,7 +45,7 @@ categories: 教程
 
 -   Fira Code
 
-    <https://github.com/tonsky/FiraCode/releases>
+    <https://github.com/tonsky/FiraCode>
 
     解压后安装 `ttf` 下的所有字体即可。
 
@@ -58,8 +58,6 @@ categories: 教程
     Windows 7：下载 Language-specific OTFs 中 Simplified Chinese 这个字体。
 
     解压后直接安装即可。
-
-若 GitHub 打不开可以将 `github.com` 替换为 `githubfast.com`。
 
 # 2. VSCode
 
@@ -136,7 +134,7 @@ cpp
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmPasteNative": false,
-    "files.associations": { "*.{in,out,ans}": "plaintext", ".clang-format": "yaml" },
+    "files.associations": { "*.{in,out,ans}": "plaintext", ".clang*": "yaml" },
     "files.autoGuessEncoding": true,
     "markdown.preview.fontFamily": "'Noto Sans CJK SC'",
     "prettier.printWidth": 90,
@@ -175,17 +173,23 @@ IndentWidth: 4
 
 `c_cpp_properties.json` 应该会自动配置。
 
-# 3. Clangd（可选）
+# 3. clangd（可选）
 
-Clangd 提供了比 IntelliSense 更好的语言服务器。
+## 3.1. 安装 clangd
 
-## 3.1. 安装扩展
+<https://github.com/clangd/clangd>
+
+点击右边的 Latest 可以找到最新版本。
+
+解压到合适的位置然后将其中的 `clangd_*/bin` 添加到环境变量。
+
+## 3.2. 安装扩展
 
 安装 clangd 扩展即可。
 
-## 3.2. 配置文件
+## 3.3. 配置文件
 
-配置 Clangd 后的目录结构应为如下：
+配置 clangd 后的目录结构应为如下：
 
 ```plaintext
 cpp
@@ -195,20 +199,23 @@ cpp
 |---.clangd
 ```
 
-需要添加或更改的配置文件内容：
+需要添加的配置文件内容：
 
 ```json
 // settings.json
 {
     "C_Cpp.intelliSenseEngine": "disabled",
-    "files.associations": { "*.{in,out,ans}": "plaintext", ".clang{-format,d}": "yaml" }
+    "clangd.fallbackFlags": ["--target=x86_64-pc-windows-gnu"]
 }
 ```
 
 ```yaml
 # .clangd
 CompileFlags:
-    Add: [-std=c++17, -Wall, -Wextra, -Wno-unknown-pragmas]
+    Add:
+        - -std=c++17
+        - -Wall
+        - -Wextra
     Compiler: clang++
 Index:
     Background: Skip
@@ -223,12 +230,14 @@ SemanticTokens:
     DisabledKinds: Operator
 ```
 
-另外还有一个问题就是 Clangd 可能会被大结构体数组卡崩，例如这样就可以卡崩：
+---
+
+另外还有一个问题就是 clangd 可能会被大结构体数组卡到很慢，例如：
 
 ```cpp
-pair<int, int> a[100000005];
+std::pair<int, int> hack_clangd[1 << 20];
 ```
 
-如果被卡崩了，你可以 `Ctrl+Shift+P` 然后输入 `>clangd.restart` 重启 Clangd。
+如果出现这种情况，你可以 `Ctrl+Shift+P` 然后输入 `>clangd.restart` 重启 clangd。
 
 # VSCode，启动！

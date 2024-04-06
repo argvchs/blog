@@ -29,7 +29,7 @@ pinned: 10
 
 # 2. 安装
 
-```bash
+```shell
 cd themes
 git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex --depth=1
 ```
@@ -38,17 +38,6 @@ git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex 
 
 ```yaml
 theme: particlex
-```
-
-**由于[一些原因](https://github.com/hexojs/hexo/issues/5367)，主题与 Hexo 7.0.0 版本不兼容。可以通过降级到 6.3.0 解决。**
-
-```bash
-# npm
-npm i hexo@6.3.0
-# yarn
-yarn up hexo@6.3.0
-# pnpm
-pnpm up hexo@6.3.0
 ```
 
 ## 2.1. 关闭自带代码高亮
@@ -62,7 +51,7 @@ prismjs:
     enable: false
 ```
 
-如果使用 Hexo 7 之后的版本只需要修改为：
+如果使用 Hexo 7.0.0 之后的版本只需要修改为：
 
 ```yaml
 syntax_highlighter:
@@ -278,14 +267,14 @@ search:
 
 ## 3.4. 评论配置
 
-### 3.4.1. Giscus
+### 3.4.1. giscus
 
-Giscus 是一个由 GitHub Discussions 支持的评论系统。
+giscus 是一个由 GitHub Discussions 支持的评论系统。
 
-在 [Giscus.app](https://giscus.app) 设置好各项后，会在下面生成一个 `<script>` 标签，在主题内填入即可。
+在 [giscus.app](https://giscus.app) 设置好各项后，会在下面生成一个 `<script>` 标签，在主题内填入即可。
 
 ```yaml
-# Giscus
+# giscus
 # https://github.com/giscus/giscus
 giscus:
     enable: false

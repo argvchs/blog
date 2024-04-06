@@ -46,7 +46,7 @@ https://nodejs.org
 
 新建一个文件夹，作为博客目录，`cd` 进入文件夹，运行命令：
 
-```bash
+```shell
 pnpm add hexo-cli -g
 hexo init --no-install
 pnpm i

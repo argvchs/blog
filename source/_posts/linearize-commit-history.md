@@ -18,7 +18,7 @@ ParticleX 主题之前用了 Git Flow AVH，提交记录很丑。
 
 如果原分支不是 `master` 的话要把下面的都改一下，**新建一个分支是因为操作很危险**。
 
-```bash
+```shell
 git checkout master
 git checkout -b new
 git rebase --root
@@ -26,14 +26,14 @@ git rebase --root
 
 过程中可能会有冲突出现，处理好冲突然后继续运行。
 
-```bash
+```shell
 git commit --no-edit
 git rebase --continue
 ```
 
 最后推送分支，打开 GitHub 的 Insight 就会发现，已经变成线性提交记录啦！
 
-```bash
+```shell
 git checkout master
 git reset new
 git branch -D new
@@ -46,7 +46,7 @@ git push -f
 
 > 如果没有**很多** Tag 可以单个删除。
 
-```bash
+```shell
 git push origin --delete $(git tag -l)
 git tag -d $(git tag -l)
 ```
@@ -55,7 +55,7 @@ git tag -d $(git tag -l)
 
 如果一个 `custom` 分支依赖 `master`，那可以用 `merge --squash`。
 
-```bash
+```shell
 git checkout master
 git checkout -b new
 git merge --squash --allow-unrelated-histories custom
@@ -63,7 +63,7 @@ git merge --squash --allow-unrelated-histories custom
 
 过程中可能也会有冲突出现，处理好冲突就提交推送。
 
-```bash
+```shell
 git commit --no-edit
 git checkout custom
 git reset new

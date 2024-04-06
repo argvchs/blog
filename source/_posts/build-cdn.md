@@ -14,7 +14,7 @@ categories: 教程
 
 # 0. 前言
 
-最初是因为 [Giscus](https://giscus-argvchs.netlify.app) 评论的字体和博客的字体相同，但要加载两次，太慢了，就想到可以引用同一个字体文件，其中一个加载，另一个就可以用缓存，但是总会 CORS 出错，于是就单独建了一个 CDN。
+最初是因为 [giscus](https://giscus-argvchs.netlify.app) 评论的字体和博客的字体相同，但要加载两次，太慢了，就想到可以引用同一个字体文件，其中一个加载，另一个就可以用缓存，但是总会 CORS 出错，于是就单独建了一个 CDN。
 
 > 然而这个 CDN 其实是存库文件的。
 >
@@ -48,9 +48,8 @@ jobs:
               run: |
                   cd cdnjs
                   git sparse-checkout init --cone
-                  for i in ${{ vars.LIBS }}
-                  do
-                  git sparse-checkout add ajax/libs/$i
+                  for i in ${{ vars.LIBS }}; do
+                      git sparse-checkout add ajax/libs/$i
                   done
                   git checkout
                   cd ../static
@@ -67,7 +66,7 @@ jobs:
                   git config --global user.name github-actions[bot]
                   git config --global user.email github-actions[bot]@users.noreply.github.com
                   git add .
-                  git commit --allow-empty -m "chore: sync libs"
+                  git commit --allow-empty -m "sync"
             - name: push
               run: |
                   cd static
@@ -95,7 +94,7 @@ jobs:
 
 运行命令：
 
-```bash
+```shell
 git init
 git add .
 git commit -m "first commit"

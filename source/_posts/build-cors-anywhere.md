@@ -18,7 +18,7 @@ Gitalk 官方代理使用 Cloudflare，速度过慢，这里介绍一下自己�
 
 在任意位置输入以下命令，克隆项目到本地：
 
-```bash
+```shell
 git clone https://github.com/<user>/cors-anywhere.git
 cd cors-anywhere
 ```
@@ -26,15 +26,6 @@ cd cors-anywhere
 # 2. 注册 Heroku
 
 CORS Anywhere 是在 Heroku 上运行的，所以要注册一下，在[这里](https://signup.heroku.com/)注册。
-
-> We could not verify you are not a robot. Please try the CAPTCHA again.
-
-诶？哪有 CAPTCHA？
-Heroku 因为用了 Google 的 CHAPCHA 服务，[所以就要](/2022/12/07/fix-github)。。。
-
-GitHub 打不开可以用[镜像站](https://githubfast.com)。
-
-重新打开页面，就会出现 CHAPCHA 检测了。
 
 # 3. 部署代理
 
@@ -46,7 +37,7 @@ GitHub 打不开可以用[镜像站](https://githubfast.com)。
 
 找到你刚才下载 CORS Anywhere 项目的位置，`cd` 到项目根目录，执行以下命令部署：
 
-```bash
+```shell
 git init
 heroku git:remote -a <app>
 git add .
@@ -82,7 +73,7 @@ gitalk:
 
 没有配置，就要自己修改了，从你主题文件夹下，找出有类似以下内容的文件，**可能细节不太一样**。
 
-```javascript
+```js
 const gitalk = new Gitalk({
     clientID: clientID,
     clientSecret: clientSecret,
@@ -97,13 +88,13 @@ const gitalk = new Gitalk({
 
 在 `new Gitalk({...})` 的大括号中添加这一条：
 
-```javascript
+```js
 proxy: "https://<app>.herokuapp.com/https://github.com/login/oauth/access_token",
 ```
 
 添加完，你文件的 Gitalk 部分应该类似这样：
 
-```javascript
+```js
 const gitalk = new Gitalk({
     // something...
     proxy: "https://<app>.herokuapp.com/https://github.com/login/oauth/access_token",

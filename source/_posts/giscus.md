@@ -1,13 +1,13 @@
 ---
-title: Giscus
+title: giscus
 date: 2022-12-06 18:35:05
 tags:
-    - Giscus
+    - giscus
     - 评论
 categories: 其他
 ---
 
-**Giscus 终于配置好了！**
+**giscus 终于配置好了！**
 
 <!-- more -->
 

@@ -77,20 +77,18 @@ tag_map:
     C/C++: c-cpp
     CDN: cdn
     CORS: cors
-    CSP-S: csps
+    CSP-S: csp-s
     CSS: css
     Clang: clang
-    Crypto-js: crypto-js
+    CryptoJS: cryptojs
     FastIO: fastio
     Florr.io: florr-io
     GCC: gcc
-    Giscus: giscus
     Git: git
     GitHub: github
     Gitalk: gitalk
     Heroku: heroku
     Hexo: hexo
-    IO Game: io-game
     JS: js
     LaTeX: latex
     MSYS2: msys2

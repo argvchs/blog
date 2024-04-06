@@ -16,7 +16,7 @@ Hexo 压缩静态文件，优化访问速度。
 压缩插件我原来用的是 Hexo-Neat，但是压缩文件会有 `rebuild by neat` 的信息，就换成了以下 3 个插件。
 运行以下命令安装。
 
-```bash
+```shell
 pnpm add hexo-html-minifier hexo-clean-css hexo-uglify
 ```
 
