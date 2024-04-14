@@ -205,7 +205,7 @@ cpp
 // settings.json
 {
     "C_Cpp.intelliSenseEngine": "disabled",
-    "clangd.fallbackFlags": ["--target=x86_64-pc-windows-gnu"]
+    "clangd.fallbackFlags": ["--target=x86_64-windows-gnu"]
 }
 ```
 

@@ -46,13 +46,13 @@ ssh-add ~/.ssh/id_ed25519
 输入以下命令复制 SSH 密钥，先不用管，后面会用到。
 
 ```shell
-clip < ~/.ssh/id_ed25519.pub
+xclip -sel c < ~/.ssh/id_ed25519.pub
 ```
 
-如果你用 Windows CMD：
+如果你用 Windows：
 
-```batch
-clip < %USERPROFILE%\.ssh\id_ed25519.pub
+```powershell
+Get-Content $env:USERPROFILE\.ssh\id_ed25519.pub | Set-Clipboard
 ```
 
 打开你 GitHub 右上角的头像中的 Settings 设置，点击左边的 SSH and GPG keys，点击右上角的 New SSH key，将 SSH 密钥复制到 Key 中，Title 不用写，点击 Add SSH key 添加密钥。
