@@ -22,8 +22,7 @@ categories: 教程
 
 <https://code.visualstudio.com>
 
-最后一个支持 Windows 7 的版本：
-<https://code.visualstudio.com/updates/v1_70>
+最后一个支持 Windows 7 的版本：<https://code.visualstudio.com/updates/v1_70>
 
 ## 1.2. 安装 MinGW-W64
 
@@ -175,13 +174,15 @@ IndentWidth: 4
 
 # 3. clangd（可选）
 
-## 3.1. 安装 clangd
+## 3.1. 安装 LLVM
 
-<https://github.com/clangd/clangd>
+<https://github.com/llvm/llvm-project>
 
 点击右边的 Latest 可以找到最新版本。
 
-解压到合适的位置然后将其中的 `clangd_*/bin` 添加到环境变量。
+下载文件名形如 `LLVM-*-win64.exe` 的文件，然后安装即可。
+
+注意要选择 Add LLVM to the system PATH for current user。
 
 ## 3.2. 安装扩展
 

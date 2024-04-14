@@ -46,13 +46,11 @@ exports.count = () => ++x;
 
 ```js
 // paste: 00000002
-console.log((await require("0bwumvaq")).count()); // output: 1
-console.log((await require("0bwumvaq")).count()); // output: 2
-console.log((await require("0bwumvaq")).count()); // output: 3
-
-require_cache.delete("0bwumvaq");
-
-console.log((await require("0bwumvaq")).count()); // output: 1
+console.log((await require("00000001")).count()); // output: 1
+console.log((await require("00000001")).count()); // output: 2
+console.log((await require("00000001")).count()); // output: 3
+require_cache.delete("00000001");
+console.log((await require("00000001")).count()); // output: 1
 ```
 
 ## 1.4. `module.exports`
