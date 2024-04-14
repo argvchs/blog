@@ -18,7 +18,7 @@ Gitalk 官方代理使用 Cloudflare，速度过慢，这里介绍一下自己�
 
 在任意位置输入以下命令，克隆项目到本地：
 
-```shell
+```bash
 git clone https://github.com/<user>/cors-anywhere.git
 cd cors-anywhere
 ```
@@ -37,7 +37,7 @@ CORS Anywhere 是在 Heroku 上运行的，所以要注册一下，在[这里](h
 
 找到你刚才下载 CORS Anywhere 项目的位置，`cd` 到项目根目录，执行以下命令部署：
 
-```shell
+```bash
 git init
 heroku git:remote -a <app>
 git add .

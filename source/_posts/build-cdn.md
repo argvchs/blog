@@ -94,7 +94,7 @@ jobs:
 
 运行命令：
 
-```shell
+```bash
 git init
 git add .
 git commit -m "first commit"

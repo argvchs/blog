@@ -14,7 +14,7 @@ categories: 教程
 
 # 1. 安装
 
-```shell
+```bash
 pnpm add hexo-babel
 ```
 
@@ -31,7 +31,7 @@ babel:
 
 例如这是一种配置（要先安装 `@babel/preset-env`）：
 
-```shell
+```bash
 pnpm add @babel/core @babel/preset-env -D
 ```
 

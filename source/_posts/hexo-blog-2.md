@@ -19,7 +19,7 @@ categories: 教程
 
 选好主题后就要安装，在博客根目录下运行下面的命令将主题 Clone 到本地。
 
-```shell
+```bash
 cd themes
 git clone <link>.git <theme> --depth=1
 ```
@@ -28,7 +28,7 @@ git clone <link>.git <theme> --depth=1
 
 例如我的主题是 [ParticleX](https://github.com/theme-particlex/hexo-theme-particlex)，则为：
 
-```shell
+```bash
 git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex --depth=1
 ```
 
@@ -38,7 +38,7 @@ git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex 
 
 ## 2.1. 分类页
 
-```shell
+```bash
 hexo new page categories
 ```
 
@@ -46,7 +46,7 @@ hexo new page categories
 
 ## 2.1. 标签页
 
-```shell
+```bash
 hexo new page tags
 ```
 
@@ -54,7 +54,7 @@ hexo new page tags
 
 ## 2.3. 关于页
 
-```shell
+```bash
 hexo new page about
 ```
 

@@ -32,20 +32,20 @@ https://github.com/settings/repositories
 
 在命令行输入命令，获取 SSH 密钥，这个过程会提示你输入一些东西，一直回车就行了。
 
-```shell
+```bash
 ssh-keygen -t ed25519 -C <email>
 ```
 
 然后添加到 SSH-Agent。
 
-```shell
+```bash
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ```
 
 输入以下命令复制 SSH 密钥，先不用管，后面会用到。
 
-```shell
+```bash
 xclip -sel c < ~/.ssh/id_ed25519.pub
 ```
 
@@ -63,7 +63,7 @@ Get-Content $env:USERPROFILE\.ssh\id_ed25519.pub | Set-Clipboard
 
 使用下面的命令初始配置。
 
-```shell
+```bash
 git config --global user.name "<user>"
 git config --global user.email "<email>"
 ```
@@ -81,7 +81,7 @@ deploy:
 
 设置好参数，使用下面的命令安装部署插件，安装了才能部署到 GitHub Pages。
 
-```shell
+```bash
 pnpm add hexo-deployer-git
 ```
 

@@ -191,7 +191,7 @@ IndentWidth: 4
 
 配置 clangd 后的目录结构应为如下：
 
-```plaintext
+```text
 cpp
 |---.vscode
 |   |---settings.json

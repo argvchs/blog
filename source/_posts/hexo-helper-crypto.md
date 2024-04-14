@@ -19,7 +19,7 @@ secret: "123456"
 
 # 1. 安装
 
-```shell
+```bash
 pnpm add hexo-helper-crypto
 ```
 
