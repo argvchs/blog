@@ -86,7 +86,7 @@ categories: 教程
 
 然后还需要创建一些配置文件，创建完成后目录结构应为如下：
 
-```
+```text
 cpp
 |---.vscode
 |   |---settings.json
@@ -126,7 +126,7 @@ cpp
     "editor.fontLigatures": "'cv01' on, 'cv02' on, 'ss09' on, 'zero' on",
     "editor.minimap.renderCharacters": false,
     "editor.minimap.scale": 2,
-    "editor.rulers": [90],
+    "editor.rulers": [100],
     "editor.stickyScroll.enabled": false,
     "editor.wordWrap": "on",
     "explorer.autoReveal": false,
@@ -136,7 +136,7 @@ cpp
     "files.associations": { "*.{in,out,ans}": "plaintext", ".clang*": "yaml" },
     "files.autoGuessEncoding": true,
     "markdown.preview.fontFamily": "'Noto Sans CJK SC'",
-    "prettier.printWidth": 90,
+    "prettier.printWidth": 100,
     "prettier.tabWidth": 4,
     "search.followSymlinks": false,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
@@ -163,9 +163,9 @@ AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: true
 BreakBeforeConceptDeclarations: Allowed
-ColumnLimit: 90
-IndentRequiresClause: false
+ColumnLimit: 100
 IndentWidth: 4
+RequiresClausePosition: SingleLine
 ```
 
 这个配置的编译器用的是 GCC，如果你想用 Clang 可以自行修改。

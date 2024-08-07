@@ -18,7 +18,7 @@ categories: 教程
 
 我的主题用的是 EJS 模板引擎，所以就是 `layout.ejs`。
 
-```
+```text
 blog # Hexo 博客根目录
 |---public # 静态网页文件
 |---source # 文章
