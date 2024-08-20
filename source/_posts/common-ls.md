@@ -21,7 +21,7 @@ Common Luogu-Paste Script（简称 Common LS、CLS）是一个洛谷剪贴板模
 ````markdown
 ```js
 // begin module
-console.log("Hello, World!");
+console.log("hello world");
 // end module
 ```
 ````
@@ -59,7 +59,7 @@ console.log((await require("00000001")).count()); // output: 1
 
 ```js
 // paste: 00000001
-module.exports = x => x * x;
+module.exports = (x) => x * x;
 ```
 
 ```js
@@ -74,7 +74,7 @@ console.log(square(10)); // output: 100
 
 ```js
 // paste: 00000001
-exports.square = x => x * x;
+exports.square = (x) => x * x;
 ```
 
 ```js
@@ -90,19 +90,17 @@ console.log(mod.square(10)); // output: 100
 支持的格式有 `plain`、`base64`、`hex`，其中 `plain` 表示不编码。
 
 ```js
-let text = 'console.log("Hello, World!")';
-let code = encode.hex(text);
-console.log(code);
-// output: 63 6f 6e 73 6f 6c 65 2e 6c 6f 67 28 22 48 65 6c 6c 6f 2c 20 57 6f 72 6c 64 21 22 29
-console.log(decode.hex(code));
-// output: console.log("Hello, World!")
+console.log(encode.hex('console.log("hello world")'));
+// output: 63 6f 6e 73 6f 6c 65 2e 6c 6f 67 28 22 68 65 6c 6c 6f 20 77 6f 72 6c 64 22 29
+console.log(decode.hex("63 6f 6e 73 6f 6c 65 2e 6c 6f 67 28 22 68 65 6c 6c 6f 20 77 6f 72 6c 64 22 29"));
+// output: console.log("hello world")
 ```
 
 你也可以自定义编码。
 
 ```js
-encode.reverse = text => text.split("").reverse().join("");
-decode.reverse = code => code.split("").reverse().join("");
+encode.reverse = (x) => x.split("").reverse().join("");
+decode.reverse = (x) => x.split("").reverse().join("");
 ```
 
 ## 1.7. 编码注释
@@ -113,14 +111,14 @@ decode.reverse = code => code.split("").reverse().join("");
 // paste: 00000001
 // encode hex
 // begin module
-63 6f 6e 73 6f 6c 65 2e 6c 6f 67 28 22 48 65 6c 6c 6f 2c 20 57 6f 72 6c 64 21 22 29
+63 6f 6e 73 6f 6c 65 2e 6c 6f 67 28 22 68 65 6c 6c 6f 20 77 6f 72 6c 64 22 29
 // end module
 ```
 
 ```js
 // paste: 00000002
 require("00000001");
-// output: Hello World!
+// output: hello world
 ```
 
 ## 1.8. 依赖注释
@@ -140,7 +138,7 @@ require("00000001");
 ```js
 // paste: 00000001
 // begin module
-exports.square = x => x * x;
+exports.square = (x) => x * x;
 // end module
 ```
 
@@ -149,15 +147,14 @@ exports.square = x => x * x;
 // require 00000001
 // begin module
 const mod = await require("00000001");
-exports.cube = x => x * mod.square(x);
+exports.cube = (x) => x * mod.square(x);
 // end module
 ```
 
 ```js
 console.log(await linker("00000002"));
 /*
-output (formatted):
-
+output:
 (async () => {
     const _linked_modules = new Map();
 
@@ -165,7 +162,7 @@ output (formatted):
         const module = { exports: {} };
         await (async (exports, module) => {
             const mod = await require("00000001");
-            exports.cube = x => x * mod.square(x);
+            exports.cube = (x) => x * mod.square(x);
         })(module.exports, module);
         return module.exports;
     });
@@ -173,20 +170,14 @@ output (formatted):
     _linked_modules.set("00000001", async () => {
         const module = { exports: {} };
         await (async (exports, module) => {
-            exports.square = x => x * x;
+            exports.square = (x) => x * x;
         })(module.exports, module);
         return module.exports;
     });
 
     const require_cache = new Map();
-    const require = async url => {
-        if (!_linked_modules.has(url)) throw Error(`Cannot find module '${url}'`);
-        let flag;
-        await navigator.locks.request("require_cache", async () => {
-            flag = require_cache.has(url);
-            if (!flag) require_cache.set(url);
-        });
-        if (flag) return require_cache.get(url);
+    const require = async (url) => {
+        if (require_cache.has(url)) return require_cache.get(url);
         let result = await _linked_modules.get(url)();
         require_cache.set(url, result);
         return result;
@@ -210,30 +201,25 @@ const _reg3 = /^\s*\/\/\s*require((\s+\w+)*)\s*$/m;
 
 const encode = {};
 const decode = {};
-encode.plain = text => text;
-decode.plain = code => code;
-encode.base64 = text => btoa(text);
-decode.base64 = code => atob(code);
-encode.hex = text => {
-    let array = [...new TextEncoder().encode(text)];
-    array = array.map(i => i.toString(16).padStart(2, "0"));
+encode.plain = (x) => x;
+decode.plain = (x) => x;
+encode.base64 = (x) => btoa(x);
+decode.base64 = (x) => atob(x);
+encode.hex = (x) => {
+    let array = [...new TextEncoder().encode(x)];
+    array = array.map((i) => i.toString(16).padStart(2, "0"));
     return array.join(" ");
 };
-decode.hex = code => {
-    let array = code.split(" ");
-    array = array.map(i => parseInt(i, 16));
+decode.hex = (x) => {
+    let array = x.split(" ");
+    array = array.map((i) => parseInt(i, 16));
     array = Uint8Array.from(array);
     return new TextDecoder().decode(array);
 };
 
 const require_cache = new Map();
-const require = async url => {
-    let flag;
-    await navigator.locks.request("require_cache", async () => {
-        flag = require_cache.has(url);
-        if (!flag) require_cache.set(url);
-    });
-    if (flag) return require_cache.get(url);
+const require = async (url) => {
+    if (require_cache.has(url)) return require_cache.get(url);
     let response = await fetch(`/paste/${url}?_contentOnly`);
     let json = await response.json();
     let data = json.currentData.paste.data;
@@ -248,19 +234,14 @@ const require = async url => {
     return result;
 };
 
-const linker = async url => {
+const linker = async (url) => {
     let result = `
     (async () => {
         const _linked_modules = new Map();
     `;
     const impl_cache = new Set();
-    const impl = async url => {
-        let flag;
-        await navigator.locks.request("linker_impl_cache", async () => {
-            flag = impl_cache.has(url);
-            if (!flag) impl_cache.add(url);
-        });
-        if (flag) return;
+    const impl = async (url) => {
+        if (impl_cache.has(url)) return;
         let response = await fetch(`/paste/${url}?_contentOnly`);
         let json = await response.json();
         let data = json.currentData.paste.data;
@@ -282,14 +263,8 @@ const linker = async url => {
     await impl(url);
     result += `
         const require_cache = new Map();
-        const require = async url => {
-            if (!_linked_modules.has(url)) throw Error(\`Cannot find module '\${url}'\`);
-            let flag;
-            await navigator.locks.request("require_cache", async () => {
-                flag = require_cache.has(url);
-                if (!flag) require_cache.set(url);
-            });
-            if (flag) return require_cache.get(url);
+        const require = async (url) => {
+            if (require_cache.has(url)) return require_cache.get(url);
             let result = await _linked_modules.get(url)();
             require_cache.set(url, result);
             return result;

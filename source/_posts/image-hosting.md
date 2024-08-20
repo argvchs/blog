@@ -49,8 +49,7 @@ GitHub 太慢了，我们需要用 [Netlify](https://netlify.com) 加速一下�
 
 做完之后，把 PicGo 复制下的链接这样修改一下即可。~~突然发现还可以缩短链接~~
 
-```
-https://raw.githubusercontent.com/<user>/<repo>/<branch>/<image>
->>>
-https://<domain>.netlify.app/<image>
+```diff
+- https://raw.githubusercontent.com/<user>/<repo>/<branch>/<image>
++ https://<domain>.netlify.app/<image>
 ```
