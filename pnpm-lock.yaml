@@ -13,7 +13,7 @@ importers:
         version: 7.3.0(chokidar@3.6.0)
       hexo-autoprefixer:
         specifier: github:hexojs/hexo-autoprefixer
-        version: https://codeload.github.com/hexojs/hexo-autoprefixer/tar.gz/e985c8f114f17309f45109c910965f962fa40c75
+        version: git+https://git@github.com:hexojs/hexo-autoprefixer.git#e985c8f114f17309f45109c910965f962fa40c75
       hexo-babel:
         specifier: ^1.2.0
         version: 1.2.0
@@ -33,8 +33,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0(chokidar@3.6.0)
       hexo-generator-index:
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^4.0.0
+        version: 4.0.0
       hexo-generator-sitemap:
         specifier: ^3.0.1
         version: 3.0.1(chokidar@3.6.0)
@@ -58,7 +58,7 @@ importers:
         version: 3.0.0
       hexo-theme-particlex:
         specifier: github:argvchs/hexo-theme-particlex
-        version: https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/d1bf2fdc23deedd014abc8bd2c1482282c865881
+        version: git+https://git@github.com:argvchs/hexo-theme-particlex.git#d1bf2fdc23deedd014abc8bd2c1482282c865881
       hexo-uglify:
         specifier: ^2.0.0
         version: 2.0.0
@@ -1025,8 +1025,8 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
 
-  hexo-autoprefixer@https://codeload.github.com/hexojs/hexo-autoprefixer/tar.gz/e985c8f114f17309f45109c910965f962fa40c75:
-    resolution: {tarball: https://codeload.github.com/hexojs/hexo-autoprefixer/tar.gz/e985c8f114f17309f45109c910965f962fa40c75}
+  hexo-autoprefixer@git+https://git@github.com:hexojs/hexo-autoprefixer.git#e985c8f114f17309f45109c910965f962fa40c75:
+    resolution: {commit: e985c8f114f17309f45109c910965f962fa40c75, repo: git@github.com:hexojs/hexo-autoprefixer.git, type: git}
     version: 2.0.0
     engines: {node: '>=12'}
 
@@ -1066,9 +1066,9 @@ packages:
     resolution: {integrity: sha512-Jo35VSRSNeMitS2JmjCq3OHAXXYU4+JIODujHtubdG/NRj2++b3Tgyz9pwTmROx6Yxr2php/hC8og5AGZHh8UQ==}
     engines: {node: '>=10.13.0'}
 
-  hexo-generator-index@3.0.0:
-    resolution: {integrity: sha512-83AuNN4cWdLVi//3ugR8E3kR6rrOwhXZt+hOCm1IjtIGj353/GlrtpMHpqZHU5kqipzj4miy9dweVdukXglVWw==}
-    engines: {node: '>=14'}
+  hexo-generator-index@4.0.0:
+    resolution: {integrity: sha512-KeM7mOCKWINGFAk1E+CkjMMgqFIv8oaRbGxR7ipkQAp44o4aopkVftma4sdIplOq9WQEWfVYDUK5gEv9J3nzUg==}
+    engines: {node: '>=18'}
 
   hexo-generator-sitemap@3.0.1:
     resolution: {integrity: sha512-n+0KLNmq6TLbiZPTQF6NY5MbEem/O+DFx0lgQZNQcU4tdjXIZRrQJs+KRKeT66NTkdlYTqb4WwCxswLqQz0crA==}
@@ -1108,8 +1108,8 @@ packages:
     resolution: {integrity: sha512-u4s0ty9Aew6jV+a9oMrXBwhrRpUQ0U8PWM/88a5aHgDru58VY81mVrxOFxs788NAsWQ8OvsJtF5m7mnXoRnSIA==}
     engines: {node: '>=12.13.0'}
 
-  hexo-theme-particlex@https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/d1bf2fdc23deedd014abc8bd2c1482282c865881:
-    resolution: {tarball: https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/d1bf2fdc23deedd014abc8bd2c1482282c865881}
+  hexo-theme-particlex@git+https://git@github.com:argvchs/hexo-theme-particlex.git#d1bf2fdc23deedd014abc8bd2c1482282c865881:
+    resolution: {commit: d1bf2fdc23deedd014abc8bd2c1482282c865881, repo: git@github.com:argvchs/hexo-theme-particlex.git, type: git}
     version: 2.8.1
 
   hexo-uglify@2.0.0:
@@ -2727,7 +2727,7 @@ snapshots:
 
   he@1.2.0: {}
 
-  hexo-autoprefixer@https://codeload.github.com/hexojs/hexo-autoprefixer/tar.gz/e985c8f114f17309f45109c910965f962fa40c75:
+  hexo-autoprefixer@git+https://git@github.com:hexojs/hexo-autoprefixer.git#e985c8f114f17309f45109c910965f962fa40c75:
     dependencies:
       autoprefixer: 10.4.20(postcss@8.4.47)
       micromatch: 4.0.8
@@ -2795,7 +2795,7 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  hexo-generator-index@3.0.0:
+  hexo-generator-index@4.0.0:
     dependencies:
       hexo-pagination: 3.0.0
 
@@ -2849,7 +2849,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  hexo-theme-particlex@https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/d1bf2fdc23deedd014abc8bd2c1482282c865881:
+  hexo-theme-particlex@git+https://git@github.com:argvchs/hexo-theme-particlex.git#d1bf2fdc23deedd014abc8bd2c1482282c865881:
     dependencies:
       hexo-helper-crypto: 1.2.1
       hexo-renderer-ejs: 2.0.0
