@@ -58,7 +58,7 @@ importers:
         version: 3.0.0
       hexo-theme-particlex:
         specifier: github:argvchs/hexo-theme-particlex
-        version: https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/b382fc5ad5eae876420e797a6f0ba10acfe08c31
+        version: https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/d1bf2fdc23deedd014abc8bd2c1482282c865881
       hexo-uglify:
         specifier: ^2.0.0
         version: 2.0.0
@@ -1108,8 +1108,8 @@ packages:
     resolution: {integrity: sha512-u4s0ty9Aew6jV+a9oMrXBwhrRpUQ0U8PWM/88a5aHgDru58VY81mVrxOFxs788NAsWQ8OvsJtF5m7mnXoRnSIA==}
     engines: {node: '>=12.13.0'}
 
-  hexo-theme-particlex@https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/b382fc5ad5eae876420e797a6f0ba10acfe08c31:
-    resolution: {tarball: https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/b382fc5ad5eae876420e797a6f0ba10acfe08c31}
+  hexo-theme-particlex@https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/d1bf2fdc23deedd014abc8bd2c1482282c865881:
+    resolution: {tarball: https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/d1bf2fdc23deedd014abc8bd2c1482282c865881}
     version: 2.8.1
 
   hexo-uglify@2.0.0:
@@ -2849,7 +2849,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  hexo-theme-particlex@https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/b382fc5ad5eae876420e797a6f0ba10acfe08c31:
+  hexo-theme-particlex@https://codeload.github.com/argvchs/hexo-theme-particlex/tar.gz/d1bf2fdc23deedd014abc8bd2c1482282c865881:
     dependencies:
       hexo-helper-crypto: 1.2.1
       hexo-renderer-ejs: 2.0.0
