@@ -8,8 +8,7 @@ type: about
 
 ---
 
-> Tell me... Does **Argvchs the God** bleed?
-> No. But **you** will.
+> Here's an argvchs...
 
 ## :bulb: 语言
 
